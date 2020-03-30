@@ -16,7 +16,7 @@
        
         .container{
            font-size: 20;
-           margin-top: 30px;
+           margin-top: 15px;
            margin-bottom: 60px;
         }
 
@@ -27,7 +27,7 @@
             height: 200px;
             background-color: #E1F3EE;
             margin-bottom: 0px;
-            padding-top: 5px;
+            padding-top: 1px;
             padding-bottom: 20px;
 
 
@@ -108,7 +108,13 @@
 
         }
 
-    
+        .col2 {
+
+            margin-left:295px;
+            margin-top:15px;
+        }
+
+       
     </style>
 
 
@@ -133,8 +139,13 @@
 
             <div class="jumbotron-jumbotron-fluid">
                 <div class="container">
-                  <h1 class="display-4" id="titleOFpage">Factory Map</h1>
-                  <p class="lead">Select the desired structure in the factory.</p>
+                <div class="form-group row">
+                <div class="col1">
+                  <h1 class="display-4" id="titleOFpage">Factory Map</h1></br><p class="lead">Select the desired structure in the factory.</p>
+                </div>
+                <div class="col2">
+                    <img src="http://www.up2me.co.il/imgs/72228361.jpeg" id="LOGO-BTL" alt="" style="width:500px;">
+                </div>
                 </div>
               </div>
 
