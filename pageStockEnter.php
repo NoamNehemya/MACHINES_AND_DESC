@@ -7,7 +7,7 @@ if (!$conn) {
 
 }
 
-$query="SELECT DISTINCT ColumnComponent_type FROM components";
+$query="SELECT DISTINCT Component_type FROM components";
 $result = mysqli_query($conn , $query);
 ?>
 
@@ -204,8 +204,6 @@ $result = mysqli_query($conn , $query);
           background-color: white;
           border-style:groove;
           
-           
-           
          }
 
         #submit {
@@ -279,20 +277,19 @@ $result = mysqli_query($conn , $query);
 
          
               
-                  <p id="explanMachinePage">Select the type of component you want to view its inventory.</p>
+                  <p id="explanMachinePage">Select the type of component you want to view its inventory</p>
 
                <div class="column" id="MainArea">
-                        <select class="DropDowns" id="DropListType">
-                        <?php
-                       while($rows = mysqli_fetch_assoc($result))
-                       {
-                        $component_type = $rows['component_type'];
-                        echo "<option value='$Component_type'>$Component_type</option>";
-                       }
-                       ?>
+                        <select class="DropDown" id="DropListType">
+                        <?php while($rows = $result->fetch_assoc()):;?>
+                        <?php $component_type = $rows['component_type'];?>
+                        <?php echo "<option value='$Component_type'>$Component_type</option>";?>
+                        <?php endwhile;?>
                         </select>
+        
+ 
 
-                  < button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
+                  <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
   
                 </div>
 
