@@ -1,3 +1,17 @@
+<?php 
+
+$conn = mysqli_connect('localhost','root','','test_project');
+
+if (!$conn) {
+	echo "failed";
+
+}
+
+$query="SELECT DISTINCT ColumnComponent_type FROM components";
+$result = mysqli_query($conn , $query);
+?>
+
+
 <html lang="en">
   <head>
    
@@ -269,13 +283,17 @@
 
                <div class="column" id="MainArea">
                         <select class="DropDowns" id="DropListType">
-                            <option value="volvo">Choose Component Type</option>
+                        <?php
+                       while($rows = mysqli_fetch_assoc($result))
+                       {
+                        $component_type = $rows['component_type'];
+                        echo "<option value='$Component_type'>$Component_type</option>";
+                       }
+                       ?>
                         </select>
 
-                        <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
-
-                        
-                    
+                  < button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
+  
                 </div>
 
 
