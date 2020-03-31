@@ -1,3 +1,5 @@
+<?php include('server.php');?>
+
 <html lang="en">
   <head>
    
@@ -12,9 +14,6 @@
     <title>Registration of system</title>
 
     <style>
-
-        
-
        
         .container{
            font-size: 20;
@@ -47,8 +46,6 @@
             margin-bottom: 0px;
             padding-top: 20px;
             padding-bottom: 20px;
-
-
         }
 
         .form-control-mx-sm-3{
@@ -61,7 +58,6 @@
 
             margin-left: 182px;
 
-
         }
 
         #Confirm {
@@ -71,9 +67,6 @@
             margin-top: 35px;
             padding-inline-end: 20px;
             margin-block-end: 50px;
-            
-
-
         }
 
         #login{
@@ -101,9 +94,7 @@
           margin-left:1300px;
           margin-top: 20px;
         }
-
-
-    
+  
     </style>
 
 
@@ -136,66 +127,67 @@
     
 
 
-                    <form id=inputDetails>
+                    <form method="post" action="registerPageFinish.php" id=inputDetails>
+                    <?php include('errors.php'); ?>
                         <div class="form-row">
                           <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+                            <input type="text" class="form-control" placeholder="First name" name="firstname" value="<?php echo $firstname; ?>">
                           </div>
                         </div>
                         <br>
                         <div class="form-row">
                           <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
+                            <input type="text" class="form-control" placeholder="Last name" name="lastname" value="<?php echo $lastname; ?>">
                           </div>
                         </div>
                         <br>
                         <div class="form-row">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="City">
+                              <input type="text" class="form-control" placeholder="City" name="city" value="<?php echo $city; ?>">
                             </div>
                           </div>
                           <br>
                         <div class="form-row">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Street">
+                              <input type="text" class="form-control" placeholder="Street" name="street" value="<?php echo $street; ?>">
                             </div>
                           </div>
                           <br>
-                        <label id="db">Date of birth:</label>
+                        <label id="db">Date Of Birth:</label>
                         <div class="form-row">
                           <div class="col">
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" name="dateofbirth" value="<?php echo $dateofbirth; ?>">
                             </div>
                           </div>
                           <br>
                           <label id="swork">Start of woriking date:</label>
                           <div class="form-row">
-                           <input type="date" class="form-control">
+                           <input type="date" class="form-control" name="startofworking" value="<?php echo $startofworking; ?>">
                             <div class="col">
                             </div>
                           </div>
                           <br>
                         <div class="form-row">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="email1" value="<?php echo $email1; ?>">
                             </div>
                         </div>
                           <br>
                         <div class="form-row">
                         <div class="col">
-                              <input type="email" class="form-control" placeholder="Confirm Email">
+                              <input type="email" class="form-control" placeholder="Confirm Email" name="email2" value="<?php echo $email2; ?>">
                             </div>
                         </div>
                           <br>
                         <div class="form-group">
-                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password">
+                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password" name="password1">
                             <small id="passwordHelpInline" class="text-muted">
                             <p id=explainPassword>Must be 8-20 characters long.</p>
                              </small>
                         </div>
         
                         <div class="form-group">
-                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
+                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password" name="password2">
                             <small id="passwordHelpInline" class="text-muted">
                              </small>
                         </div>
@@ -204,7 +196,7 @@
         
                         <div class="form-group">
                             <p id=Verification-question>Verification question</p>
-                            <select class="form-control" id="exampleFormControlSelect1" placeholder="Verification question">
+                            <select class="form-control" id="exampleFormControlSelect1" placeholder="Verification question" name="question" value="<?php echo $question; ?>">
                               <option>What is your first teacher's name?</option>
                               <option>What is your pet's name?</option>
                               <option>What is the name of your elementary school?</option>
@@ -212,11 +204,11 @@
                             <br>
                             <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Your Answer">
+                                  <input type="text" class="form-control" placeholder="Your Answer" name="answer" value="<?php echo $answer; ?>">
                                 </div>
                               </div>
                           </div>
-                          <button type="submit" id="Confirm"class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
+                          <button type="submit" name="create" id="Confirm"class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
                           <br>
         
                           
