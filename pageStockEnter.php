@@ -281,6 +281,7 @@ $result = mysqli_query($conn , $query);
 
                <div class="column" id="MainArea">
                         <select class="DropDown" id="DropListType">
+                        <option>select component type</option>
                         <?php while($rows = $result->fetch_assoc()):;?>
                         <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
                         <?php endwhile;?>
