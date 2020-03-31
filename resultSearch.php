@@ -1,3 +1,17 @@
+<?php 
+
+$conn = mysqli_connect('localhost','root','','test_project');
+
+if (!$conn) {
+	echo "failed";
+
+}
+
+$query="SELECT * FROM components";
+$result = mysqli_query($conn , $query);
+?>
+
+
 <html lang="en">
   <head>
    
@@ -172,7 +186,7 @@
                  font-size: 25px;
             }
 
-            #IncorrectTable {
+            #ComponentTable {
 
                 margin-top: 60px;
                 margin: 60px 25px 25px 25px;
@@ -270,80 +284,46 @@
                </div>
 
                 
-                    <table class="table table-hover" id="IncorrectTable">
-                     <thead>
-                       <tr>
-                         <th scope="col">Serial</th>
-                         <th scope="col">Component Type</th>
+               <table class="table table-hover" id="ComponentTable">
+                <thead>
+                      <tr>
+                         <th scope="col">Code</th>
                          <th scope="col">Department</th>
                          <th scope="col">Main</th>
-                         <th scope="col"> Support</th>
+                         <th scope="col">Support</th>
                          <th scope="col">Brand Name</th>
-                         <th scope="col">Type</th>
                          <th scope="col">Place</th>
                          <th scope="col">Model</th>
                          <th scope="col">S/N</th>
+                       </tr>
+                </thead>
 
-                       </tr>
-                     </thead>
-                     <tbody>
-                       <tr>
-                         <th scope="row">1</th>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                        
-                        
-                       </tr>
-                       <tr>
-                         <th scope="row">2</th>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                         
-                       </tr>
-                       <tr>
-                         <th scope="row">3</th>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                         
-                       </tr>
-                       <tr>
-                         <th scope="row">4</th>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>elample</td>
-                         <td>Bla Bla</td>
-                         <td>Bla Bla</td>
-                        
-                       </tr>
-                       <tr>
-                         
-                     </tbody>
-                   </table>
+
+                <?php
+                     while($rows = mysqli_fetch_assoc($result)) {
+
+                ?>
+
+                <tbody>
+                  <tr>
+                    <th scope="row"><?php echo $rows['code']; ?></th>
+                    <td><?php echo $rows['department']; ?></td>
+                    <td><?php echo $rows['main']; ?></td>
+                    <td><?php echo $rows['support']; ?></td>
+                    <td><?php echo $rows['brandname']; ?></td>
+                    <td><?php echo $rows['place']; ?></td>
+                    <td><?php echo $rows['model']; ?></td>
+                    <td><?php echo $rows['s/n']; ?></td>          
+                  </tr>
+                 
+                    
+                </tbody>
+
+                <?php
+                    }
+                ?>
+
+              </table>
                   </div>
                
                        

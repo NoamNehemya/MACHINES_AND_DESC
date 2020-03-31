@@ -1,3 +1,17 @@
+<?php 
+
+$conn = mysqli_connect('localhost','root','','test_project');
+
+if (!$conn) {
+	echo "failed";
+
+}
+
+$query="SELECT DISTINCT Component_type FROM components";
+$result = mysqli_query($conn , $query);
+?>
+
+
 <html lang="en">
   <head>
    
@@ -190,8 +204,6 @@
           background-color: white;
           border-style:groove;
           
-           
-           
          }
 
         #submit {
@@ -265,17 +277,19 @@
 
          
               
-                  <p id="explanMachinePage">Select the type of component you want to view its inventory.</p>
+                  <p id="explanMachinePage">Select the type of component you want to view its inventory</p>
 
                <div class="column" id="MainArea">
-                        <select class="DropDowns" id="DropListType">
-                            <option value="volvo">Choose Component Type</option>
+                        <select class="DropDown" id="DropListType">
+                        <?php while($rows = $result->fetch_assoc()):;?>
+                        <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
+                        <?php endwhile;?>
                         </select>
+        
+ 
 
-                        <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
-
-                        
-                    
+                  <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
+  
                 </div>
 
 
