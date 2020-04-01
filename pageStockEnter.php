@@ -345,6 +345,7 @@ function closeNav() {
 
 }
 
+// This function set the behavior of Submit button, enabled or dimmed
 function submitActiveOrDimmed() {
 
   if(document.getElementById("DropListType").value === "Select component type..."){
@@ -358,6 +359,9 @@ function submitActiveOrDimmed() {
     document.getElementById("submit").style.backgroundColor='white';
   }
 }
+
+// Set value to other ResultSearch.php page
+localStorage.setItem('PassVar',document.getElementById("DropListType").value);
 
 
 

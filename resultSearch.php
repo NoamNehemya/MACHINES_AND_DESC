@@ -12,6 +12,9 @@ $result = mysqli_query($conn , $query);
 ?>
 
 
+<script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
+
+
 <html lang="en">
   <head>
    
@@ -21,7 +24,12 @@ $result = mysqli_query($conn , $query);
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
+    <script
+     src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous">
+     // get value (component_type value) from the pageStockEnter page
+     var Component_type_from_pageStockEnter = localStorage.getItem('PassVar')
+     </script>
+    
 
     <title>Component Type - result</title>
 
@@ -268,7 +276,7 @@ $result = mysqli_query($conn , $query);
   
 
                
-  <p id="explanMachinePage">Component Type:</p>
+  <p id="explanMachinePage">Component_type_from_pageStockEnter </p>
                   
                   
     <div class="column" id="MainArea">
@@ -389,11 +397,7 @@ function closeNav() {
 
 
 }
-
-
-
-
-
+var Component_type_from_pageStockEnter = localStorage.getItem('PassVar');
 </script>
   </body>
 </html>
