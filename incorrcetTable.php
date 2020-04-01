@@ -228,7 +228,7 @@ $result = mysqli_query($conn , $query);
                 <span class="navbar-toggler-icon"></span>
                 </button>
                     <a class="logout1" style="right-side: 5px">
-                    <button class="btn btn-dark" onclick = "location.href='file:///C:/Users/Asus/Desktop/machinesAndDesc/LoginMD.html';" id="logout" type="submit" >Log Out</button>
+                    <button class="btn btn-dark" onclick = "location.href='LoginMD.php';" id="logout" type="submit" >Log Out</button>
 					</a>
             </nav>
 
@@ -236,16 +236,16 @@ $result = mysqli_query($conn , $query);
          
 				<div id="mySidenav" class="sidenav">
 					   <div class="column" id="backPage1">
-                         <button class="btn btn-light" style="text-align:center;" onclick = "location.href='file:///C:/Users/Asus/Desktop/machinesAndDesc/historyTable.html';" data-toggle="tooltip"  title="Machine Therapy History" id="History"><img src="http://www.up2me.co.il/imgs/77306062.png" alt="" style="width:"></button>
+                         <button class="btn btn-light" style="text-align:center;" onclick = "location.href='historyTable.php';" data-toggle="tooltip"  title="Machine Therapy History" id="History"><img src="http://www.up2me.co.il/imgs/77306062.png" alt="" style="width:"></button>
                          </div>
                     <div class="column" id="backPage1">
-                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='file:///C:/Users/Asus/Desktop/machinesAndDesc/incorrcetTable.html';"  data-toggle="tooltip" data-placement="bottom" title="Incorrect Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/46232313.png" alt="" style="width:"></button>
+                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='incorrcetTable.php';"  data-toggle="tooltip" data-placement="bottom" title="Incorrect Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/46232313.png" alt="" style="width:"></button>
                          </div>
                     <div class="column" id="insert">
-                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='file:///C:/Users/Asus/Desktop/machinesAndDesc/insertComponent.html';" data-toggle="tooltip" data-placement="bottom" title="Insert Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/14121216.png" alt="" style="width:"></button>
+                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='insertComponent.php';" data-toggle="tooltip" data-placement="bottom" title="Insert Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/14121216.png" alt="" style="width:"></button>
                             </div>
                     <div class="column" id="insert">
-                       <button class="btn btn-light" style="text-align:center;"  onclick = "location.href='file:///C:/Users/Asus/Desktop/machinesAndDesc/pageStockEnter.html';" data-toggle="tooltip" data-placement="bottom" title="Component Stock" id="ComponentPool"><img src="http://www.up2me.co.il/imgs/28542967.png" alt="" style="width:"></button>
+                       <button class="btn btn-light" style="text-align:center;"  onclick = "location.href='pageStockEnter.php';" data-toggle="tooltip" data-placement="bottom" title="Component Stock" id="ComponentPool"><img src="http://www.up2me.co.il/imgs/28542967.png" alt="" style="width:"></button>
                           </div>
 						  
           </div>
@@ -262,7 +262,7 @@ $result = mysqli_query($conn , $query);
                  <button class="btn btn-outline-dark" onclick = window.history.back() data-toggle="tooltip" data-placement="bottom" title="Back" id="backPage"><img src="http://www.up2me.co.il/imgs/18785403.png" alt="" style="width:" ></button>
                   </div>
                 <div class="column" id="home_Page">
-                 <button type="button" class="btn btn-outline-dark" onclick = "location.href='file:///C:/Users/Asus/Desktop/machinesAndDesc/mapOfBilding.html';" data-toggle="tooltip" data-placement="bottom" title="Home Page" id="homePage"><img src="http://www.up2me.co.il/imgs/38159196.png" alt="" style="width:"></button>
+                 <button type="button" class="btn btn-outline-dark" onclick = "location.href='mapOfBilding.php';" data-toggle="tooltip" data-placement="bottom" title="Home Page" id="homePage"><img src="http://www.up2me.co.il/imgs/38159196.png" alt="" style="width:"></button>
                   </div>      
                   <div class="column" id="Brint">  
                        <button class="btn btn-outline-dark" onclick = window.print()  data-toggle="tooltip" data-placement="bottom" title="Print" id="PrintPage"><img src="http://www.up2me.co.il/imgs/64977067.png" alt="" style="width:"></button>

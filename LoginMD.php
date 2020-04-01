@@ -126,10 +126,10 @@ body {
                   </div>
 
 
-                  <p><button type="button"  onclick="location.href='forgotpasswordkey.html';" id="fpassword" class="btn btn-light">Forgot password?</button></p>
+                  <p><button type="button"  onclick="location.href='forgotpasswordkey.php';" id="fpassword" class="btn btn-light">Forgot password?</button></p>
                   <br>
-                  <button type="button"  onclick="location.href='mapOfBilding.html';" id="Login" class="btn btn-black">Login</button>
-                  <button type="button" onclick="location.href='registerPageFinish.html';" id="Register" class="btn btn-secondary">Register</button>
+                  <button type="button"  onclick="location.href='mapOfBilding.php';" id="Login" class="btn btn-black">Login</button>
+                  <button type="button" onclick="location.href='registerPageFinish.php';" id="Register" class="btn btn-secondary">Register</button>
 
 
 

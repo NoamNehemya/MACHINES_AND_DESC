@@ -113,7 +113,7 @@
                 </button>
             
                 <form class="form-inline my-2 my-lg-0">
-					<p><input type="button" onclick="location.href='LoginMD.html';" id="Login" class="btn btn-dark" value = "Login"/>
+					<p><input type="button" onclick="location.href='LoginMD.php';" id="Login" class="btn btn-dark" value = "Login"/>
                 </form>
                 </div class="container">
                 
