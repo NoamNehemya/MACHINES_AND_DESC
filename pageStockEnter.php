@@ -230,7 +230,7 @@ $result = mysqli_query($conn , $query);
                 <span class="navbar-toggler-icon"></span>
                 </button>
                     <a class="logout1" style="right-side: 5px">
-                      <button class="btn btn-dark" onclick = "location.href='LoginMD.html';" id="logout" type="submit" >Log Out</button>
+                      <button class="btn btn-dark" onclick = "location.href='LoginMD.php';" id="logout" type="submit" >Log Out</button>
 					</a>
                 
             </nav>
@@ -239,16 +239,16 @@ $result = mysqli_query($conn , $query);
          
 				<div id="mySidenav" class="sidenav">
 					  <div class="column" id="backPage1">
-                         <button class="btn btn-light" style="text-align:center;" onclick = "location.href='historyTable.html';" data-toggle="tooltip"  title="Machine Therapy History" id="History"><img src="http://www.up2me.co.il/imgs/77306062.png" alt="" style="width:"></button>
+                         <button class="btn btn-light" style="text-align:center;" onclick = "location.href='historyTable.php';" data-toggle="tooltip"  title="Machine Therapy History" id="History"><img src="http://www.up2me.co.il/imgs/77306062.png" alt="" style="width:"></button>
                          </div>
                     <div class="column" id="backPage1">
-                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='incorrcetTable.html';"  data-toggle="tooltip" data-placement="bottom" title="Incorrect Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/46232313.png" alt="" style="width:"></button>
+                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='incorrcetTable.php';"  data-toggle="tooltip" data-placement="bottom" title="Incorrect Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/46232313.png" alt="" style="width:"></button>
                          </div>
                     <div class="column" id="insert">
-                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='insertComponent.html';" data-toggle="tooltip" data-placement="bottom" title="Insert Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/14121216.png" alt="" style="width:"></button>
+                        <button class="btn btn-light" style="text-align:center;" onclick = "location.href='insertComponent.php';" data-toggle="tooltip" data-placement="bottom" title="Insert Components" id="Incorrect"><img src="http://www.up2me.co.il/imgs/14121216.png" alt="" style="width:"></button>
                             </div>
                     <div class="column" id="insert">
-                       <button class="btn btn-light" style="text-align:center;"  onclick = "location.href='pageStockEnter.html';" data-toggle="tooltip" data-placement="bottom" title="Component Stock" id="ComponentPool"><img src="http://www.up2me.co.il/imgs/28542967.png" alt="" style="width:"></button>
+                       <button class="btn btn-light" style="text-align:center;"  onclick = "location.href='pageStockEnter.php';" data-toggle="tooltip" data-placement="bottom" title="Component Stock" id="ComponentPool"><img src="http://www.up2me.co.il/imgs/28542967.png" alt="" style="width:"></button>
                           </div>
 						  
           </div>
@@ -265,7 +265,7 @@ $result = mysqli_query($conn , $query);
                  <button class="btn btn-outline-dark" onclick = window.history.back() data-toggle="tooltip" data-placement="bottom" title="Back" id="backPage"><img src="http://www.up2me.co.il/imgs/18785403.png" alt="" style="width:" ></button>
                   </div>
                 <div class="column" id="home_Page">
-                 <button type="button" class="btn btn-outline-dark" onclick = "location.href='mapOfBilding.html';" data-toggle="tooltip" data-placement="bottom" title="Home Page" id="homePage"><img src="http://www.up2me.co.il/imgs/38159196.png" alt="" style="width:"></button>
+                 <button type="button" class="btn btn-outline-dark" onclick = "location.href='mapOfBilding.php';" data-toggle="tooltip" data-placement="bottom" title="Home Page" id="homePage"><img src="http://www.up2me.co.il/imgs/38159196.png" alt="" style="width:"></button>
                   </div>      
                   <div class="column" id="Brint">  
                        <button class="btn btn-outline-dark" onclick = window.print()  data-toggle="tooltip" data-placement="bottom" title="Print" id="PrintPage"><img src="http://www.up2me.co.il/imgs/64977067.png" alt="" style="width:"></button>
@@ -280,8 +280,8 @@ $result = mysqli_query($conn , $query);
                   <p id="explanMachinePage">Select the type of component you want to view its inventory</p>
 
                <div class="column" id="MainArea">
-                        <select class="DropDown" id="DropListType">
-                        <option>select component type</option>
+                        <select class="DropDown" id="DropListType" onChange="submitActiveOrDimmed()">
+                        <option>Select component type...</option>
                         <?php while($rows = $result->fetch_assoc()):;?>
                         <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
                         <?php endwhile;?>
@@ -289,8 +289,8 @@ $result = mysqli_query($conn , $query);
         
  
 
-                  <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
-  
+                  <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Submit </button>
+                  
                 </div>
 
 
@@ -300,7 +300,7 @@ $result = mysqli_query($conn , $query);
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
-	
+	submitActiveOrDimmed()
 	document.getElementById("navButton").addEventListener("click", toggleNav);
 
 function toggleNav(){
@@ -344,6 +344,21 @@ function closeNav() {
   document.getElementById("MainArea").style.marginLeft = "0px";
 
 }
+
+function submitActiveOrDimmed() {
+
+  if(document.getElementById("DropListType").value === "Select component type..."){
+    document.getElementById("submit").disabled = true;
+    document.getElementById("submit").style.cursor = "no-drop";
+    document.getElementById("submit").style.backgroundColor='grey';
+  }
+  else{
+    document.getElementById("submit").disabled = false;
+    document.getElementById("submit").style.cursor = "pointer";
+    document.getElementById("submit").style.backgroundColor='white';
+  }
+}
+
 
 
 </script>
