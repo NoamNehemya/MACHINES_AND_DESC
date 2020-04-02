@@ -6,13 +6,15 @@ if (!$conn) {
 	echo "failed";
 
 }
-
-$query="SELECT * FROM components";
+// Set PHP variable using created cookie (cookie 'myJavascriptVar' created on the buttom code)
+$myPhpVar= $_COOKIE['myJavascriptVar'];
+$query="SELECT * FROM components WHERE Component_type = '".$myPhpVar."'";
 $result = mysqli_query($conn , $query);
 ?>
 
 
 <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
+
 
 
 <html lang="en">
@@ -24,11 +26,9 @@ $result = mysqli_query($conn , $query);
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script
-     src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous">
-     // get value (component_type value) from the pageStockEnter page
-     var Component_type_from_pageStockEnter = localStorage.getItem('PassVar')
-     </script>
+    
+    <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
+     
     
 
     <title>Component Type - result</title>
@@ -276,7 +276,7 @@ $result = mysqli_query($conn , $query);
   
 
                
-  <p id="explanMachinePage">Component_type_from_pageStockEnter </p>
+  <p id="explanMachinePage"></p>
                   
                   
     <div class="column" id="MainArea">
@@ -397,7 +397,22 @@ function closeNav() {
 
 
 }
-var Component_type_from_pageStockEnter = localStorage.getItem('PassVar');
+// get variable (component_type value from pageStockEnter.php)
+var ComponentType = localStorage.getItem('PassVar');
+
+// set title to explanMachinePage title according to ComponentType variable
+document.getElementById("explanMachinePage").innerHTML = "Component type: " + ComponentType ;
+
+// use cookie for using var javaScript in PHP code
+document.cookie = "myJavascriptVar = " +  ComponentType
+
+// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
 </script>
   </body>
 </html>

@@ -360,10 +360,14 @@ function submitActiveOrDimmed() {
   }
 }
 
-// Set value to other ResultSearch.php page
-localStorage.setItem('PassVar',document.getElementById("DropListType").value);
+// use submitButtonActions() function where clicking on 'Submit' button
+document.getElementById("submit").addEventListener("click", submitButtonActions);
 
 
+function submitButtonActions() {
+  localStorage.setItem('PassVar',document.getElementById('DropListType').options[document.getElementById('DropListType').selectedIndex].innerHTML); // Set variable (component_type value) for resultSearch page
+  location.href='resultSearch.php'; // Move to resultSearch.php page
+}
 
 </script>
   </body>
