@@ -1,3 +1,5 @@
+<?php include('server.php');?>
+
 <html lang="en">
   <head>
 
@@ -117,18 +119,20 @@ body {
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form>
+
+               <form method="post" action="server.php">
+               <?php include('errors.php'); ?>
                   <div class="form-group">
-                     <input type="text" class="form-control" placeholder="Email">
+                     <input type="text" name="email_LoginMD" class="form-control" placeholder="Email" value="<?php echo $email_login; ?>">
                   </div>
                   <div class="form-group">
-                     <input type="password" class="form-control" placeholder="Password">
+                     <input type="password" name="password_LoginMD" class="form-control" placeholder="Password" value="<?php echo $password_login; ?>">
                   </div>
 
 
                   <p><button type="button"  onclick="location.href='forgotpasswordkey.php';" id="fpassword" class="btn btn-light">Forgot password?</button></p>
                   <br>
-                  <button type="button"  onclick="location.href='mapOfBilding.php';" id="Login" class="btn btn-black">Login</button>
+                  <button type="submit" name="login_LoginMD" id="Login" class="btn btn-black">Login</button>
                   <button type="button" onclick="location.href='registerPageFinish.php';" id="Register" class="btn btn-secondary">Register</button>
 
 
