@@ -15,6 +15,11 @@
 
     $errors = array();
 
+    $email_login = "";
+    $password_login = "";
+
+
+
 
 
     $db = mysqli_connect('localhost', 'root', '','test_project');
@@ -89,14 +94,74 @@
 
         if(count($errors) == 0) {
 
+            //insert date to users table.
+
             $sql = "INSERT INTO users(Email, FirstName, LastName, City, DateOfBirth, StartOfWorkingDate, Street, VerificationQuestion, AnswerToVerification, Password) 
             VALUES('$email1', '$firstname', '$lastname', '$city', '$dateofbirth', '$startofworking', '$street', '$question', '$answer', '$password1')";
             mysqli_query($db,$sql);
+            $_SESSION['Email'] = $email1;
+            $_SESSION['success'] ="You are now registered to the system."; //messege for new user.
+         
+         
+            header('location: LoginMD.php'); //move to home page.
+        }
+    }
+
+        //*************************************************************************************************************************************************************** */
+
+        //LOG USER IN FROM LOGIN PAGE
+
+     
+
+        if(isset($_POST['login_LoginMD'])) {
+
+
+            $email_login = mysqli_real_escape_string($db,$_POST['email_LoginMD']);
+            $password_login = mysqli_real_escape_string($db,$_POST['password_LoginMD']);
+
+
+            //if felid input in login page.
+            
+
+            if (empty($email_login)) {
+                array_push($errors,"email is required");
+                echo "email is required";
+            }
+
+            if (empty($password_login)) {
+                array_push($errors,"password  is required");
+                echo "password  is required";
+                
+            }
+
+            if(count($errors) == 0) {
+
+                $password_login = md5($password_login);
+                $query = "SELECT * FROM users WHERE Email == '$email_login' AND Password == '$password_login'";
+                $result = mysqli_query($db,$query);
+
+                if (!$result || mysqli_num_rows($result) !=1 ){
+
+                    header('location: mapOfBilding.php'); 
+                }
+
+                else {
+
+                    
+
+                    echo "worng password / email";
+
+                    array_push($errors,"worng password/email");
+                }
+               
+            }
+
         }
 
-        
+     
 
-    }
+    
 
 
 ?>
+
