@@ -528,7 +528,7 @@
   <p id="explanMachinePage">Select the machine you want to operate on.</p>
 
 
-    <div class="MainAREA">
+    <div class="MainAREA" id= MainAREA >
 
       <div class="form-group row">
 
