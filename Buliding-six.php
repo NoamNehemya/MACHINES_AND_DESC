@@ -17,7 +17,7 @@
 	}
 
 	.sidenav {
-	  height: 101%;
+	  height: 100%;
 	  width: 0;
 	  position: fixed;
 	  z-index: 1;
@@ -528,35 +528,35 @@
   <p id="explanMachinePage">Select the machine you want to operate on.</p>
 
 
-    <div class="MainAREA">
+    <div class="MainAREA" id= MainAREA >
 
       <div class="form-group row">
 
         
 
         <div class="col1">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-630">630<br/>ROSLER</button></div>
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-634">634<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="630">630<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="634">634<br/>ROSLER</button></div>
         </div>
 
         <div class="col2">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-641">641<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="641">641<br/>ROSLER</button></div>
         </div>
 
         <div class="col3">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-396">396<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="396">396<br/>ROSLER</button></div>
         </div>
 
         <div class="col4">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1466">1466<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="1466">1466<br/>ROSLER</button></div>
         </div>
 
         <div class="col5">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-750">750<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="750">750<br/>ROSLER</button></div>
         </div>
 
         <div class="col6">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1239">1239<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="1239">1239<br/>ROSLER</button></div>
         </div>
 
       </div>
@@ -566,27 +566,27 @@
         <div class="form-group row">
 
           <div class="col7">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-629">629<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="629">629<br/>ROSLER</button></div>
           </div>
 
           <div class="col8">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-632">632<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="632">632<br/>ROSLER</button></div>
           </div>
 
           <div class="col9">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-627">627<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="627">627<br/>ROSLER</button></div>
           </div>
 
           <div class="col10">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-347">347<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="347">347<br/>ROSLER</button></div>
           </div>
 
           <div class="col11">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-628">628<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="628">628<br/>ROSLER</button></div>
           </div>
 
           <div class="col12">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1263">1263<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="1263">1263<br/>ROSLER</button></div>
           </div>
 
         </div>
@@ -597,55 +597,55 @@
         <div class="form-group row">
 
           <div class="col13">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-637">637<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="637">637<br/>ROSLER</button></div>
           </div>
 
           <div class="col14">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-638">638<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="638">638<br/>ROSLER</button></div>
           </div>
 
           <div class="col15">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-636">636<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="636">636<br/>ROSLER</button></div>
           </div>
 
           <div class="col16">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-640">640<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="640">640<br/>ROSLER</button></div>
           </div>
 
           <div class="col17">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-639">639<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="639">639<br/>ROSLER</button></div>
           </div>
 
           <div class="col18">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-635">635<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="635">635<br/>ROSLER</button></div>
           </div>
 
           <div class="col19">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-633">633<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="633">633<br/>ROSLER</button></div>
           </div>
 
           <div class="col20">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-644">644<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="644">644<br/>ROSLER</button></div>
           </div>
 
           <div class="col21">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1465">1465<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="1465">1465<br/>ROSLER</button></div>
           </div>
 
           <div class="col22">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-642">642<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="642">642<br/>ROSLER</button></div>
           </div>
 
           <div class="col23">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-341">341<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="341">341<br/>ROSLER</button></div>
           </div>
 
           <div class="col24">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1365">1365<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="1365">1365<br/>ROSLER</button></div>
           </div>
 
           <div class="col25">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-643">643<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="643">643<br/>ROSLER</button></div>
           </div>
 
 
@@ -657,19 +657,19 @@
 
 
           <div class="col26">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="E-4-FIRST-MACHINE-0140">0140<br/>E-4</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0140">0140<br/>E-4</button></div>
           </div>
 
           <div class="col27">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="E-5-FIRST-MACHINE-0141">0141<br/>E-5</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0141">0141<br/>E-5</button></div>
           </div>
 
           <div class="col28">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="E-6-FIRST-MACHINE-0142">0142<br/>E-6</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0142">0142<br/>E-6</button></div>
           </div>
 
           <div class="col29">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="המסה אלומיניום" id="D.8-FIRST-MACHINE-0981">0981<br/>D.8</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="המסה אלומיניום" id="0981">0981<br/>D.8</button></div>
           </div>
 
 
@@ -682,27 +682,27 @@
 
           
           <div class="col30">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="BOX-2-FIRST-MACHINE-0148">0148<br/>BOX-2</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="0148">0148<br/>BOX-2</button></div>
           </div>
 
           <div class="col31">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="BOX-3-FIRST-MACHINE-1330">1330<br/>BOX-3</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="1330">1330<br/>BOX-3</button></div>
           </div>
 
           <div class="col32">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="BOX-1-FIRST-MACHINE-0147">0147<br/>BOX-1</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="0147">0147<br/>BOX-1</button></div>
           </div>
 
           <div class="col33">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="E-3-FIRST-MACHINE-0144">0144<br/>E-3</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0144">0144<br/>E-3</button></div>
           </div>
 
           <div class="col34">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="E-1-FIRST-MACHINE-0143">0143<br/>E-1</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0143">0143<br/>E-1</button></div>
           </div>
 
           <div class="col35">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="E-2-FIRST-MACHINE-0145">0145<br/>E-2</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0145">0145<br/>E-2</button></div>
           </div>
 
         </div>
@@ -785,7 +785,10 @@ function closeNav() {
 
 }
 
+// This command print the result of machine ID (support) from array [0..n]
+//  document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark')[0].id 
 
+ 
 
 
 
