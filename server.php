@@ -44,55 +44,81 @@
 
         if (empty($firstname)) {
             array_push($errors,"first name is required");
+            $message = "first name is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($lastname)) {
             array_push($errors,"last name is required");
+            $message = "last name is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($city)) {
             array_push($errors,"city is required");
+            $message = "city is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($street)) {
             array_push($errors,"street is required");
+            $message = "street is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($dateofbirth)) {
             array_push($errors,"date of birth is required");
+            $message = "date of birth is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($startofworking)) {
-            array_push($errors,"start of working is required");
+             array_push($errors,"start of working is required");
+            $message = "start of working is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($email1)) {
             array_push($errors,"email is required");
+            $message = "email is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($email2)) {
-            array_push($errors,"email confirm is required");
+             array_push($errors,"email confirm is required");
+            $message = "email confirm is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($password1)) {
             array_push($errors,"password  is required");
+            $message = "password  is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($password1)) {
             array_push($errors,"password  is required");
+            $message = "password  is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($password2)) {
             array_push($errors,"password confirm is required");
+            $message = "password confirm is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if (empty($answer)) {
             array_push($errors,"answer is required");
+            $message = "answer is required";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if($password1 != $password2) {
 
-            array_push($errors, "The two passwords do not match");
+           array_push($errors, "The two passwords do not match");
+            $message = "The two passwords do not match";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
 
         if(count($errors) == 0) {
@@ -104,6 +130,8 @@
             mysqli_query($db,$sql);
             $_SESSION['Email'] = $email1;
             $_SESSION['success'] ="You are now registered to the system."; //messege for new user.
+            $message = "You are now registered to the system.";
+            echo "<script type='text/javascript'>alert('$message');</script>";
          
          
             header('location: LoginMD.php'); //move to home page.
@@ -128,12 +156,16 @@
 
             if (empty($email_login)) {
                 array_push($errors,"email is required");
-                echo "email is required";
+               
+                $message = "email is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
             if (empty($password_login)) {
                 array_push($errors,"password  is required");
-                echo "password  is required";
+                
+                $message = "password  is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
                 
             }
 
@@ -144,10 +176,14 @@
 
                 if (mysqli_num_rows($result) > 0){
 
+                    $message = "welcom! You are now login to the system.";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+
                     ob_start();
 
                     $_SESSION['Email'] = $email_login;  
                     $_SESSION['success'] ="You are now login to the system.";
+
                     header('Location: mapOfBilding.php');
                     exit();
 
@@ -155,8 +191,8 @@
 
                 else {
 
-                    echo "worng password / email";
-
+                    $message = "worng password / email";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
                     
                 }
                
