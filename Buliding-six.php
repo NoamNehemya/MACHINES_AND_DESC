@@ -785,7 +785,10 @@ function closeNav() {
 
 }
 
+// This command print the result of machine ID (support) from array [0..n]
+//  document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark')[0].id 
 
+ 
 
 
 
