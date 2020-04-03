@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php include('server.php');?>
 
 <html lang="en">
@@ -120,7 +121,7 @@ body {
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
 
-               <form method="post" action="server.php">
+               <form method="post" action="LoginMD.php">
                <?php include('errors.php'); ?>
                   <div class="form-group">
                      <input type="text" name="email_LoginMD" class="form-control" placeholder="Email" value="<?php echo $email_login; ?>">
