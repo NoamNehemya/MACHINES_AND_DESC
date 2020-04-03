@@ -1,5 +1,7 @@
 <?php
 
+    ob_start();
+
     $firstname = "";
     $lastname = "";
     $city = "";
@@ -17,6 +19,7 @@
 
     $email_login = "";
     $password_login = "";
+    $nextpage ="";
 
 
 
@@ -111,7 +114,7 @@
 
         //LOG USER IN FROM LOGIN PAGE
 
-     
+  
 
         if(isset($_POST['login_LoginMD'])) {
 
@@ -136,29 +139,33 @@
 
             if(count($errors) == 0) {
 
-                $password_login = md5($password_login);
-                $query = "SELECT * FROM users WHERE Email == '$email_login' AND Password == '$password_login'";
+                $query = "SELECT * FROM users WHERE Email='$email_login' AND Password='$password_login'";
                 $result = mysqli_query($db,$query);
 
-                if (!$result || mysqli_num_rows($result) !=1 ){
+                if (mysqli_num_rows($result) > 0){
 
-                    header('location: mapOfBilding.php'); 
+                    ob_start();
+
+                    $_SESSION['Email'] = $email_login;  
+                    $_SESSION['success'] ="You are now login to the system.";
+                    header('Location: mapOfBilding.php');
+                    exit();
+
                 }
 
                 else {
 
-                    
-
                     echo "worng password / email";
 
-                    array_push($errors,"worng password/email");
+                    
                 }
                
             }
+           
 
         }
 
-     
+      
 
     
 
