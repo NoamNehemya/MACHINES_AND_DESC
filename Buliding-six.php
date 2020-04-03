@@ -535,28 +535,28 @@
         
 
         <div class="col1">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-630">630<br/>ROSLER</button></div>
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-634">634<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-630">630<br/> ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-634">634<br/> ROSLER</button></div>
         </div>
 
         <div class="col2">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-641">641<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-641">641<br/> ROSLER</button></div>
         </div>
 
         <div class="col3">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-396">396<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-396">396<br/> ROSLER</button></div>
         </div>
 
         <div class="col4">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1466">1466<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1466">1466<br/> ROSLER</button></div>
         </div>
 
         <div class="col5">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-750">750<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-750">750<br/> ROSLER</button></div>
         </div>
 
         <div class="col6">
-          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1239">1239<br/>ROSLER</button></div>
+          <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1239">1239<br/> ROSLER</button></div>
         </div>
 
       </div>
@@ -566,27 +566,27 @@
         <div class="form-group row">
 
           <div class="col7">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-629">629<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-629">629<br/> ROSLER</button></div>
           </div>
 
           <div class="col8">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-632">632<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-632">632<br/> ROSLER</button></div>
           </div>
 
           <div class="col9">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-627">627<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-627">627<br/> ROSLER</button></div>
           </div>
 
           <div class="col10">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-347">347<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-347">347<br/> ROSLER</button></div>
           </div>
 
           <div class="col11">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-628">628<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-628">628<br/> ROSLER</button></div>
           </div>
 
           <div class="col12">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1263">1263<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1263">1263<br/> ROSLER</button></div>
           </div>
 
         </div>
@@ -597,55 +597,55 @@
         <div class="form-group row">
 
           <div class="col13">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-637">637<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-637">637<br/> ROSLER</button></div>
           </div>
 
           <div class="col14">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-638">638<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-638">638<br/> ROSLER</button></div>
           </div>
 
           <div class="col15">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-636">636<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-636">636<br/> ROSLER</button></div>
           </div>
 
           <div class="col16">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-640">640<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-640">640<br/> ROSLER</button></div>
           </div>
 
           <div class="col17">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-639">639<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-639">639<br/> ROSLER</button></div>
           </div>
 
           <div class="col18">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-635">635<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-635">635<br/> ROSLER</button></div>
           </div>
 
           <div class="col19">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-633">633<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-633">633<br/> ROSLER</button></div>
           </div>
 
           <div class="col20">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-644">644<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-644">644<br/> ROSLER</button></div>
           </div>
 
           <div class="col21">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1465">1465<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1465">1465<br/> ROSLER</button></div>
           </div>
 
           <div class="col22">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-642">642<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-642">642<br/> ROSLER</button></div>
           </div>
 
           <div class="col23">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-341">341<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-341">341<br/> ROSLER</button></div>
           </div>
 
           <div class="col24">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1365">1365<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-1365">1365<br/> ROSLER</button></div>
           </div>
 
           <div class="col25">
-            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-643">643<br/>ROSLER</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" id="ROSLER-FIRST-MACHINE-643">643<br/> ROSLER</button></div>
           </div>
 
 
