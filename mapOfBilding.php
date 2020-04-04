@@ -134,7 +134,7 @@
                 </button>
             
                 <form class="form-inline my-2 my-lg-0">
-				<p><input type="button" onclick="location.href='LoginMD.html';" id="login" class="btn btn-dark" value = "Log Out"/>
+				<p><input type="button" onclick="location.href='LoginMD.php';" id="login" class="btn btn-dark" value = "Log Out"/>
                 </form>
                 </div class="container">
             </nav>
@@ -155,7 +155,7 @@
               <button type="button" class="btn btn-outline-dark" id="build1">Building 1</button>
               <button type="button" class="btn btn-outline-dark" id="build2">Building 2</button>
               <button type="button" class="btn btn-outline-dark" id="build5">Building 5</button>
-              <button type="button" class="btn btn-outline-dark" onclick = "location.href='Buliding-six.html';" id="build6">Building 6</button>
+              <button type="button" class="btn btn-outline-dark" onclick = "location.href='Buliding-six.php';" id="build6">Building 6</button>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
