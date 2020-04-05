@@ -2,6 +2,8 @@
 
     ob_start();
 
+    //variables for regiater page
+
     $firstname = "";
     $lastname = "";
     $city = "";
@@ -17,9 +19,25 @@
 
     $errors = array();
 
+    //variables for login page
+
     $email_login = "";
     $password_login = "";
     $nextpage ="";
+
+    //variables for forgot-password page
+
+    $email_forgot = "";
+    $Verification_question_forgot = "";
+    $answer_forgot = "";
+
+    //variables for reset password page
+
+    $reset_Password = "";
+    $reset_Confirm_Password = "";
+    $Email_reset_Password = "";
+
+
 
 
 
@@ -199,11 +217,154 @@
             }
            
 
+        
+        
         }
+        
+         //*************************************************************************************************************************************************************** */
 
       
+        //forgot passowrd page one sec!!
+
+        if(isset($_POST['submit_Forgot'])) { 
+
+            $email_forgot = mysqli_real_escape_string($db,$_POST['email_forgot']);
+            $Verification_question_forgot = mysqli_real_escape_string($db,$_POST['Verification_question_forgot']);
+            $answer_forgot = mysqli_real_escape_string($db,$_POST['answer_forgot']);
+
+            if (empty($email_forgot)) {
+                array_push($errors,"email is required");
+               
+                $message = "email is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if (empty($Verification_question_forgot)) {
+                array_push($errors,"Verification question is required");
+                
+                $message = "Verification question is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+                
+            }
+
+            if (empty($answer_forgot)) {
+                array_push($errors,"answer for Verification question is required");
+                
+                $message = "answer for Verification question is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+                
+            }
+
+            if(count($errors) == 0) {
+
+                $sqli = "SELECT * FROM users WHERE Email='$email_forgot' AND VerificationQuestion='$Verification_question_forgot' AND AnswerToVerification='$answer_forgot'";
+                $result_forgot = mysqli_query($db,$sqli);
+
+                if (mysqli_num_rows($result_forgot) > 0){
+
+                    $message = "Excellent! You are switched to password reset!";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+
+                    header('Location: resetPassword.php');
+                    exit();
+
+                }
+
+                else {
+
+                    $message = "email / Verification Question / Answer To Verification";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                    
+                }
+
+
+
+            }
+
+            
+
+        }
+
+            //forgot passowrd page TWO sec resetPassword!!
+
+
+            if(isset($_POST['submit_reset'])) { 
+
+
+                $Email_reset_Password = mysqli_real_escape_string($db,$_POST['Email_reset_Password']);
+                $reset_Password = mysqli_real_escape_string($db,$_POST['reset_Password']);
+                $reset_Confirm_Password = mysqli_real_escape_string($db,$_POST['reset_Confirm_Password']);
+
+                if (empty($Email_reset_Password)) {
+                    array_push($errors,"Email confirm is required");
+                   
+                    $message = "Password is required";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                }
+               
+    
+                if (empty($reset_Password)) {
+                    array_push($errors,"Password is required");
+                   
+                    $message = "Password is required";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                }
+    
+                if (empty($reset_Confirm_Password)) {
+                    array_push($errors,"Confirm password is required");
+                    
+                    $message = "Confirm password is required";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                    
+                }
+
+                if($reset_Password != $reset_Confirm_Password) {
+
+                    array_push($errors, "The two passwords do not match");
+                     $message = "The two passwords do not match";
+                     echo "<script type='text/javascript'>alert('$message');</script>";
+                 }
 
     
+                if(count($errors) == 0) {
+                    
+
+                    $sqli_reset = "SELECT * FROM users WHERE Email = '$Email_reset_Password'";
+                    $result_reset = mysqli_query($db,$sqli_reset);
+
+    
+                    if (mysqli_num_rows($result_reset) > 0){
+
+                        $sqli_reset2 = "UPDATE users SET Passwrod = '$reset_Password' WHERE Email = '$Email_reset_Password'";
+
+                        if(mysqli_query($db, $sqli_reset2)) {
+
+                            
+                        $message = "Upadte password is success!";
+                        echo "<script type='text/javascript'>alert('$message');</script>";
+
+                        header('Location: LoginMD.php');
+                        exit();
+
+                        } else {
+    
+                        $message = "wornge EMAIL";
+                        echo "<script type='text/javascript'>alert('$message');</script>";
+                        
+                    }
+
+    
+                } else {
+                    
+                    $message = "wornge EMAIL";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                }
+
+            }
+        }
+    
+
+
 
 
 ?>
