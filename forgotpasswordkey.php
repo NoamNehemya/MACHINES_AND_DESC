@@ -1,3 +1,8 @@
+<?php ob_start(); ?>
+<?php include('server.php');?>
+
+
+
 <html lang="en">
   <head>
    
@@ -113,7 +118,7 @@
                 </button>
             
                 <form class="form-inline my-2 my-lg-0">
-					<p><input type="button" onclick="location.href='LoginMD.php';" id="Login" class="btn btn-dark" value = "Login"/>
+					<p><input type="button" onclick="location.href='LoginMD.html';" id="Login" class="btn btn-dark" value = "Login"/>
                 </form>
                 </div class="container">
                 
@@ -130,12 +135,12 @@
               <div class="row">
                 <div class="column">
 
-                    <form id=inputDetailsForResetPass>
-
+                    <form method="post" action="forgotpasswordkey.php" id=inputDetailsForResetPass>
+                       <?php include('errors.php'); ?>
                         <div class="form-row">
                             <div class="col">
                                 <label id="Uemail">Your Email:</label>
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input type="email" name="email_forgot" class="form-control" placeholder="Email" value="<?php echo $email_forgot; ?>">
                                 </div>
                             </div>
                               <br>
@@ -143,8 +148,8 @@
         
         
                         <div class="form-group">
-                            <label for="Verification-question" id="Verification-question">Verification question:</label>
-                            <select class="form-control" id="exampleFormControlSelect1" placeholder="Verification question">
+                            <label for="Verification-question"  id="Verification-question">Verification question:</label>
+                            <select class="form-control" id="exampleFormControlSelect1" placeholder="Verification question" name="Verification_question_forgot" value="<?php echo $Verification_question_forgot; ?>">
                               <option>What is your first teacher's name?</option>
                               <option>What is your pet's name?</option>
                               <option>What is the name of your elementary school?</option>
@@ -152,12 +157,12 @@
                             <br>
                             <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Your Answer">
+                                  <input type="text" name="answer_forgot" class="form-control" placeholder="Your Answer" value="<?php echo $answer_forgot; ?>">
                                 </div>
                               </div>
                           </div>
         
-                          <button type="submit" id="Confirm" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
+                          <button type="submit" name="submit_Forgot" id="Confirm" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
                         </form>
                         </div>
                         <div class="column">
