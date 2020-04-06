@@ -1,4 +1,4 @@
-<?php ob_start(); ?>
+
 <?php include('server.php');?>
 
 
@@ -14,7 +14,7 @@
 
     <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
 
-    <title>Choose Bilding in Factory Area</title>
+    <title>Reset password</title>
 
     <style>
 
@@ -57,7 +57,7 @@
         }
 
        
-        #Confirm {
+        #reset {
 
             margin-left: 20px;
             width: 650px;
@@ -97,11 +97,17 @@
         #imagelock{
 
             margin-right: 50px;
-            margin-left: 200px;
+            margin-left: 0px;
             margin-top: 50px;
 
             
         }
+
+        .column1 {
+
+            margin-left: 0px;
+        }
+        
 
        
        
@@ -140,13 +146,13 @@
               <div class="row">
                 <div class="column">
 
-                    <form metod="post" action="resetPassword.php" id=inputDetailsForResetPass>
-                    <?php include('errors.php'); ?>
+                    <form method="post" action="resetPassword.php" id=inputDetailsForResetPass>
+                       
 
                         <div class="form-row">
                             <div class="col">
                                 <label id="Password">Your Email:</label>
-                                <input type="email" class="form-control" placeholder="Your email Login" name="Email_reset_Password" value="<?php echo $Email_reset_Password; ?>">
+                                <input type="email" class="form-control" placeholder="Your email Login" id="Email_reset_Password" name="Email_reset_Password" value="">
                                 </div>
                             </div>
 
@@ -156,7 +162,7 @@
                         <div class="form-row">
                             <div class="col">
                                 <label id="Password">Your New Password:</label>
-                                <input type="password" class="form-control" placeholder="Password" name="reset_Password" value="<?php echo $reset_Password; ?>">
+                                <input type="password" class="form-control" placeholder="Password" id="reset_Password" name="reset_Password" value="">
                                 </div>
                             </div>
 
@@ -166,7 +172,7 @@
                          <div class="form-row">
                             <div class="col">
                                 <label id="Password2">Confirm Password:</label>
-                                <input type="password" class="form-control" placeholder="Confirm Password:" name="reset_Confirm_Password" value="<?php echo $reset_Confirm_Password; ?>">
+                                <input type="password" class="form-control" placeholder="Confirm Password:" id="reset_Confirm_Password" name="reset_Confirm_Password" value="">
                                 </div>
                             </div>
                               <br>
@@ -174,16 +180,14 @@
 
                             
         
-                          <button type="submit" name="submit_reset" id="Confirm" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
+                          <button type="submit" name="update" id="reset" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Submit</button>
                         </form>
                         </div>
-                        <div class="column">
+                     
         
 
                     </div>
-                <div class="column" id="imageLock">
-                        <img src="http://www.up2me.co.il/imgs/50965295.png" alt="" style="width:250px">
-                </div>
+            
             </div>
 
       
