@@ -785,10 +785,25 @@ function closeNav() {
 
 }
 
+// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
+// inside the text box for page machine (vibration\electro...) and move to this page. 
+
+document.getElementById('SearchSupport').onkeypress=function(e){
+    if(e.keyCode==13){ // key is 'Enter' in keyboard
+        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
+        location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
+    }
+}
+
+
+
+
+
 // This command print the result of machine ID (support) from array [0..n]
 //  document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark')[0].id 
 
  
+
 
 
 

@@ -628,6 +628,33 @@ function closeNav() {
 
 }
 
+// get variable (component_type value from pageStockEnter.php)
+var support = localStorage.getItem('PassVar');
+
+// set title to explanMachinePage title according to support sent variable
+document.getElementById("titleOFpage").innerHTML = "Machine: " + support ;
+
+// use cookie for using var javaScript in PHP code
+document.cookie = "myJavascriptVar = " +  support
+
+// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+
+// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
+// inside the text box for page machine (vibration\electro...) and move to this page. 
+
+document.getElementById('SearchSupport').onkeypress=function(e){
+    if(e.keyCode==13){ // key is 'Enter' in keyboard
+        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
+        location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
+    }
+}
+
 
 </script>
   </body>
