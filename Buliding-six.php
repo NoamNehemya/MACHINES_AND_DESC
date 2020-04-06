@@ -208,6 +208,7 @@
               width: 80pxx;
               height: 60px;
               font-size: 12px;
+              /* border-color: #00ff40;    ---- set border color according to machine status.
 
 
             }
