@@ -272,7 +272,7 @@
 
                 else {
 
-                    $message = "email / Verification Question / Answer To Verification";
+                    $message = "Worng email / Verification Question / Answer To Verification";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                     
                 }
@@ -288,81 +288,56 @@
             //forgot passowrd page TWO sec resetPassword!!
 
 
-            if(isset($_POST['submit_reset'])) { 
+          if(isset($_POST['update'])) {
 
+            $reset_Password = mysqli_real_escape_string($db,$_POST['reset_Password']);
+            $reset_Confirm_Password = mysqli_real_escape_string($db,$_POST['reset_Confirm_Password']);
+            $Email_reset_Password = mysqli_real_escape_string($db,$_POST['Email_reset_Password']);
 
-                $Email_reset_Password = mysqli_real_escape_string($db,$_POST['Email_reset_Password']);
-                $reset_Password = mysqli_real_escape_string($db,$_POST['reset_Password']);
-                $reset_Confirm_Password = mysqli_real_escape_string($db,$_POST['reset_Confirm_Password']);
-
-                if (empty($Email_reset_Password)) {
-                    array_push($errors,"Email confirm is required");
-                   
-                    $message = "Password is required";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-                }
+            if (empty($reset_Password)) {
+                array_push($errors,"Password is required");
                
-    
-                if (empty($reset_Password)) {
-                    array_push($errors,"Password is required");
-                   
-                    $message = "Password is required";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-                }
-    
-                if (empty($reset_Confirm_Password)) {
-                    array_push($errors,"Confirm password is required");
-                    
-                    $message = "Confirm password is required";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-                    
-                }
-
-                if($reset_Password != $reset_Confirm_Password) {
-
-                    array_push($errors, "The two passwords do not match");
-                     $message = "The two passwords do not match";
-                     echo "<script type='text/javascript'>alert('$message');</script>";
-                 }
-
-    
-                if(count($errors) == 0) {
-                    
-
-                    $sqli_reset = "SELECT * FROM users WHERE Email = '$Email_reset_Password'";
-                    $result_reset = mysqli_query($db,$sqli_reset);
-
-    
-                    if (mysqli_num_rows($result_reset) > 0){
-
-                        $sqli_reset2 = "UPDATE users SET Passwrod = '$reset_Password' WHERE Email = '$Email_reset_Password'";
-
-                        if(mysqli_query($db, $sqli_reset2)) {
-
-                            
-                        $message = "Upadte password is success!";
-                        echo "<script type='text/javascript'>alert('$message');</script>";
-
-                        header('Location: LoginMD.php');
-                        exit();
-
-                        } else {
-    
-                        $message = "wornge EMAIL";
-                        echo "<script type='text/javascript'>alert('$message');</script>";
-                        
-                    }
-
-    
-                } else {
-                    
-                    $message = "wornge EMAIL";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-                }
-
+                $message = "Password is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
             }
-        }
-    
+
+            if (empty($reset_Confirm_Password)) {
+                array_push($errors,"Password confirm is required");
+                
+                $message = "Password confirm is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+                
+            }
+
+            if (empty($Email_reset_Password)) {
+                array_push($errors,"Email is required");
+                
+                $message = "Email is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+                
+            }
+
+            if(count($errors) == 0) {
+
+                $q = "UPDATE users SET Password = '$reset_Password' WHERE Email = '$Email_reset_Password'";
+
+                 $query2 = mysqli_query($db,$q);
+
+                if($query2) {
+
+                     echo "<script type='text/javascript'>alert('Password is Update!');</script>";
+                    header('Location: LoginMD.php');
+
+                } else {
+
+                     echo "<script type='text/javascript'>alert('Wornge Email / password');</script>"; 
+                    //header('Location: LoginMD.php');
+                }
+            
+            
+            }
+          }
+          
 
 
 
