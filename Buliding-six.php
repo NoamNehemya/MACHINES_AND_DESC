@@ -799,10 +799,14 @@ document.getElementById('SearchSupport').onkeypress=function(e){
 
 
 
-// This command print the result of machine ID (support) from array [0..n]
-//  document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark')[0].id 
+// This command save the result of machine ID (support) from array of same class buttons [0..n]
 
- 
+var Machinesbuttons = document.getElementsByClassName("btn-btn-outline-dark"); // 'btn-btn-outline-dark' belong to Machine buttons only
+for (var i = 0; i < Machinesbuttons.length; i++) {
+  Machinesbuttons[i].addEventListener("click", function(e) {
+        alert(this.id); // save the Machine ID of the pressed button        
+    });
+}
 
 
 
