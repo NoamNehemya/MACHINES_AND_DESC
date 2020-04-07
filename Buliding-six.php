@@ -1,4 +1,36 @@
-<html lang="en">
+<?php 
+
+$conn = mysqli_connect('localhost','root','','test_project');
+
+if (!$conn) {
+	echo "failed";
+
+}
+// conncection to DB and store query of building 6 into php array
+$machine_support_query= "SELECT support FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_support_result = mysqli_query($conn , $machine_support_query);
+$phpArray_support = array(); // create new PHP array
+
+while($row = mysqli_fetch_assoc($machine_support_result)){
+    $phpArray_support[] = $row['support']; // insert support query into php array
+}  
+
+// conncection to DB and store query of building 6 into php array
+
+$machine_status_query= "SELECT machineStatus FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_status_result = mysqli_query($conn , $machine_status_query);
+$phpArray_status = array(); // create new PHP array
+
+
+while($row = mysqli_fetch_assoc($machine_status_result)){
+    $phpArray_status[] = $row['machineStatus']; // insert status query into php array
+} 
+
+
+?>
+  
+  
+  <html lang="en">
   <head>
    
     <meta charset="utf-8">
@@ -208,8 +240,6 @@
               width: 80pxx;
               height: 60px;
               font-size: 12px;
-              /* border-color: #00ff40;    ---- set border color according to machine status.
-
 
             }
 
@@ -658,19 +688,19 @@
 
 
           <div class="col26">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0140">0140<br/>E-4</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="140">140<br/>E-4</button></div>
           </div>
 
           <div class="col27">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0141">0141<br/>E-5</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="141">141<br/>E-5</button></div>
           </div>
 
           <div class="col28">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0142">0142<br/>E-6</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="142">142<br/>E-6</button></div>
           </div>
 
           <div class="col29">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="המסה אלומיניום" id="0981">0981<br/>D.8</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="המסה אלומיניום" id="981">981<br/>D.8</button></div>
           </div>
 
 
@@ -683,7 +713,7 @@
 
           
           <div class="col30">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="0148">0148<br/>BOX-2</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="148">148<br/>BOX-2</button></div>
           </div>
 
           <div class="col31">
@@ -691,19 +721,19 @@
           </div>
 
           <div class="col32">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="0147">0147<br/>BOX-1</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור אוויר" id="147">147<br/>BOX-1</button></div>
           </div>
 
           <div class="col33">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0144">0144<br/>E-3</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="144">144<br/>E-3</button></div>
           </div>
 
           <div class="col34">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0143">0143<br/>E-1</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="143">143<br/>E-1</button></div>
           </div>
 
           <div class="col35">
-            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="0145">0145<br/>E-2</button></div>
+            <div><button type="button" class="btn-btn-outline-dark" data-toggle="tooltip"  title="תנור ואקום" id="145">145<br/>E-2</button></div>
           </div>
 
         </div>
@@ -798,20 +828,51 @@ document.getElementById('SearchSupport').onkeypress=function(e){
 
 
 
-
-
 // This command save the result of machine ID (support) from array of same class buttons [0..n]
-
-var Machinesbuttons = document.getElementsByClassName("btn-btn-outline-dark"); // 'btn-btn-outline-dark' belong to Machine buttons only
-for (var i = 0; i < Machinesbuttons.length; i++) {
-  Machinesbuttons[i].addEventListener("click", function(e) {
-        alert(this.id); // save the Machine ID of the pressed button        
+var machinesButtons = document.getElementsByClassName("btn-btn-outline-dark"); // 'btn-btn-outline-dark' belong to Machine buttons only
+for (var i = 0; i < machinesButtons.length; i++) {
+  machinesButtons[i].addEventListener("click", function(e) {
+        alert(this.id); // save the Machine ID of the pressed button 
     });
 }
 
 
 
 
+// var machinesButtons = document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark'); // 'btn-btn-outline-dark' belong to Machine buttons only
+    
+    var support = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var machineStatus = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+   
+    // remove this items from support array because they dont presented on this screen (building 6)
+    var itemtoRemove = "1094";
+    support.splice($.inArray(itemtoRemove, support), 1);
+    var itemtoRemove = "1279";
+    support.splice($.inArray(itemtoRemove, support), 1);
+    var itemtoRemove = "1468";
+    support.splice($.inArray(itemtoRemove, support), 1);
+
+    for (var i = 0; i < support.length; i++) {
+        if(machineStatus[i] === "Working"){
+          document.getElementById(support[i]).style.borderColor = '#00ff40'; // green color
+        }
+        else if(machineStatus[i] === "Set-up"){
+          document.getElementById(support[i]).style.borderColor = 'yellow';
+        }
+        else{
+         document.getElementById(support[i]).style.borderColor = 'red';
+        }
+    }
+
+
+// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+    
 </script>
   </body>
 </html>
