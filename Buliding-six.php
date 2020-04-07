@@ -841,26 +841,30 @@ for (var i = 0; i < machinesButtons.length; i++) {
 
 // var machinesButtons = document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark'); // 'btn-btn-outline-dark' belong to Machine buttons only
     
-    var support = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
-    var machineStatus = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
-   
-    // remove this items from support array because they dont presented on this screen (building 6)
-    var itemtoRemove = "1094";
-    support.splice($.inArray(itemtoRemove, support), 1);
-    var itemtoRemove = "1279";
-    support.splice($.inArray(itemtoRemove, support), 1);
-    var itemtoRemove = "1468";
-    support.splice($.inArray(itemtoRemove, support), 1);
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
 
-    for (var i = 0; i < support.length; i++) {
-        if(machineStatus[i] === "Working"){
-          document.getElementById(support[i]).style.borderColor = '#00ff40'; // green color
+    ButtonsElements = document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark'); // all the machines buttons in this page
+    
+    var machineButtons = []; // initiate new array
+    for (var i = 0; i < ButtonsElements.length; i++) { // loop all over the machine buttons
+      machineButtons.push(ButtonsElements[i].id); // push button id to new array
+    }
+
+    let intersection_support = support_php.filter(x => machineButtons.includes(x)); // array of same values of both array
+  // we want array only for support that presented on this screen (building 6)
+   
+   
+    // this loop configure the button border color according to machine status (in DB)
+    for (var i = 0; i < intersection_support.length; i++) {
+        if(machineStatus_php[i] === "Working"){
+          document.getElementById(intersection_support[i]).style.borderColor = '#00ff40'; // green color
         }
-        else if(machineStatus[i] === "Set-up"){
-          document.getElementById(support[i]).style.borderColor = 'yellow';
+        else if(machineStatus_php[i] === "Set-up"){
+          document.getElementById(intersection_support[i]).style.borderColor = 'yellow';
         }
         else{
-         document.getElementById(support[i]).style.borderColor = 'red';
+         document.getElementById(intersection_support[i]).style.borderColor = 'red';
         }
     }
 
