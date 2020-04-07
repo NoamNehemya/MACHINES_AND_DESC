@@ -1,3 +1,5 @@
+<?php include('server.php');?>
+
 <html lang="en">
   <head>
    
@@ -317,7 +319,8 @@
 
                    <p id="explanMachinePage">Complete the information needed to add a component to the factory component stock.</p>
 
-                   <form id="inputingComponentDetail">
+                   <form method="post" action="insertComponent.php" id="inputingComponentDetail">
+                   <?php include('errors.php'); ?>
 
                     <div class="form-group row">
 
@@ -326,7 +329,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="Insert Support" id="textFildSupport">
+                            <input type="text" class="form-control" placeholder="Insert Support" id="textFildSupport" name="support" value="<?php echo $support; ?>">
                         </div>
 
                         <div class="col3">
@@ -334,7 +337,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual">
+                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual" name="manual" value="<?php echo $manual; ?>">
                         </div>
 
                     </div>
@@ -346,15 +349,15 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber">
+                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber" name="serial_num" value="<?php echo $serial_num; ?>">
                         </div>
 
                         <div class="col3">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Model type:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Brand Name:</label>
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype">
+                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype" name="brand_name" value="<?php echo $brand_name; ?>">
                         </div>
 
                     </div>
@@ -366,17 +369,15 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain">
+                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain" name="main" value="<?php echo $main; ?>">
                         </div>
 
                         <div class="col3">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Component Type:</label>
-                        </div>
+                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">S/N</label>
+                            </div>
 
                         <div class="col4">
-                            <select class="DropDowns" id="dropCt">
-                                <option value="volvo">Choose Type</option>
-                              </select>
+                               <input type="text" class="form-control" placeholder="insert s/n"  id="textFilds/n" name="s_n" value="<?php echo $s_n; ?>">
                         </div>
 
                     </div>
@@ -388,15 +389,15 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildDepartment">
+                            <input type="text" class="form-control" placeholder="insert Department" id="textFildDepartment" name="Department" value="<?php echo $Department; ?>">
                         </div>
 
                         <div class="col3">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">image:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Image:</label>
                         </div>
 
                         <div class="col4">
-                            <button class="btn btn-outline-dark"  id="UpalteFile1">Upload Image</button>
+                            <input type="file" class="btn btn-outline-dark"  id="UpalteFile1" name="upalte_image" value="<?php echo $upalte_image; ?>">
                         </div>
                     
                     </div>
@@ -408,8 +409,40 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildModel">
+                                <input type="text" class="form-control" placeholder="insert Model" id="textFildModel" name="model" value="<?php echo $model; ?>">
                             </div>
+
+                            <div class="col3">
+                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Type:</label>
+                            </div>
+
+                            <div class="col4">
+                                <input type="text" class="form-control" placeholder="insert type"  id="textFildType" name="type" value="<?php echo $type; ?>">
+                            </div>
+    
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col1">
+                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Place:</label>
+                            </div>
+    
+                            <div class="col2">
+                                <input type="text" class="form-control" placeholder="insert Place" id="textFildPlace" name="place" value="<?php echo $place; ?>">
+                            </div>
+
+                            <div class="col3">
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Component Type:</label>
+                        </div>
+
+                        <div class="col4">
+                            <select class="DropDowns" id="DropListType" name="Component_Type" value="<?php echo $Component_Type; ?>">
+                            <?php while($rows = $result_list->fetch_assoc()):;?>
+                                <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
+                            <?php endwhile;?>
+                              </select>
+                        </div>
     
                         </div>
 
@@ -417,10 +450,13 @@
 
                             <div class="col5">
 
-                                <button class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="UpalteFile2">Submit</button>
+                                <button type="submit" name="insertComponentBtn" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="UpalteFile2">Submit</button>
                                 
                             </div> 
                         </div>
+
+
+                        
     
     
 
@@ -493,6 +529,8 @@ function closeNav() {
   document.getElementById("MainArea").style.marginLeft = "0px";
 
 }
+
+
 
 
 
