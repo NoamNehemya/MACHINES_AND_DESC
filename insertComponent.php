@@ -329,7 +329,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="Insert Support" id="textFildSupport" name="support" value="<?php echo $support; ?>">
+                            <input type="number" class="form-control" placeholder="Insert Support" id="textFildSupport" name="support" value="<?php echo $support; ?>">
                         </div>
 
                         <div class="col3">
