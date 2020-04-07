@@ -38,7 +38,20 @@
     $Email_reset_Password = "";
 
 
+    //variables for insert component page
 
+    $support = "";
+    $manual = "";
+    $serial_num = "";
+    $brand_name = "";
+    $main = "";
+    $Component_Type = "";
+    $Department = "";
+    $upalte_image = "";
+    $model = "";
+    $type = "";
+    $place = "";
+    $s_n = "";
 
 
 
@@ -337,7 +350,123 @@
             
             }
           }
+
+   //*************************************************************************************************************************************************************** */
+
           
+
+          //insert NEW component to component table
+
+            $query_list="SELECT DISTINCT Component_type FROM components";
+            $result_list = mysqli_query($db , $query_list);
+
+          if(isset($_POST['insertComponentBtn'])) {
+
+            $support = mysqli_real_escape_string($db,$_POST['support']);
+            $manual = mysqli_real_escape_string($db,$_POST['manual']);
+            $serial_num = mysqli_real_escape_string($db,$_POST['serial_num']);
+            $brand_name = mysqli_real_escape_string($db,$_POST['brand_name']);
+            $main = mysqli_real_escape_string($db,$_POST['main']);
+            $Component_Type = mysqli_real_escape_string($db,$_POST['Component_Type']);
+            $Department = mysqli_real_escape_string($db,$_POST['Department']);
+            $upalte_image = mysqli_real_escape_string($db,$_POST['upalte_image']);
+            $model = mysqli_real_escape_string($db,$_POST['model']);
+            $type = mysqli_real_escape_string($db,$_POST['type']);
+            $place = mysqli_real_escape_string($db,$_POST['place']);
+            $s_n = mysqli_real_escape_string($db,$_POST['s_n']);
+            
+    
+            if (empty($support)) {
+                array_push($errors,"support is required");
+                $message = "support is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($manual)) {
+                array_push($errors,"manual is required");
+                $message = "manual is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($serial_num)) {
+                array_push($errors,"serial number is required");
+                $message = "serial number is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($brand_name)) {
+                array_push($errors,"brand name is required");
+                $message = "brand name is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($main)) {
+                array_push($errors,"main is required");
+                $message = "main is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($Component_Type)) {
+                 array_push($errors,"Choose Component Type is required");
+                $message = "Choose Component Type is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($Department)) {
+                array_push($errors,"Department is required");
+                $message = "Department is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($upalte_image)) {
+                 array_push($errors,"image of component is required");
+                $message = "Image of component is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+    
+            if (empty($model)) {
+                array_push($errors,"model  is required");
+                $message = "model  is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if (empty($type)) {
+                array_push($errors,"type is required");
+                $message = "type is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if (empty($place)) {
+                array_push($errors,"place is required");
+                $message = "place is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if (empty($s_n)) {
+                array_push($errors,"s/n is required");
+                $message = "s/n is required";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+    
+            
+    
+            if(count($errors) == 0) {
+    
+                //insert date to users table.
+    
+                $sql_component = "INSERT INTO components(code, Component_type, department, main, support, brandname, type, place, model, s_n, image) 
+                VALUES('$serial_num', '$Component_Type', '$Department', '$main', '$support', '$brand_name', '$type', '$place', '$model', '$s_n', '$upalte_image')";
+                mysqli_query($db,$sql_component);
+                $_SESSION['support'] = $support;
+                $_SESSION['success'] ="You are now add new component to the system."; //messege for new user.
+                $message = "You are now add new component to the system.";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+             
+             
+                header('location: insertComponent.php'); //move to insert Component page.
+            }
+        }
 
 
 
