@@ -160,7 +160,7 @@
                             </div>
                           </div>
                           <br>
-                          <label id="swork">Start of woriking date:</label>
+                          <label id="swork">Start of working date:</label>
                           <div class="form-row">
                            <input type="date" class="form-control" name="startofworking" value="<?php echo $startofworking; ?>">
                             <div class="col">
