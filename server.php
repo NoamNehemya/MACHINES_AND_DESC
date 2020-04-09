@@ -360,6 +360,9 @@
             $query_list="SELECT DISTINCT Component_type FROM components";
             $result_list = mysqli_query($db , $query_list);
 
+            $query_list2="SELECT DISTINCT support FROM machines";
+            $result_list2 = mysqli_query($db , $query_list2);
+
           if(isset($_POST['insertComponentBtn'])) {
 
             $support = mysqli_real_escape_string($db,$_POST['support']);
@@ -373,7 +376,7 @@
             $model = mysqli_real_escape_string($db,$_POST['model']);
             $type = mysqli_real_escape_string($db,$_POST['type']);
             $place = mysqli_real_escape_string($db,$_POST['place']);
-            $s_n = mysqli_real_escape_string($db,$_POST['s_n']);
+            
             
     
             if (empty($support)) {
@@ -387,6 +390,8 @@
                 $message = "manual is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
+
+            //serial num = s/n in data base
     
             if (empty($serial_num)) {
                 array_push($errors,"serial number is required");
@@ -442,11 +447,7 @@
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
-            if (empty($s_n)) {
-                array_push($errors,"s/n is required");
-                $message = "s/n is required";
-                echo "<script type='text/javascript'>alert('$message');</script>";
-            }
+           
 
     
             
@@ -455,8 +456,8 @@
     
                 //insert date to users table.
     
-                $sql_component = "INSERT INTO components(code, Component_type, department, main, support, brandname, type, place, model, s_n, image) 
-                VALUES('$serial_num', '$Component_Type', '$Department', '$main', '$support', '$brand_name', '$type', '$place', '$model', '$s_n', '$upalte_image')";
+                $sql_component = "INSERT INTO components(Component_type, department, main, support, brandname, type, place, model, s_n, image) 
+                VALUES('$Component_Type', '$Department', '$main', '$support', '$brand_name', '$type', '$place', '$model', '$serial_num', '$upalte_image')";
                 mysqli_query($db,$sql_component);
                 $_SESSION['support'] = $support;
                 $_SESSION['success'] ="You are now add new component to the system."; //messege for new user.

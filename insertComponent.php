@@ -329,15 +329,22 @@
                         </div>
 
                         <div class="col2">
-                            <input type="number" class="form-control" placeholder="Insert Support" id="textFildSupport" name="support" value="<?php echo $support; ?>">
+                        <select class="DropDowns" id="DropListType" name="support" value="<?php echo $support; ?>">
+                        <option>Select support...</option>
+                            <?php while($rows = $result_list2->fetch_assoc()):;?>
+                                <?php echo "<option value={$rows["support"]}>{$rows["support"]}</option>";?>
+                            <?php endwhile;?>
+                              </select>
                         </div>
+
+                        
 
                         <div class="col3">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Manual:</label>
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual" name="manual" value="<?php echo $manual; ?>">
+                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual"  maxlength="272" name="manual" value="<?php echo $manual; ?>">
                         </div>
 
                     </div>
@@ -349,7 +356,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber" name="serial_num" value="<?php echo $serial_num; ?>">
+                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
                         </div>
 
                         <div class="col3">
@@ -357,7 +364,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype" name="brand_name" value="<?php echo $brand_name; ?>">
+                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
                         </div>
 
                     </div>
@@ -369,27 +376,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain" name="main" value="<?php echo $main; ?>">
-                        </div>
-
-                        <div class="col3">
-                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">S/N</label>
-                            </div>
-
-                        <div class="col4">
-                               <input type="text" class="form-control" placeholder="insert s/n"  id="textFilds/n" name="s_n" value="<?php echo $s_n; ?>">
-                        </div>
-
-                    </div>
-
-                    <div class="form-group row">
-
-                        <div class="col1">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Department:</label>
-                        </div>
-
-                        <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Department" id="textFildDepartment" name="Department" value="<?php echo $Department; ?>">
+                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
                         </div>
 
                         <div class="col3">
@@ -399,6 +386,25 @@
                         <div class="col4">
                             <input type="file" class="btn btn-outline-dark"  id="UpalteFile1" name="upalte_image" value="<?php echo $upalte_image; ?>">
                         </div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <div class="col1">
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Department:</label>
+                        </div>
+
+                        <div class="col2">
+                            <input type="text" class="form-control" placeholder="insert Department" id="textFildDepartment" maxlength="17" name="Department" value="<?php echo $Department; ?>">
+                        </div>
+
+                        <div class="col3">
+                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Type:</label>
+                            </div>
+
+                            <div class="col4">
+                                <input type="text" class="form-control" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
+                            </div>
                     
                     </div>
 
@@ -409,16 +415,21 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Model" id="textFildModel" name="model" value="<?php echo $model; ?>">
+                                <input type="text" class="form-control" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
                             </div>
 
                             <div class="col3">
-                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Type:</label>
-                            </div>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Component Type:</label>
+                        </div>
 
-                            <div class="col4">
-                                <input type="text" class="form-control" placeholder="insert type"  id="textFildType" name="type" value="<?php echo $type; ?>">
-                            </div>
+                        <div class="col4">
+                            <select class="DropDowns" id="DropListType" name="Component_Type" value="<?php echo $Component_Type; ?>">
+                            <option>Select component type...</option>
+                            <?php while($rows = $result_list->fetch_assoc()):;?>
+                                <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
+                            <?php endwhile;?>
+                              </select>
+                        </div>
     
                         </div>
 
@@ -429,20 +440,10 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Place" id="textFildPlace" name="place" value="<?php echo $place; ?>">
+                                <input type="text" class="form-control" placeholder="insert Place" id="textFildPlace" maxlength="11" name="place" value="<?php echo $place; ?>">
                             </div>
 
-                            <div class="col3">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Component Type:</label>
-                        </div>
-
-                        <div class="col4">
-                            <select class="DropDowns" id="DropListType" name="Component_Type" value="<?php echo $Component_Type; ?>">
-                            <?php while($rows = $result_list->fetch_assoc()):;?>
-                                <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
-                            <?php endwhile;?>
-                              </select>
-                        </div>
+                           
     
                         </div>
 
