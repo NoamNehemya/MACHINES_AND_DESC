@@ -211,12 +211,6 @@
             width: 150px;
         }
 
-        .col4 {
-
-            margin-left:10px;
-            margin-top: 15px;
-
-        }
 
         .col5 {
 
@@ -329,7 +323,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="Insert Support" id="textFildSupport" name="support" value="<?php echo $support; ?>">
+                            <input type="text" class="form-control" placeholder="Insert Support" id="textFildSupport" maxlength="4" min="0" type="number" name="support" value="<?php echo $support; ?>">
                         </div>
 
                         <div class="col3">
@@ -337,7 +331,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual" name="manual" value="<?php echo $manual; ?>">
+                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual" maxlength="272" name="manual" value="<?php echo $manual; ?>">
                         </div>
 
                     </div>
@@ -349,7 +343,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber" name="serial_num" value="<?php echo $serial_num; ?>">
+                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
                         </div>
 
                         <div class="col3">
@@ -357,7 +351,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype" name="brand_name" value="<?php echo $brand_name; ?>">
+                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
                         </div>
 
                     </div>
@@ -369,15 +363,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain" name="main" value="<?php echo $main; ?>">
-                        </div>
-
-                        <div class="col3">
-                                <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">S/N</label>
-                            </div>
-
-                        <div class="col4">
-                               <input type="text" class="form-control" placeholder="insert s/n"  id="textFilds/n" name="s_n" value="<?php echo $s_n; ?>">
+                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
                         </div>
 
                     </div>
@@ -389,7 +375,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Department" id="textFildDepartment" name="Department" value="<?php echo $Department; ?>">
+                            <input type="text" class="form-control" placeholder="insert Department" id="textFildDepartment" maxlength="17" name="Department" value="<?php echo $Department; ?>">
                         </div>
 
                         <div class="col3">
@@ -409,7 +395,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Model" id="textFildModel" name="model" value="<?php echo $model; ?>">
+                                <input type="text" class="form-control" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
                             </div>
 
                             <div class="col3">
@@ -417,7 +403,7 @@
                             </div>
 
                             <div class="col4">
-                                <input type="text" class="form-control" placeholder="insert type"  id="textFildType" name="type" value="<?php echo $type; ?>">
+                                <input type="text" class="form-control" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
                             </div>
     
                         </div>
@@ -429,7 +415,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Place" id="textFildPlace" name="place" value="<?php echo $place; ?>">
+                                <input type="text" class="form-control" placeholder="insert Place" id="textFildPlace" maxlength="11" name="place" value="<?php echo $place; ?>">
                             </div>
 
                             <div class="col3">
