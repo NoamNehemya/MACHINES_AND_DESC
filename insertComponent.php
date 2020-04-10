@@ -325,11 +325,11 @@
                     <div class="form-group row">
 
                         <div class="col1">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
+                            <label for="colFormLabelSm"  class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                         </div>
 
                         <div class="col2">
-                        <select class="DropDowns" id="DropListType" name="support" value="<?php echo $support; ?>">
+                        <select class="DropDowns" id="DropListTypeSupport" onChange="submitActiveOrDimmed()" name="support" value="<?php echo $support; ?>">
                         <option>Select support...</option>
                             <?php while($rows = $result_list2->fetch_assoc()):;?>
                                 <?php echo "<option value={$rows["support"]}>{$rows["support"]}</option>";?>
@@ -419,11 +419,11 @@
                             </div>
 
                             <div class="col3">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Component Type:</label>
+                            <label for="colFormLabelSm"  class="col-sm-1-col-form-label-col-form-label-sm">Component Type:</label>
                         </div>
 
                         <div class="col4">
-                            <select class="DropDowns" id="DropListType" name="Component_Type" value="<?php echo $Component_Type; ?>">
+                            <select class="DropDowns" id="DropListType" onChange="submitActiveOrDimmed()" name="Component_Type" value="<?php echo $Component_Type; ?>">
                             <option>Select component type...</option>
                             <?php while($rows = $result_list->fetch_assoc()):;?>
                                 <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
@@ -469,7 +469,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
-	
+	submitActiveOrDimmed();
 	document.getElementById("navButton").addEventListener("click", toggleNav);
 
 function toggleNav(){
@@ -531,7 +531,21 @@ function closeNav() {
 
 }
 
+// This function set the behavior of Submit button, enabled or dimmed
+function submitActiveOrDimmed() {
 
+if(document.getElementById("DropListType").value === "Select component type..."
+|| document.getElementById("DropListTypeSupport").value === "Select support..." ){
+  document.getElementById("UpalteFile2").disabled = true;
+  document.getElementById("UpalteFile2").style.cursor = "no-drop";
+  document.getElementById("UpalteFile2").style.backgroundColor='grey';
+}
+else{
+  document.getElementById("UpalteFile2").disabled = false;
+  document.getElementById("UpalteFile2").style.cursor = "pointer";
+  document.getElementById("UpalteFile2").style.backgroundColor='white';
+    }
+}
 
 
 
