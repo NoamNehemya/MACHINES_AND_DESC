@@ -356,7 +356,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
+                            <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
                         </div>
 
                         <div class="col3">
@@ -364,7 +364,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Model type" id="textFildModeltype" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
+                            <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Model type" id="textFildBrandName" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
                         </div>
 
                     </div>
@@ -376,7 +376,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
+                            <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
                         </div>
 
                         <div class="col3">
@@ -384,7 +384,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="file" class="btn btn-outline-dark"  id="UpalteFile1" name="upalte_image" value="<?php echo $upalte_image; ?>">
+                            <input type="file" class="btn btn-outline-dark" onChange="submitActiveOrDimmed()"  id="UpalteFile1" name="upalte_image" value="<?php echo $upalte_image; ?>">
                         </div>
                     </div>
 
@@ -403,7 +403,7 @@
                             </div>
 
                             <div class="col4">
-                                <input type="text" class="form-control" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
+                                <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
                             </div>
                     
                     </div>
@@ -415,7 +415,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
+                                <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
                             </div>
 
                             <div class="col3">
@@ -535,10 +535,15 @@ function closeNav() {
 function submitActiveOrDimmed() {
 
 if(document.getElementById("DropListType").value === "Select component type..."
-|| document.getElementById("DropListTypeSupport").value === "Select support..." ){
-  document.getElementById("UpalteFile2").disabled = true;
-  document.getElementById("UpalteFile2").style.cursor = "no-drop";
-  document.getElementById("UpalteFile2").style.backgroundColor='grey';
+|| document.getElementById("DropListTypeSupport").value === "Select support..."
+|| document.getElementById("textFildSerialNumber").value === ""
+|| document.getElementById("textFildMain").value === ""
+|| document.getElementById("textFildBrandName").value === ""
+|| document.getElementById("UpalteFile1").value === "No file chosen"
+|| document.getElementById("textFildType").value === "") {
+    document.getElementById("UpalteFile2").disabled = true;
+    document.getElementById("UpalteFile2").style.cursor = "no-drop";
+    document.getElementById("UpalteFile2").style.backgroundColor='grey';
 }
 else{
   document.getElementById("UpalteFile2").disabled = false;
@@ -558,6 +563,8 @@ document.getElementById('SearchSupport').onkeypress=function(e){
         location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
     }
 }
+
+
 
 </script>
   </body>
