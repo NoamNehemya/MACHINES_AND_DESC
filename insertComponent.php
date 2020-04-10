@@ -325,7 +325,7 @@
                     <div class="form-group row">
 
                         <div class="col1">
-                            <label for="colFormLabelSm"  class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                         </div>
 
                         <div class="col2">
@@ -344,7 +344,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" placeholder="insert Manual" id="textFildManual"  maxlength="272" name="manual" value="<?php echo $manual; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" placeholder="insert Manual" id="textFildManual"  maxlength="272" name="manual" value="<?php echo $manual; ?>">
                         </div>
 
                     </div>
@@ -356,7 +356,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
                         </div>
 
                         <div class="col3">
@@ -364,7 +364,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Model type" id="textFildBrandName" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Model type" id="textFildBrandName" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
                         </div>
 
                     </div>
@@ -376,7 +376,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
                         </div>
 
                         <div class="col3">
@@ -403,7 +403,7 @@
                             </div>
 
                             <div class="col4">
-                                <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
+                                <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
                             </div>
                     
                     </div>
@@ -415,7 +415,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" onChange="submitActiveOrDimmed()" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
+                                <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
                             </div>
 
                             <div class="col3">
@@ -423,7 +423,7 @@
                         </div>
 
                         <div class="col4">
-                            <select class="DropDowns" id="DropListType" onChange="submitActiveOrDimmed()" name="Component_Type" value="<?php echo $Component_Type; ?>">
+                            <select class="DropDowns" id="DropListType" onChange="submitActiveOrDimmed();redFrames_DropDowns()" name="Component_Type" value="<?php echo $Component_Type; ?>">
                             <option>Select component type...</option>
                             <?php while($rows = $result_list->fetch_assoc()):;?>
                                 <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
@@ -440,7 +440,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" placeholder="insert Place" id="textFildPlace" maxlength="11" name="place" value="<?php echo $place; ?>">
+                                <input type="text" class="form-control" onclick="redFrames()" placeholder="insert Place" id="textFildPlace" maxlength="11" name="place" value="<?php echo $place; ?>">
                             </div>
 
                            
@@ -564,6 +564,18 @@ document.getElementById('SearchSupport').onkeypress=function(e){
     }
 }
 
+
+function redFrames(){
+ButtonsElements = document.getElementsByClassName('form-control'); // all inputs fields
+for (var i = 1; i < ButtonsElements.length; i++) {
+        if(ButtonsElements[i].value === ""){
+            ButtonsElements[i].style.borderColor = 'red'; // if user dont insert input in the text field, the color of border will be red
+        }
+        else{
+            ButtonsElements[i].style.borderColor = ''; // the default border color
+        }
+    }
+}
 
 
 </script>
