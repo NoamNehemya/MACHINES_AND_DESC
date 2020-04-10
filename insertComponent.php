@@ -330,7 +330,6 @@
 
                         <div class="col2">
                         <select class="DropDowns" id="DropListTypeSupport" onChange="submitActiveOrDimmed()" name="support" value="<?php echo $support; ?>">
-                        <option>Select support...</option>
                             <?php while($rows = $result_list2->fetch_assoc()):;?>
                                 <?php echo "<option value={$rows["support"]}>{$rows["support"]}</option>";?>
                             <?php endwhile;?>
@@ -423,8 +422,7 @@
                         </div>
 
                         <div class="col4">
-                            <select class="DropDowns" id="DropListType" onChange="submitActiveOrDimmed();redFrames_DropDowns()" name="Component_Type" value="<?php echo $Component_Type; ?>">
-                            <option>Select component type...</option>
+                            <select class="DropDowns" id="DropListType" onChange="submitActiveOrDimmed()" name="Component_Type" value="<?php echo $Component_Type; ?>">
                             <?php while($rows = $result_list->fetch_assoc()):;?>
                                 <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
                             <?php endwhile;?>
@@ -534,13 +532,14 @@ function closeNav() {
 // This function set the behavior of Submit button, enabled or dimmed
 function submitActiveOrDimmed() {
 
-if(document.getElementById("DropListType").value === "Select component type..."
-|| document.getElementById("DropListTypeSupport").value === "Select support..."
-|| document.getElementById("textFildSerialNumber").value === ""
-|| document.getElementById("textFildMain").value === ""
-|| document.getElementById("textFildBrandName").value === ""
-|| document.getElementById("UpalteFile1").value === "No file chosen"
-|| document.getElementById("textFildType").value === "") {
+if  (  document.getElementById("textFildSerialNumber").value === ""
+    || document.getElementById("textFildMain").value === ""
+    || document.getElementById("textFildBrandName").value === ""
+    || document.getElementById("textFildPlace").value === ""
+    || document.getElementById("textFildMain").value === ""
+    || document.getElementById("textFildType").value === ""
+    || document.getElementById("textFildManual").value === ""
+    || document.getElementById("textFildModel").value === "") {
     document.getElementById("UpalteFile2").disabled = true;
     document.getElementById("UpalteFile2").style.cursor = "no-drop";
     document.getElementById("UpalteFile2").style.backgroundColor='grey';
@@ -565,7 +564,7 @@ document.getElementById('SearchSupport').onkeypress=function(e){
 }
 
 
-function redFrames(){
+function redFrames(){ // this function mark input fileds thats empty
 ButtonsElements = document.getElementsByClassName('form-control'); // all inputs fields
 for (var i = 1; i < ButtonsElements.length; i++) {
         if(ButtonsElements[i].value === ""){
