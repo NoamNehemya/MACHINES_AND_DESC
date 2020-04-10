@@ -360,7 +360,7 @@
             $query_list="SELECT DISTINCT Component_type FROM components";
             $result_list = mysqli_query($db , $query_list);
 
-            $query_list2="SELECT DISTINCT support FROM machines";
+            $query_list2="SELECT DISTINCT support FROM machines ORDER BY support DESC";
             $result_list2 = mysqli_query($db , $query_list2);
 
           if(isset($_POST['insertComponentBtn'])) {
