@@ -321,7 +321,7 @@ $result = mysqli_query($conn , $query);
                     <td><?php echo $rows['brandname']; ?></td>
                     <td><?php echo $rows['place']; ?></td>
                     <td><?php echo $rows['model']; ?></td>
-                    <td><?php echo $rows['s/n']; ?></td>          
+                    <td><?php echo $rows['s_n']; ?></td>          
                   </tr>
                  
                     
