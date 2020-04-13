@@ -304,13 +304,15 @@ $result = mysqli_query($conn , $query);
                <table class="table table-hover" id="IncorrectTable">
                 <thead>
                   <tr>
-                    <th scope="col">Change Date</th>
+                    <th scope="col">Update Number</th>
                     <th scope="col">Employee's Name</th>
+                    <th scope="col">Change Date</th>
+                    <th scope="col">Component - Type</th>
+                    <th scope="col">Component - ID</th>
                     <th scope="col">Previous Machine - ID</th>
                     <th scope="col">New Machine - ID</th>
-                    <th scope="col">Component - ID</th>
-                    <th scope="col">Component - Type</th>
-                    <th scope="col">Update Number</th>
+                    
+
                   </tr>
                 </thead>
                 
@@ -321,14 +323,14 @@ $result = mysqli_query($conn , $query);
 
                 <tbody>
                   <tr>
-                    <th scope="row"><?php echo $rows['UpdateDate']; ?></th>
+                    <th scope="row"><?php echo $rows['Update_Number']; ?></th>
                     <td><?php echo $rows['UserName']; ?></td>
+                    <td><?php echo $rows['UpdateDate']; ?></td>
+                    <td><?php echo $rows['Component_type']; ?></td>
+                    <td><?php echo $rows['Component_ID']; ?></td>
                     <td><?php echo $rows['OldMachine']; ?></td>
                     <td><?php echo $rows['NewMachine']; ?></td>
-                    <td><?php echo $rows['Component_ID']; ?></td>
-                    <td><?php echo $rows['Component_type']; ?></td>
-                    <td><?php echo $rows['Update_Number']; ?></td>
-                   
+
                   </tr>
             
                 </tbody>
