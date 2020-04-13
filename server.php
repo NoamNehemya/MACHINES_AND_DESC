@@ -58,6 +58,11 @@
 
     $db = mysqli_connect('localhost', 'root', '','test_project');
 
+ //*************************************************************************************************************************************************************** */
+
+    //register page create NEW users 
+
+
     if(isset($_POST['create'])) {
 
         $firstname = mysqli_real_escape_string($db,$_POST['firstname']);
@@ -454,7 +459,7 @@
     
             if(count($errors) == 0) {
     
-                //insert date to users table.
+                //insert date to component table.
     
                 $sql_component = "INSERT INTO components(Component_type, department, main, support, brandname, type, place, model, s_n, image) 
                 VALUES('$Component_Type', '$Department', '$main', '$support', '$brand_name', '$type', '$place', '$model', '$serial_num', '$upalte_image')";
