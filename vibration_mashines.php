@@ -6,8 +6,10 @@
 
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    
     <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
+
+    
 
     <title>Machine Page</title>
 
@@ -308,12 +310,37 @@
          width: 400px;
          margin-left:0px;
          margin-top: 80px;
-         
-
-
 
          
        }
+
+         /*css of list - status Machine */
+
+         #List_Machine_Statuc {
+
+          background-color: #b3e6cc;
+          }
+
+          #redOP {
+
+          background-color:#ff4d4d;
+
+          }
+
+          #yellowOP {
+
+          background-color:#ffad33;
+
+          }
+
+          #greenOP {
+
+          background-color:#4dff88;
+
+
+          }
+          
+
 
         
 
@@ -392,63 +419,70 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">PV/AK:</label>   
+                              <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">PLC:</label>   
                             </div>
 
                             <div class="col3">
+
                             <select class="DropDowns">
-                              <option value="volvo">PV/AK Component</option>
+                              <option value="volvo">PLC Component</option>
                             </select>
+                            
                           </div>
-                          </div>
-
-                        <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Asset:</label>
-                            <div class="col1">
-                              <p class="dit2">FA24624</p>
-                            </div>
-
-                            <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Model:</label>
-                            </div>
-
-                            <div class="col4">
-                              <p class="dit2">0057</p>
-                            </div>
                           </div>
 
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Department:</label>
                             <div class="col1">
-                              <p class="dit2">North</p>
+                              <p class="dit2">Department ex</p>
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Functional:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Timer:</label>
                             </div>
 
                             <div class="col4">
-                              <p class="dit2">0057</p>
+                              <select class="DropDowns">
+                              <option value="volvo">Timer Component</option>
+                            </select>
+
+                            </div>
+                          </div>
+
+                        <div class="form-group row">
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
+                            <div class="col1">
+                              <p class="dit2">Building ex</p>
+                            </div>
+
+                            <div class="col2">
+                              <label for="colFormLabelSm" class="Model-dit">Speed<br/>Control:</label>
+                            </div>
+
+                            <div class="col4">
+                              
+                            <select class="DropDowns">
+                              <option value="volvo">Speed Control Component</option>
+                            </select>
+
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PLC:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine Type:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">choose PLC</option>
-                              </select>
+                            <p class="dit2">Machine Type ex</p>
                               
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Modem:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Hourmeter:</label>
                             </div>
 
                             <div class="col4">
                               <select class="DropDowns">
-                              <option value="volvo">Modem Component</option>
+                              <option value="volvo">Hourmeter Component</option>
                             </select>
                             </div>
 
@@ -465,12 +499,14 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">SCR:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Machine<br/>Status:</label>
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">SCR Component</option>
+                            <select class="DropDowns" id="List_Machine_Statuc">
+                              <option value="volvo"id="redOP">noam</option>
+                              <option value="volvo" id="yellowOP">ha</option>
+                              <option value="volvo" id="greenOP">ZIRO</option>
                             </select>
                             </div>
 
@@ -486,60 +522,10 @@
                                 <option value="volvo">AC Drives Component</option>
                               </select>
                             </div>
-
                             
-                            <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Safety:</label>
-                            </div>
-
-                            <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Safety Component</option>
-                            </select>
-                            </div>
-
                           </div>
-
-                          <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PHT:</label>
-                            <div class="col1">
-
-                              <select class="DropDowns">
-                                <option value="volvo">PHT Component</option>
-                              </select>
-                            </div>
-
-                            <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Robot:</label>
-                            </div>
-
-                            <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Robot Component</option>
-                            </select>
-                            </div>
-
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Pol/Pot:</label>
-                            <div class="col1">
-
-                              <select class="DropDowns">
-                                <option value="volvo">Pol/Pot Component</option>
-                              </select>
-                            </div>
-
-                            <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">DC BUS:</label>
-                            </div>
-
-                            <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">DC BUS Component</option>
-                            </select>
-                            </div>
-                          </div>
+                           
+                         
                       </form>
 
                 </form>
@@ -560,17 +546,12 @@
       </div>
             
 
-
-
-                   
-                  
-                   
-
-
-     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
+
+      
 	
 	document.getElementById("navButton").addEventListener("click", toggleNav);
 
@@ -637,6 +618,29 @@ document.getElementById('SearchSupport').onkeypress=function(e){
         location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
     }
 }
+
+
+
+
+
+$(function() {
+
+    $('#chkveg').multiselect({
+    
+    includeSelectAllOption: true
+    
+    });
+    
+    $('#btnget').click(function() {
+    
+    alert($('#chkveg').val());
+    
+    })
+    
+    });
+
+
+
 
 
 </script>
