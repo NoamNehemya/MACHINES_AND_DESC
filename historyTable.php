@@ -301,7 +301,7 @@ $result = mysqli_query($conn , $query);
 
                
 
-               <table class="table table-hover" id="IncorrectTable">
+               <table class="table table-hover" id="HistoryTable">
                 <thead>
                   <tr>
                     <th scope="col">Update Number</th>
@@ -370,7 +370,7 @@ function openNav() {
   document.getElementById("Brint").style.marginLeft = "0px";
   document.getElementById("explanMachinePage").style.marginLeft = "130px";
  
-  document.getElementById("IncorrectTable").style.marginLeft = "50px";
+  document.getElementById("HistoryTable").style.marginLeft = "50px";
 
 
 
@@ -382,7 +382,7 @@ function openNav() {
   document.getElementById("home_Page").style.transition = "0.5s";
   document.getElementById("Brint").style.transition = "0.5s";
   document.getElementById("explanMachinePage").style.transition = "0.5s";
-  document.getElementById("IncorrectTable").style.transition = "0.5s";
+  document.getElementById("HistoryTable").style.transition = "0.5s";
   
   
 }
@@ -398,7 +398,7 @@ function closeNav() {
   document.getElementById("Brint").style.marginRight = "0";
 
   document.getElementById("explanMachinePage").style.marginLeft = "100px";
-  document.getElementById("IncorrectTable").style.marginLeft = "0px";
+  document.getElementById("HistoryTable").style.marginLeft = "0px";
 
 
 }

@@ -366,7 +366,7 @@ function openNav() {
   document.getElementById("Brint").style.marginLeft = "0px";
   document.getElementById("explanMachinePage").style.marginLeft = "130px";
  
-  document.getElementById("IncorrectTable").style.marginLeft = "50px";
+  document.getElementById("ComponentTable").style.marginLeft = "50px";
 
 
 
@@ -378,7 +378,7 @@ function openNav() {
   document.getElementById("home_Page").style.transition = "0.5s";
   document.getElementById("Brint").style.transition = "0.5s";
   document.getElementById("explanMachinePage").style.transition = "0.5s";
-  document.getElementById("IncorrectTable").style.transition = "0.5s";
+  document.getElementById("ComponentTable").style.transition = "0.5s";
   
   
 }
@@ -394,7 +394,7 @@ function closeNav() {
   document.getElementById("Brint").style.marginRight = "0";
 
   
-  document.getElementById("IncorrectTable").style.marginLeft = "0px";
+  document.getElementById("ComponentTable").style.marginLeft = "0px";
 
 
 }
