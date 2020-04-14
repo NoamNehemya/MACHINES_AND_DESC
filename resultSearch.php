@@ -295,17 +295,17 @@ $result = mysqli_query($conn , $query);
                <table class="table table-hover" id="ComponentTable">
                 <thead>
                       <tr>
-                         <th scope="col">Code</th>
-                         <th scope="col">Department</th>
+                         <th scope="col">Row #</th>
                          <th scope="col">Main</th>
                          <th scope="col">Support</th>
                          <th scope="col">Brand Name</th>
                          <th scope="col">Place</th>
                          <th scope="col">Model</th>
-                         <th scope="col">S/N</th>
+                         <th scope="col">Serial Number</th>
+                         <th scope="col">Image</th>
+                
                        </tr>
                 </thead>
-
 
                 <?php
                      while($rows = mysqli_fetch_assoc($result)) {
@@ -315,15 +315,15 @@ $result = mysqli_query($conn , $query);
                 <tbody>
                   <tr>
                     <th scope="row"><?php echo $rows['code']; ?></th>
-                    <td><?php echo $rows['department']; ?></td>
                     <td><?php echo $rows['main']; ?></td>
                     <td><?php echo $rows['support']; ?></td>
                     <td><?php echo $rows['brandname']; ?></td>
                     <td><?php echo $rows['place']; ?></td>
                     <td><?php echo $rows['model']; ?></td>
-                    <td><?php echo $rows['s_n']; ?></td>          
-                  </tr>
-                 
+                    <td><?php echo $rows['s_n']; ?></td>    
+                    <td><img src="<?php echo $rows['image']?>" onclick = "window.open(this.src)" id="viewImage" width="75px"/> </td>   
+                  </tr>                                                      
+                  
                     
                 </tbody>
 
@@ -336,12 +336,13 @@ $result = mysqli_query($conn , $query);
                
                        
                     
-
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
+
 	
 	document.getElementById("navButton").addEventListener("click", toggleNav);
 
