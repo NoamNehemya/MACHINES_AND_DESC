@@ -289,7 +289,7 @@
 
           margin-left: 130px;
           width: 250px;
-          margin-top: 130px;
+          margin-top: 315px;
 
         }
 
@@ -297,6 +297,35 @@
 
           margin-left: 65px;
         }
+
+        /*css of list - status Machine */
+
+        #List_Machine_Statuc {
+
+        background-color: #b3e6cc;
+        }
+
+        #redOP {
+
+        background-color:#ff4d4d;
+
+        }
+
+        #yellowOP {
+
+        background-color:#ffad33;
+
+        }
+
+        #greenOP {
+
+        background-color:#4dff88;
+
+
+        }
+
+
+
 
         .column1{
 
@@ -308,12 +337,12 @@
          width: 400px;
          margin-left:0px;
          margin-top: 80px;
-         
-
-
-
-         
+                 
        }
+
+       .multiselect-container>li>a>label {
+        padding: 4px 20px 3px 20px;
+      }
 
         
 
@@ -356,7 +385,7 @@
           <div class="jumbotron-jumbotron-fluid">
             <div class="row">
                 <div class="column" id="titleMachine">
-                  <h1 class="display-5" id="titleOFpage">Machine 0981</h1>
+                  <h1 class="display-5" id="titleOFpage">Machine: </h1>
                   </div>
                 <div class="column" id="Search_Machine">
                   <input type="text" class="form-control" placeholder="Search Machine:" id="SearchSupport" lt="" style="width:150">
@@ -392,12 +421,12 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">PV/AK:</label>   
+                              <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Sourch:</label>   
                             </div>
 
                             <div class="col3">
                             <select class="DropDowns">
-                              <option value="volvo">PV/AK Component</option>
+                              <option value="volvo">Sourch Component</option>
                             </select>
                           </div>
                           </div>
@@ -409,46 +438,48 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Model:</label>
+                              <label for="colFormLabelSm" class="Model-dit">PLC:</label>
                             </div>
 
                             <div class="col4">
-                              <p class="dit2">0057</p>
+                            <select class="DropDowns">
+                              <option value="volvo">PLC Component</option>
+                            </select>
                             </div>
                           </div>
 
                         <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Department:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
                             <div class="col1">
                               <p class="dit2">North</p>
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Functional:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Graphic Recorder:</label>
                             </div>
 
                             <div class="col4">
-                              <p class="dit2">0057</p>
+                            <select class="DropDowns">
+                              <option value="volvo">Graphic Recorder Component</option>
+                            </select>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PLC:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Main:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">choose PLC</option>
-                              </select>
+                            <p class="dit2">example</p>
                               
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Modem:</label>
+                              <label for="colFormLabelSm" class="Model-dit">PVAK:</label>
                             </div>
 
                             <div class="col4">
                               <select class="DropDowns">
-                              <option value="volvo">Modem Component</option>
+                              <option value="volvo">PVAK Component</option>
                             </select>
                             </div>
 
@@ -456,12 +487,9 @@
                           </div>
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Power Supply:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine<br/>Type:</label>
                             <div class="col1">
-
-                              <select class="DropDowns">
-                                <option value="volvo">Power Supply Component</option>
-                              </select>
+                              <p class="dit2">example</p>
                             </div>
 
                             <div class="col2">
@@ -479,22 +507,24 @@
                           
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">AC Drives:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PEX:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">AC Drives Component</option>
+                            <select class="DropDowns">
+                                <option value="volvo">PEX Component</option>
                               </select>
+
+
                             </div>
 
                             
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Safety:</label>
+                              <label for="colFormLabelSm" class="Model-dit">PWT:</label>
                             </div>
 
                             <div class="col4">
                               <select class="DropDowns">
-                              <option value="volvo">Safety Component</option>
+                              <option value="volvo">PWT Component</option>
                             </select>
                             </div>
 
@@ -510,12 +540,12 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Robot:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Volt /<br/>Ampermeter:</label>
                             </div>
 
                             <div class="col4">
                               <select class="DropDowns">
-                              <option value="volvo">Robot Component</option>
+                              <option value="volvo">Volt Component</option>
                             </select>
                             </div>
 
@@ -531,15 +561,59 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">DC BUS:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Power Supply:</label>
                             </div>
 
                             <div class="col4">
                               <select class="DropDowns">
-                              <option value="volvo">DC BUS Component</option>
+                              <option value="volvo">Power Supply</option>
                             </select>
                             </div>
                           </div>
+
+                          <div class="form-group row">
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH1/SSR:</label>
+                            <div class="col1">
+
+                              <select class="DropDowns">
+                                <option value="volvo">DH1/SSR Component</option>
+                              </select>
+                            </div>
+
+                            <div class="col2">
+                              <label for="colFormLabelSm" class="Model-dit">Universal<br/>Digital:</label>
+                            </div>
+
+                            <div class="col4">
+                              <select class="DropDowns">
+                              <option value="volvo">Universal Digital</option>
+                            </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH2/SSR:</label>
+                            <div class="col1">
+
+                              <select class="DropDowns">
+                                <option value="volvo">DH2/SSR Component</option>
+                              </select>
+                            </div>
+
+                            <div class="col2">
+                              <label for="colFormLabelSm" class="Model-dit">Machine<br/>Status:</label>
+                            </div>
+
+                            <div class="col4">
+                              <select class="DropDowns" id="List_Machine_Statuc">
+                              <option value="volvo">Machine Status</option>
+                              <option value="volvo"id="redOP">noam</option>
+                              <option value="volvo" id="yellowOP">ha</option>
+                              <option value="volvo" id="greenOP">homo</option>
+                            </select>
+                            </div>
+                          </div>
+
                       </form>
 
                 </form>
@@ -637,6 +711,22 @@ document.getElementById('SearchSupport').onkeypress=function(e){
         location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
     }
 }
+
+$(function() {
+
+$('#chkveg').multiselect({
+
+includeSelectAllOption: true
+
+});
+
+$('#btnget').click(function() {
+
+alert($('#chkveg').val());
+
+})
+
+});
 
 
 </script>
