@@ -172,6 +172,12 @@ while($row = mysqli_fetch_assoc($machine_status_result)){
 
         }
 
+        #informationIcon {
+
+        margin-top:7px;
+        margin-left: 1400px; 
+        }
+
         #History {
 
         margin-top:25px;
@@ -557,7 +563,8 @@ while($row = mysqli_fetch_assoc($machine_status_result)){
 
                
   <p id="explanMachinePage">Select the machine you want to operate on.</p>
-
+           
+  <i class="fa fa-info-circle" id="informationIcon" onclick="alert('Machine Status\n\nGreen frame: Working machine\nYellow frame: Set up\nRed frame:     Error')" style="font-size:24px"></i>
 
     <div class="MainAREA" id= MainAREA >
 
@@ -867,6 +874,7 @@ for (var i = 0; i < machinesButtons.length; i++) {
          document.getElementById(intersection_support[i]).style.borderColor = 'red';
         }
     }
+
 
 
 // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
