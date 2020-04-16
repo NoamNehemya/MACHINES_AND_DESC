@@ -425,9 +425,10 @@
                             </div>
 
                             <div class="col3">
-                            <select class="DropDowns">
-                              <option value="volvo">Sourch Component</option>
-                            </select>
+                           
+
+                            <p class="dit2">Sourch Component</p>
+
                           </div>
                           </div>
 
@@ -442,9 +443,9 @@
                             </div>
 
                             <div class="col4">
-                            <select class="DropDowns">
-                              <option value="volvo">PLC Component</option>
-                            </select>
+
+                            <p class="dit2">PLC Component</p>
+
                             </div>
                           </div>
 
@@ -459,9 +460,9 @@
                             </div>
 
                             <div class="col4">
-                            <select class="DropDowns">
-                              <option value="volvo">Graphic Recorder Component</option>
-                            </select>
+
+                            <p class="dit2">Graphic Recorder Component</p>
+
                             </div>
                           </div>
 
@@ -478,9 +479,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">PVAK Component</option>
-                            </select>
+
+                            <p class="dit2">PVAK Component</p>
+
                             </div>
 
 
@@ -497,9 +498,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">SCR Component</option>
-                            </select>
+
+                            <p class="dit2">SCR Component</p>
+
                             </div>
 
                           </div>
@@ -509,11 +510,8 @@
                           <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PEX:</label>
                             <div class="col1">
-
-                            <select class="DropDowns">
-                                <option value="volvo">PEX Component</option>
-                              </select>
-
+                       
+                              <p class="dit2">PEX Component</p>
 
                             </div>
 
@@ -523,9 +521,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">PWT Component</option>
-                            </select>
+
+                            <p class="dit2">PWT Component</p>
+
                             </div>
 
                           </div>
@@ -534,9 +532,8 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PHT:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">PHT Component</option>
-                              </select>
+                              <p class="dit2">PHT Component</p>
+
                             </div>
 
                             <div class="col2">
@@ -544,9 +541,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Volt Component</option>
-                            </select>
+
+                            <p class="dit2">Volt Component</p>
+
                             </div>
 
                           </div>
@@ -555,9 +552,8 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Pol/Pot:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">Pol/Pot Component</option>
-                              </select>
+                              <p class="dit2">Pol/Pot Component</p>
+
                             </div>
 
                             <div class="col2">
@@ -565,9 +561,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Power Supply</option>
-                            </select>
+
+                            <p class="dit2">Power Supply Component</p>
+
                             </div>
                           </div>
 
@@ -575,9 +571,8 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH1/SSR:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">DH1/SSR Component</option>
-                              </select>
+                            <p class="dit2">DH1/SSR Component</p>
+
                             </div>
 
                             <div class="col2">
@@ -585,9 +580,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Universal Digital</option>
-                            </select>
+
+                            <p class="dit2">Universal Digital</p>
+
                             </div>
                           </div>
 
@@ -595,9 +590,8 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH2/SSR:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">DH2/SSR Component</option>
-                              </select>
+                            <p class="dit2">DH2/SSR Component</p>
+
                             </div>
 
                             <div class="col2">
@@ -712,21 +706,21 @@ document.getElementById('SearchSupport').onkeypress=function(e){
     }
 }
 
-$(function() {
+// get variable (component_type value from pageStockEnter.php)
+var support = localStorage.getItem('PassVar');
+// set title to explanMachinePage title according to support sent variable
+document.getElementById("titleOFpage").innerHTML = "Machine: " + support ;
+// use cookie for using var javaScript in PHP code
+document.cookie = "myJavascriptVar = " +  support
+// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
 
-$('#chkveg').multiselect({
 
-includeSelectAllOption: true
-
-});
-
-$('#btnget').click(function() {
-
-alert($('#chkveg').val());
-
-})
-
-});
 
 
 </script>
