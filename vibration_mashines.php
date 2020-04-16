@@ -424,9 +424,9 @@
 
                             <div class="col3">
 
-                            <select class="DropDowns">
-                              <option value="volvo">PLC Component</option>
-                            </select>
+                            <p class="dit2">PLC Component</p>
+
+                            
                             
                           </div>
                           </div>
@@ -442,9 +442,11 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Timer Component</option>
-                            </select>
+
+
+                            <p class="dit2">Timer Component </p>
+
+                             
 
                             </div>
                           </div>
@@ -452,7 +454,9 @@
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
                             <div class="col1">
+
                               <p class="dit2">Building ex</p>
+
                             </div>
 
                             <div class="col2">
@@ -461,9 +465,7 @@
 
                             <div class="col4">
                               
-                            <select class="DropDowns">
-                              <option value="volvo">Speed Control Component</option>
-                            </select>
+                            <p class="dit2">Speed ex</p>
 
                             </div>
                           </div>
@@ -481,9 +483,9 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns">
-                              <option value="volvo">Hourmeter Component</option>
-                            </select>
+                                
+                            <p class="dit2">Hourmeter ex</p>
+
                             </div>
 
 
@@ -493,9 +495,8 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Power Supply:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">Power Supply Component</option>
-                              </select>
+                            <p class="dit2">Power Supply ex</p>
+
                             </div>
 
                             <div class="col2">
@@ -518,9 +519,8 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">AC Drives:</label>
                             <div class="col1">
 
-                              <select class="DropDowns">
-                                <option value="volvo">AC Drives Component</option>
-                              </select>
+                            <p class="dit2">AC Drives ex</p>
+
                             </div>
                             
                           </div>
