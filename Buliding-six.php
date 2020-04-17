@@ -849,7 +849,7 @@ for (var i = 0; i < machinesButtons.length; i++) {
     location.href=check(this.id); // Move to page machine (vibration\electro...) 
     });
 }
-//
+//this function check the machine type of selected machine 
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){
