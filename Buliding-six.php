@@ -835,11 +835,13 @@ document.getElementById('SearchSupport').onkeypress=function(e){
 
 
 
-// This command save the result of machine ID (support) from array of same class buttons [0..n]
+// This command save the result of machine ID (support) from array of same class buttons [0..n] and display the pressed machine in machine page (vibration\electro...)  
+
 var machinesButtons = document.getElementsByClassName("btn-btn-outline-dark"); // 'btn-btn-outline-dark' belong to Machine buttons only
 for (var i = 0; i < machinesButtons.length; i++) {
-  machinesButtons[i].addEventListener("click", function(e) {
-        alert(this.id); // save the Machine ID of the pressed button 
+  machinesButtons[i].addEventListener("click", function(e) { // after click on any machine button 
+    localStorage.setItem('PassVar',this.id); // save the machine id button (support number) to variable 
+    location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...) 
     });
 }
 
