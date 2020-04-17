@@ -1,3 +1,42 @@
+<?php 
+
+$db = mysqli_connect('localhost', 'root', '','test_project');
+
+//sql for display data per Machine
+
+$support_input = $_COOKIE["myJavascriptVar"];
+
+$sqli = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'ac drives'";
+$sqli_1 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'PLC'";
+$sqli_2 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Power Supply 24V'";
+$sqli_3 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'hourmeter'";
+$sqli_4 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Timer'";
+$sqli_5 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
+$sqli_6 = "SELECT * FROM components WHERE support LIKE '$support_input' and component_type like 'ac drives'";
+
+
+
+
+$result = mysqli_query($db,$sqli);
+$result_1 = mysqli_query($db,$sqli_1);
+$result_2 = mysqli_query($db,$sqli_2);
+$result_3 = mysqli_query($db,$sqli_3);
+$result_4 = mysqli_query($db,$sqli_4);
+$result_5 = mysqli_query($db,$sqli_5);
+$result_6 = mysqli_query($db,$sqli_6);
+
+
+
+
+?>
+
+
+
+
+
+
+
+
 <html lang="en">
   <head>
    
@@ -415,7 +454,18 @@
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                             <div class="col1">
-                              <p class="dit1">0057</p>
+
+                            <?php while($row=mysqli_fetch_array($result_6)) {
+
+                            ?>
+                            
+                              <input type="text" name="support" class="dit1" value="<?php echo $row['support']; ?>">
+
+                             <?php
+
+                            }
+
+                            ?> 
                             </div>
 
                             <div class="col2">
@@ -424,17 +474,37 @@
 
                             <div class="col3">
 
-                            <p class="dit2">PLC Component</p>
+                            <?php while($row=mysqli_fetch_array($result_1)) {
 
-                            
-                            
+                            ?>
+
+                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+                           
                           </div>
                           </div>
 
                         <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Department:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">AC Drives:</label>
                             <div class="col1">
-                              <p class="dit2">Department ex</p>
+
+                            <?php while($row=mysqli_fetch_array($result)) {
+
+                            ?>
+
+                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+
                             </div>
 
                             <div class="col2">
@@ -443,10 +513,17 @@
 
                             <div class="col4">
 
+                            <?php while($row=mysqli_fetch_array($result_4)) {
 
-                            <p class="dit2">Timer Component </p>
+                            ?>
 
-                             
+                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
                           </div>
@@ -455,7 +532,7 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
                             <div class="col1">
 
-                              <p class="dit2">Building ex</p>
+                              <p class="dit2">6</p>
 
                             </div>
 
@@ -464,8 +541,19 @@
                             </div>
 
                             <div class="col4">
+
+                            <?php while($row=mysqli_fetch_array($result_5)) {
+
+                            ?>
                               
-                            <p class="dit2">Speed ex</p>
+                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+
 
                             </div>
                           </div>
@@ -474,7 +562,7 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine Type:</label>
                             <div class="col1">
 
-                            <p class="dit2">Machine Type ex</p>
+                            <p class="dit2">Vibration</p>
                               
                             </div>
 
@@ -483,8 +571,18 @@
                             </div>
 
                             <div class="col4">
+
+                            <?php while($row=mysqli_fetch_array($result_3)) {
+
+                            ?>
                                 
-                            <p class="dit2">Hourmeter ex</p>
+                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                             }
+
+                             ?>
 
                             </div>
 
@@ -495,7 +593,23 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Power Supply:</label>
                             <div class="col1">
 
-                            <p class="dit2">Power Supply ex</p>
+                            <?php while($row=mysqli_fetch_array($result_2)) {
+
+                                
+                                    
+                              
+
+                            ?>
+
+                              
+
+                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                             }
+
+                             ?>
 
                             </div>
 
@@ -515,15 +629,7 @@
 
                           
 
-                          <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">AC Drives:</label>
-                            <div class="col1">
-
-                            <p class="dit2">AC Drives ex</p>
-
-                            </div>
-                            
-                          </div>
+                          
                            
                          
                       </form>
@@ -545,6 +651,7 @@
         </div>
       </div>
             
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
