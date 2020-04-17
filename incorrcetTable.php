@@ -295,8 +295,7 @@ $result = mysqli_query($conn , $query);
                     <th scope="col">Fault Number</th>
                     <th scope="col">Component Type</th>
                     <th scope="col">ID Component</th>
-                    <th scope="col">Cause Of Malfunction</th>
-                    <th scope="col">Fault Description</th>
+                    <th scope="col">Serial number</th>
                     
                   </tr>
                 </thead>
@@ -312,8 +311,8 @@ $result = mysqli_query($conn , $query);
                     <th scope="row"><?php echo $rows['FaultNumber']; ?></th>
                     <td><?php echo $rows['Component_type']; ?></td>
                     <td><?php echo $rows['Component_ID']; ?></td>
-                    <td><?php echo $rows['CouseOfMalfunction']; ?></td>
-                    <td><?php echo $rows['FaultDescription']; ?></td>
+                    <td><?php echo $rows['s_n']; ?></td>
+
                     
                    
                   </tr>
