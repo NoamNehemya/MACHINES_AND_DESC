@@ -849,7 +849,7 @@ for (var i = 0; i < machinesButtons.length; i++) {
     location.href=check(this.id); // Move to page machine (vibration\electro...) 
     });
 }
-
+//
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){
