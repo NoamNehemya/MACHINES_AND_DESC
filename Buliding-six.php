@@ -15,6 +15,13 @@ while($row = mysqli_fetch_assoc($machine_support_result)){
     $phpArray_support[] = $row['support']; // insert support query into php array
 }  
 
+$machine_machineType_query= "SELECT Machine_type FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_machineType_result = mysqli_query($conn , $machine_machineType_query);
+$phpArray_machineType = array(); // create new PHP array
+
+while($row = mysqli_fetch_assoc($machine_machineType_result)){
+    $phpArray_machineType[] = $row['Machine_type']; // insert support query into php array
+}  
 // conncection to DB and store query of building 6 into php array
 
 $machine_status_query= "SELECT machineStatus FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
@@ -28,7 +35,7 @@ while($row = mysqli_fetch_assoc($machine_status_result)){
 
 
 ?>
-  
+  <?php include('server.php');?>
   
   <html lang="en">
   <head>
@@ -829,11 +836,9 @@ function closeNav() {
 document.getElementById('SearchSupport').onkeypress=function(e){
     if(e.keyCode==13){ // key is 'Enter' in keyboard
         localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
+        location.href=check(document.getElementById('SearchSupport').value); // Move to page machine (vibration\electro...)
     }
 }
-
-
 
 // This command save the result of machine ID (support) from array of same class buttons [0..n] and display the pressed machine in machine page (vibration\electro...)  
 
@@ -841,18 +846,33 @@ var machinesButtons = document.getElementsByClassName("btn-btn-outline-dark"); /
 for (var i = 0; i < machinesButtons.length; i++) {
   machinesButtons[i].addEventListener("click", function(e) { // after click on any machine button 
     localStorage.setItem('PassVar',this.id); // save the machine id button (support number) to variable 
-    location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...) 
+    location.href=check(this.id); // Move to page machine (vibration\electro...) 
     });
 }
 
+function check(number){
+for(var i = 0; i < support_php.length; i++){
+  if(number === support_php[i]){
+    if (machineType_php[i] === 'VIBRATION MASHINES'){
+      return "vibration_mashines.php";
+    }
+    else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
+      return "electrotherm_box_furnace.php";
+    }
+    else{
+     return "nothing";
+    }
+  }
 
+}
+}
 
 
 // var machinesButtons = document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark'); // 'btn-btn-outline-dark' belong to Machine buttons only
     
     var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
     var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
-
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>;
     ButtonsElements = document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark'); // all the machines buttons in this page
     
     var machineButtons = []; // initiate new array
