@@ -517,8 +517,8 @@
 
                 
 
-                $query_list2="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
-                $result_list2 = mysqli_query($db , $query_list2);
+                $query_machineStatus="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
+                $result_machineStatus = mysqli_query($db , $query_machineStatus);
 
 
                 if(isset($_POST['save_status'])) {

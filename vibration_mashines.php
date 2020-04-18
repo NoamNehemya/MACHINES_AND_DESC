@@ -583,7 +583,7 @@
 
                             <div class="col4">
                             <select class="DropDowns" id="List_Machine_Statuc" name="update_status_machine" value="">
-                              <?php while($rows = $result_list2->fetch_assoc()):;?>
+                              <?php while($rows = $result_machineStatus->fetch_assoc()):;?>
                                  <?php echo "<option value={$rows["machineStatus"]}>{$rows["machineStatus"]}</option>";?>
                               <?php endwhile;?>
                             </select>
