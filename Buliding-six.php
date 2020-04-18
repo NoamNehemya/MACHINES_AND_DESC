@@ -852,7 +852,7 @@ for (var i = 0; i < machinesButtons.length; i++) {
 //this function check the machine type of selected machine 
 function check(number){
 for(var i = 0; i < support_php.length; i++){
-  if(number === support_php[i]){
+  if(number === support_php[i]){ // check in iteration if the machine presented on DB
     if (machineType_php[i] === 'VIBRATION MASHINES'){
       return "vibration_mashines.php";
     }
@@ -863,9 +863,14 @@ for(var i = 0; i < support_php.length; i++){
      return "nothing";
     }
   }
+else{ // move to next iteration
+}
+}
+  return "machineError.php"; // if all loop over, than machine not presented on the DB, so moving to machineError.php page
+}
+    
 
-}
-}
+
 
 
 // var machinesButtons = document.getElementById('MainAREA').getElementsByClassName('btn-btn-outline-dark'); // 'btn-btn-outline-dark' belong to Machine buttons only
