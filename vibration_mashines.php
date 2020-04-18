@@ -459,7 +459,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             ?>
                             
-                              <input type="text" name="support" class="dit1" value="<?php echo $row['support']; ?>">
+                              <input type="text" name="textField" class="dit1" value="<?php echo $row['support']; ?>">
 
                              <?php
 
@@ -478,7 +478,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             ?>
 
-                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
                             <?php
 
@@ -497,7 +497,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             ?>
 
-                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
                             <?php
 
@@ -517,7 +517,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             ?>
 
-                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
                             <?php
 
@@ -532,7 +532,7 @@ $result_6 = mysqli_query($db,$sqli_6);
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
                             <div class="col1">
 
-                              <p class="dit2">6</p>
+                              <p name="textField" class="dit2">6</p>
 
                             </div>
 
@@ -546,7 +546,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             ?>
                               
-                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
                             <?php
 
@@ -562,7 +562,7 @@ $result_6 = mysqli_query($db,$sqli_6);
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine Type:</label>
                             <div class="col1">
 
-                            <p class="dit2">Vibration</p>
+                            <p name="textField" class="dit2">Vibration</p>
                               
                             </div>
 
@@ -576,7 +576,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             ?>
                                 
-                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
                             <?php
 
@@ -603,7 +603,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                               
 
-                            <input type="text" name="support" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
                             <?php
 
@@ -730,9 +730,9 @@ document.getElementById('SearchSupport').onkeypress=function(e){
 // get variable (component_type value from pageStockEnter.php)
 var support = localStorage.getItem('PassVar');
 // set title to explanMachinePage title according to support sent variable
-document.getElementById("titleOFpage").innerHTML = "Machine: " + support ;
+document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
 // use cookie for using var javaScript in PHP code
-document.cookie = "myJavascriptVar = " +  support
+document.cookie = "myJavascriptVar = " +  support;
 // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
 window.onload = function() {
     if(!window.location.hash) {
