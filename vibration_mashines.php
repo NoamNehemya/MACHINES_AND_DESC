@@ -1,44 +1,5 @@
-<?php 
 
-$db = mysqli_connect('localhost', 'root', '','test_project');
-
-//sql for display data per Machine
-
-$support_input = $_COOKIE["myJavascriptVar"];
-
-$sqli_acDrives = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'ac drives'";
-$sqli_PLC = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'PLC'";
-$sqli_powerSupply = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Power Supply 24V'";
-$sqli_hourmeter = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'hourmeter'";
-$sqli_timer = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Timer'";
-$sqli_speedControl = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
-$sqli_support = "SELECT distinct support FROM components WHERE support LIKE '$support_input'";
-$sqli_image = "SELECT * FROM machines WHERE support LIKE '$support_input'";
-
-
-
-
-
-$result_acDrives = mysqli_query($db,$sqli_acDrives);
-$result_PLC = mysqli_query($db,$sqli_PLC);
-$result_powerSupply = mysqli_query($db,$sqli_powerSupply);
-$result_hourmeter = mysqli_query($db,$sqli_hourmeter);
-$result_timer = mysqli_query($db,$sqli_timer);
-$result_speedControl = mysqli_query($db,$sqli_speedControl);
-$result_support = mysqli_query($db,$sqli_support);
-$result_image = mysqli_query($db,$sqli_image);
-
-
-
-
-?>
-
-
-
-
-
-
-
+<?php include('server.php');?>
 
 <html lang="en">
   <head>
@@ -358,7 +319,7 @@ $result_image = mysqli_query($db,$sqli_image);
 
          /*css of list - status Machine */
 
-         #List_Machine_Statuc {
+     /*    #List_Machine_Statuc {
 
           background-color: #b3e6cc;
           }
@@ -382,7 +343,7 @@ $result_image = mysqli_query($db,$sqli_image);
 
           }
           
-
+*/
 
         
 
@@ -447,13 +408,13 @@ $result_image = mysqli_query($db,$sqli_image);
                
 		 <div class="row">
 			   <div class="column1" id="ditealMachine">    
-                <form>
+                
 
                     <p id="explanMachinePage"> Enter the data you want to update on this machine.</p>
                    
 
                     
-                    <form id="inputing">
+                    <form method="post" action="vibration_mashines.php" id="inputing">
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                             <div class="col1">
@@ -621,10 +582,10 @@ $result_image = mysqli_query($db,$sqli_image);
                             </div>
 
                             <div class="col4">
-                            <select class="DropDowns" id="List_Machine_Statuc">
-                              <option value="volvo"id="redOP">noam</option>
-                              <option value="volvo" id="yellowOP">ha</option>
-                              <option value="volvo" id="greenOP">ZIRO</option>
+                            <select class="DropDowns" id="List_Machine_Statuc" name="update_status_machine" value="">
+                              <?php while($rows = $result_list2->fetch_assoc()):;?>
+                                 <?php echo "<option value={$rows["machineStatus"]}>{$rows["machineStatus"]}</option>";?>
+                              <?php endwhile;?>
                             </select>
                             </div>
 
@@ -635,9 +596,9 @@ $result_image = mysqli_query($db,$sqli_image);
                           
                            
                          
-                      </form>
+                      
 
-                </form>
+                
               </div>
 
               <?php while($row=mysqli_fetch_assoc($result_image)) {
@@ -653,8 +614,10 @@ $result_image = mysqli_query($db,$sqli_image);
       ?>
             
             <div class="form-group row">
-              <button type="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
+              <button type="submit" name="save_status" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
             </div>
+
+            </form>
             
                               
 
