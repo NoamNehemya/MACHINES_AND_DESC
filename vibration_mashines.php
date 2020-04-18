@@ -319,7 +319,7 @@
 
          /*css of list - status Machine */
 
-     /*    #List_Machine_Statuc {
+     /*    #List_Machine_Status {
 
           background-color: #b3e6cc;
           }
@@ -582,7 +582,7 @@
                             </div>
 
                             <div class="col4">
-                            <select class="DropDowns" id="List_Machine_Statuc" name="update_status_machine" value="">
+                            <select class="DropDowns" id="List_Machine_Status" name="update_status_machine" value="">
                               <?php while($rows = $result_machineStatus->fetch_assoc()):;?>
                                  <?php echo "<option value={$rows["machineStatus"]}>{$rows["machineStatus"]}</option>";?>
                               <?php endwhile;?>
