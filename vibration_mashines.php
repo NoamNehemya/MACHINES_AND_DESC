@@ -6,24 +6,27 @@ $db = mysqli_connect('localhost', 'root', '','test_project');
 
 $support_input = $_COOKIE["myJavascriptVar"];
 
-$sqli = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'ac drives'";
-$sqli_1 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'PLC'";
-$sqli_2 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Power Supply 24V'";
-$sqli_3 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'hourmeter'";
-$sqli_4 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Timer'";
-$sqli_5 = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
-$sqli_6 = "SELECT * FROM components WHERE support LIKE '$support_input' and component_type like 'ac drives'";
+$sqli_acDrives = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'ac drives'";
+$sqli_PLC = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'PLC'";
+$sqli_powerSupply = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Power Supply 24V'";
+$sqli_hourmeter = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'hourmeter'";
+$sqli_timer = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Timer'";
+$sqli_speedControl = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
+$sqli_support = "SELECT distinct support FROM components WHERE support LIKE '$support_input'";
+$sqli_image = "SELECT * FROM machines WHERE support LIKE '$support_input'";
 
 
 
 
-$result = mysqli_query($db,$sqli);
-$result_1 = mysqli_query($db,$sqli_1);
-$result_2 = mysqli_query($db,$sqli_2);
-$result_3 = mysqli_query($db,$sqli_3);
-$result_4 = mysqli_query($db,$sqli_4);
-$result_5 = mysqli_query($db,$sqli_5);
-$result_6 = mysqli_query($db,$sqli_6);
+
+$result_acDrives = mysqli_query($db,$sqli_acDrives);
+$result_PLC = mysqli_query($db,$sqli_PLC);
+$result_powerSupply = mysqli_query($db,$sqli_powerSupply);
+$result_hourmeter = mysqli_query($db,$sqli_hourmeter);
+$result_timer = mysqli_query($db,$sqli_timer);
+$result_speedControl = mysqli_query($db,$sqli_speedControl);
+$result_support = mysqli_query($db,$sqli_support);
+$result_image = mysqli_query($db,$sqli_image);
 
 
 
@@ -334,7 +337,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
         }
 
-        #picher{
+        #MachineImage{
 
           margin-left: 65px;
         }
@@ -455,7 +458,7 @@ $result_6 = mysqli_query($db,$sqli_6);
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_6)) {
+                            <?php while($row=mysqli_fetch_array($result_support)) {
 
                             ?>
                             
@@ -474,7 +477,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             <div class="col3">
 
-                            <?php while($row=mysqli_fetch_array($result_1)) {
+                            <?php while($row=mysqli_fetch_array($result_PLC)) {
 
                             ?>
 
@@ -493,7 +496,7 @@ $result_6 = mysqli_query($db,$sqli_6);
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">AC Drives:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result)) {
+                            <?php while($row=mysqli_fetch_array($result_acDrives)) {
 
                             ?>
 
@@ -513,7 +516,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_4)) {
+                            <?php while($row=mysqli_fetch_array($result_timer)) {
 
                             ?>
 
@@ -542,7 +545,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_5)) {
+                            <?php while($row=mysqli_fetch_array($result_speedControl)) {
 
                             ?>
                               
@@ -572,7 +575,7 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_3)) {
+                            <?php while($row=mysqli_fetch_array($result_hourmeter)) {
 
                             ?>
                                 
@@ -593,7 +596,7 @@ $result_6 = mysqli_query($db,$sqli_6);
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Power Supply:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_2)) {
+                            <?php while($row=mysqli_fetch_array($result_powerSupply)) {
 
                                 
                                     
@@ -636,10 +639,18 @@ $result_6 = mysqli_query($db,$sqli_6);
 
                 </form>
               </div>
+
+              <?php while($row=mysqli_fetch_assoc($result_image)) {
+
+              ?>
           <div class="column2">
             <div class="form-group row">
-              <img src="http://www.up2me.co.il/imgs/43417744.jpg" id="picher" alt="" style="width:400px">
+              <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="width:200px">
             </div>
+
+            <?php
+          }
+      ?>
             
             <div class="form-group row">
               <button type="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
