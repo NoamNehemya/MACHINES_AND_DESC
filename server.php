@@ -53,6 +53,11 @@
     $place = "";
     $s_n = "";
 
+    //variables for update status machine
+
+
+    $update_status_machine = "";
+
 
 
 
@@ -475,7 +480,85 @@
         }
 
 
+        //***************************************************************************************************************************************************************
 
+        //display data in machine 
+
+        //sql for display data per Machine
+
+                $support_input = $_COOKIE["myJavascriptVar"];
+
+                $sqli_acDrives = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'ac drives'";
+                $sqli_PLC = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'PLC'";
+                $sqli_powerSupply = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Power Supply 24V'";
+                $sqli_hourmeter = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'hourmeter'";
+                $sqli_timer = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'Timer'";
+                $sqli_speedControl = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
+                $sqli_support = "SELECT distinct support FROM components WHERE support LIKE '$support_input'";
+                $sqli_image = "SELECT * FROM machines WHERE support LIKE '$support_input'";
+
+
+
+
+
+                $result_acDrives = mysqli_query($db,$sqli_acDrives);
+                $result_PLC = mysqli_query($db,$sqli_PLC);
+                $result_powerSupply = mysqli_query($db,$sqli_powerSupply);
+                $result_hourmeter = mysqli_query($db,$sqli_hourmeter);
+                $result_timer = mysqli_query($db,$sqli_timer);
+                $result_speedControl = mysqli_query($db,$sqli_speedControl);
+                $result_support = mysqli_query($db,$sqli_support);
+                $result_image = mysqli_query($db,$sqli_image);
+
+                //**********************************************************
+
+
+                //sql for update status machine
+
+                
+
+                $query_list2="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
+                $result_list2 = mysqli_query($db , $query_list2);
+
+
+                if(isset($_POST['save_status'])) {
+
+                $update_status_machine = mysqli_real_escape_string($db,$_POST['update_status_machine']);
+
+                if (empty($update_status_machine)) {
+                    array_push($errors,"Password is required");
+                   
+                    $message = "no choose status";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                }
+
+                if(count($errors) == 0) {
+
+                    $sql_update_status = "UPDATE machines SET machineStatus = '$update_status_machine' WHERE support LIKE '$support_input'";
+    
+                    $query_update_status = mysqli_query($db,$sql_update_status);
+
+                    if($query_update_status) {
+    
+                         echo "<script type='text/javascript'>alert('Password is Update!');</script>";
+                        header('Location: Buliding-six.php');
+    
+                    } else {
+    
+                         echo "<script type='text/javascript'>alert('Wornge Email / password');</script>"; 
+                        //header('Location: LoginMD.php');
+                    }
+                
+                
+                }
+
+            }
+
+               
+
+                
+
+                
 
 ?>
 
