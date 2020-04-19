@@ -887,22 +887,32 @@ else{ // move to next iteration
 
     let intersection_support = support_php.filter(x => machineButtons.includes(x)); // array of same values of both array
   // we want array only for support that presented on this screen (building 6)
-   
+   // remove this items from support array because they dont presented on this screen (building 6)
+    var itemtoRemove = "1094";
+    support_php.splice($.inArray(itemtoRemove, support_php), 1);
+    var itemtoRemove = "1279";
+    support_php.splice($.inArray(itemtoRemove, support_php), 1);
+    var itemtoRemove = "1468";
+    support_php.splice($.inArray(itemtoRemove, support_php), 1);
+
+    machineStatus_php.splice(0,1); // index of '1094'
+    machineStatus_php.splice(3,1); // index of '1279'
+    machineStatus_php.splice(14,1); // index of '1468'
    
     // this loop configure the button border color according to machine status (in DB)
-    for (var i = 0; i < intersection_support.length; i++) {
+    for (var i = 0; i < support_php.length; i++) {
         if(machineStatus_php[i] === "Working"){
-          document.getElementById(intersection_support[i]).style.borderColor = '#00ff40'; // green color
+          document.getElementById(support_php[i]).style.borderColor = '#00ff40'; // green color
         }
         else if(machineStatus_php[i] === "Set-up"){
-          document.getElementById(intersection_support[i]).style.borderColor = 'yellow';
+          document.getElementById(support_php[i]).style.borderColor = 'yellow';
         }
         else{
-         document.getElementById(intersection_support[i]).style.borderColor = 'red';
+         document.getElementById(support_php[i]).style.borderColor = 'red';
         }
     }
 
-
+ 
 
 // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
 window.onload = function() {
