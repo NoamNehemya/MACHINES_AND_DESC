@@ -295,7 +295,7 @@
 
         }
 
-        #picher{
+        #machineImage{
 
           margin-left: 65px;
         }
@@ -791,10 +791,16 @@
 
                 
               </div>
+              <?php while($row=mysqli_fetch_assoc($result_image)) {
+
+              ?>
           <div class="column2">
             <div class="form-group row">
-              <img src="http://www.up2me.co.il/imgs/43417744.jpg" id="picher" alt="" style="width:400px">
+              <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="width:200px">
             </div>
+            <?php
+          }
+      ?>
             
             <div class="form-group row">
               <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
