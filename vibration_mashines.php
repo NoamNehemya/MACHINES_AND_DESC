@@ -319,7 +319,7 @@
 
          /*css of list - status Machine */
 
-     /*    #List_Machine_Status {
+     /*    #List_Machine_Statuc {
 
           background-color: #b3e6cc;
           }
@@ -531,16 +531,16 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Hourmeter:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Machine Status:</label>
                             </div>
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_hourmeter)) {
+                            <?php while($row=mysqli_fetch_array($result_statusMachine)) {
 
                             ?>
                                 
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
 
                             <?php
 
@@ -559,13 +559,8 @@
 
                             <?php while($row=mysqli_fetch_array($result_powerSupply)) {
 
-                                
-                                    
-                              
-
                             ?>
 
-                              
 
                             <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
 
@@ -578,12 +573,14 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Machine<br/>Status:</label>
+                              <label for="colFormLabelSm" class="Model-dit">change Machine<br/>Status:</label>
                             </div>
 
                             <div class="col4">
-                            <select class="DropDowns" id="List_Machine_Status" name="update_status_machine" value="">
-                              <?php while($rows = $result_machineStatus->fetch_assoc()):;?>
+                            <select class="DropDowns" id="List_Machine_Statuc" name="update_status_machine" value="">
+                              
+                    
+                              <?php while($rows = $result_list2->fetch_assoc()):;?>
                                  <?php echo "<option value={$rows["machineStatus"]}>{$rows["machineStatus"]}</option>";?>
                               <?php endwhile;?>
                             </select>
@@ -591,7 +588,26 @@
 
                           </div>
 
-                          
+                          <div class="form-group row">
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Hourmeter:</label>
+                            <div class="col1"> 
+
+                            <?php while($row=mysqli_fetch_array($result_hourmeter)) {
+
+                            ?>
+                                  
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+
+
+
+                            </div>
+                            </div>
 
                           
                            
@@ -696,7 +712,7 @@ function closeNav() {
 document.getElementById('SearchSupport').onkeypress=function(e){
     if(e.keyCode==13){ // key is 'Enter' in keyboard
         localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
+        location.href=check(document.getElementById('SearchSupport').value); // Move to page machine (vibration\electro...)
     }
 }
 
@@ -713,6 +729,23 @@ window.onload = function() {
         window.location = window.location + '#loaded';
         window.location.reload();
     }
+}
+
+function check(number){
+for(var i = 0; i < support_php.length; i++){
+  if(number === support_php[i]){
+    if (machineType_php[i] === 'VIBRATION MASHINES'){
+      return "vibration_mashines.php";
+    }
+    else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
+      return "electrotherm_box_furnace.php";
+    }
+    else{
+     return "nothing";
+    }
+  }
+
+}
 }
 
 
