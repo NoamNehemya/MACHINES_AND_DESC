@@ -319,7 +319,7 @@
 
          /*css of list - status Machine */
 
-     /*    #List_Machine_Statuc {
+     /*    #List_Machine_Status {
 
           background-color: #b3e6cc;
           }
@@ -531,7 +531,6 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Machine Status:</label>
                             </div>
 
                             <div class="col4">
@@ -540,7 +539,7 @@
 
                             ?>
                                 
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
+                            <input type="text" id="machineStatusText" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
 
                             <?php
 
@@ -573,11 +572,11 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">change Machine<br/>Status:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Machine<br/>Status:</label>
                             </div>
 
                             <div class="col4">
-                            <select class="DropDowns" id="List_Machine_Statuc" name="update_status_machine" value="">
+                            <select class="DropDowns" id="List_Machine_Status" name="update_status_machine" value="">
                               
                     
                               <?php while($rows = $result_list2->fetch_assoc()):;?>
@@ -729,6 +728,7 @@ window.onload = function() {
     }
 }
 
+
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){
@@ -746,9 +746,11 @@ for(var i = 0; i < support_php.length; i++){
 }
 }
 
+var machineTextBox = document.getElementById('machineStatusText').value; // store machine status value from text box
 
+document.getElementById('List_Machine_Status').value = machineTextBox; // set machineTextBox value as default in drop list
 
-
+document.getElementById('machineStatusText').style.display = "none"; // hide machineTextBox from UI
 
 </script>
   </body>
