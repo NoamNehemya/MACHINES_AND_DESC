@@ -1,3 +1,5 @@
+<?php include('server.php');?>
+
 <html lang="en">
   <head>
    
@@ -407,17 +409,28 @@
                
 		 <div class="row">
 			   <div class="column1" id="ditealMachine">    
-                <form>
+                
 
                     <p id="explanMachinePage"> Enter the data you want to update on this machine.</p>
                    
 
                     
-                    <form id="inputing">
+                    <form method="post" action="electrotherm_box_furnace.php" id="inputing">
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                             <div class="col1">
-                              <p class="dit1">0057</p>
+
+                            <?php while($row=mysqli_fetch_array($result_support2)) {
+
+                            ?>
+                              <input type="text" name="textField" class="dit1" value="<?php echo $row['support']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?> 
+
                             </div>
 
                             <div class="col2">
@@ -425,17 +438,40 @@
                             </div>
 
                             <div class="col3">
+
+                            <?php while($row=mysqli_fetch_array($result_sourch)) {
+
+                            ?>
                            
 
-                            <p class="dit2">Sourch Component</p>
+                           <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                           </div>
                           </div>
 
                         <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Asset:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Universal<br/>Digital:</label>
                             <div class="col1">
-                              <p class="dit2">FA24624</p>
+
+                            <?php while($row=mysqli_fetch_array($result_Universal_Digital)) {
+
+                            ?>
+
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+
                             </div>
 
                             <div class="col2">
@@ -444,7 +480,17 @@
 
                             <div class="col4">
 
-                            <p class="dit2">PLC Component</p>
+                            <?php while($row=mysqli_fetch_array($result_PLC2)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
                           </div>
@@ -452,7 +498,7 @@
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
                             <div class="col1">
-                              <p class="dit2">North</p>
+                              <p class="dit2">6</p>
                             </div>
 
                             <div class="col2">
@@ -461,7 +507,17 @@
 
                             <div class="col4">
 
-                            <p class="dit2">Graphic Recorder Component</p>
+                            <?php while($row=mysqli_fetch_array($result_Graphic_Recorder)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
                           </div>
@@ -470,17 +526,38 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Main:</label>
                             <div class="col1">
 
-                            <p class="dit2">example</p>
+                            <?php while($row=mysqli_fetch_array($result_Main)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['main']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
                               
                             </div>
 
                             <div class="col2">
                               <label for="colFormLabelSm" class="Model-dit">PVAK:</label>
                             </div>
+                            
 
                             <div class="col4">
 
-                            <p class="dit2">PVAK Component</p>
+                            <?php while($row=mysqli_fetch_array($result_PVAK)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
@@ -490,7 +567,7 @@
                           <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine<br/>Type:</label>
                             <div class="col1">
-                              <p class="dit2">example</p>
+                              <p class="dit2">Electrotherm box</p>
                             </div>
 
                             <div class="col2">
@@ -499,7 +576,18 @@
 
                             <div class="col4">
 
-                            <p class="dit2">SCR Component</p>
+                            <?php while($row=mysqli_fetch_array($result_SCR)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+
 
                             </div>
 
@@ -511,7 +599,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PEX:</label>
                             <div class="col1">
                        
-                              <p class="dit2">PEX Component</p>
+                            <?php while($row=mysqli_fetch_array($result_PEX)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
@@ -522,7 +620,19 @@
 
                             <div class="col4">
 
-                            <p class="dit2">PWT Component</p>
+                           
+                            <?php while($row=mysqli_fetch_array($result_PWT)) {
+
+                            ?>
+
+                             <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                           <?php
+
+                           }
+
+                          ?>
+
 
                             </div>
 
@@ -532,7 +642,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PHT:</label>
                             <div class="col1">
 
-                              <p class="dit2">PHT Component</p>
+                            <?php while($row=mysqli_fetch_array($result_PHT)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
@@ -542,7 +662,17 @@
 
                             <div class="col4">
 
-                            <p class="dit2">Volt Component</p>
+                            <?php while($row=mysqli_fetch_array($result_Volt_Ampermeter)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
@@ -552,7 +682,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Pol/Pot:</label>
                             <div class="col1">
 
-                              <p class="dit2">Pol/Pot Component</p>
+                            <?php while($row=mysqli_fetch_array($result_Pol_Pot)) {
+
+                           ?>
+
+                           <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                           <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
@@ -562,7 +702,18 @@
 
                             <div class="col4">
 
-                            <p class="dit2">Power Supply Component</p>
+                            
+                            <?php while($row=mysqli_fetch_array($result_powerSupply2)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
                           </div>
@@ -571,17 +722,36 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH1/SSR:</label>
                             <div class="col1">
 
-                            <p class="dit2">DH1/SSR Component</p>
+                            <?php while($row=mysqli_fetch_array($result_DH1)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Universal<br/>Digital:</label>
+                              <label for="colFormLabelSm" class="Model-dit">Machine Status:</label>
                             </div>
 
                             <div class="col4">
+                            <?php while($row=mysqli_fetch_array($result_statusMachine2)) {
 
-                            <p class="dit2">Universal Digital</p>
+                            ?>
+                                
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
                           </div>
@@ -590,7 +760,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH2/SSR:</label>
                             <div class="col1">
 
-                            <p class="dit2">DH2/SSR Component</p>
+                            <?php while($row=mysqli_fetch_array($result_DH2)) {
+
+                            ?>
+
+                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
 
                             </div>
 
@@ -599,18 +779,17 @@
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns" id="List_Machine_Statuc">
-                              <option value="volvo">Machine Status</option>
-                              <option value="volvo"id="redOP">noam</option>
-                              <option value="volvo" id="yellowOP">ha</option>
-                              <option value="volvo" id="greenOP">homo</option>
+                              <select class="DropDowns" id="List_Machine_Statuc" name="update_status_machine2">
+                              <?php while($rows = $result_list3->fetch_assoc()):;?>
+                                 <?php echo "<option value={$rows["machineStatus"]}>{$rows["machineStatus"]}</option>";?>
+                              <?php endwhile;?>
                             </select>
                             </div>
                           </div>
 
-                      </form>
+                      
 
-                </form>
+                
               </div>
           <div class="column2">
             <div class="form-group row">
@@ -618,10 +797,10 @@
             </div>
             
             <div class="form-group row">
-              <button type="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
+              <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
             </div>
             
-                              
+            </form>                
 
           </div>
         </div>
@@ -702,7 +881,7 @@ function closeNav() {
 document.getElementById('SearchSupport').onkeypress=function(e){
     if(e.keyCode==13){ // key is 'Enter' in keyboard
         localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
+        location.href='electrotherm_box_furnace.php'; // Move to page machine (vibration\electro...)
     }
 }
 
