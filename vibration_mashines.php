@@ -617,9 +617,7 @@
                 
               </div>
 
-              <?php while($row=mysqli_fetch_assoc($result_image)) {
-
-              ?>
+              <?php while($row=mysqli_fetch_assoc($result_image)) {?>
           <div class="column2">
             <div class="form-group row">
               <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="width:200px">
