@@ -482,7 +482,7 @@
 
         //***************************************************************************************************************************************************************
 
-        //display data in machine 
+        //display data in machine ----------->> vibraion <<---------------------
 
         //sql for display data per Machine
 
@@ -496,12 +496,8 @@
                 $sqli_speedControl = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
                 $sqli_support = "SELECT distinct support FROM components WHERE support LIKE '$support_input'";
                 $sqli_image = "SELECT * FROM machines WHERE support LIKE '$support_input'";
-      
-                $sqli_default_statusMachine = "SELECT machineStatus FROM machines WHERE support LIKE '$support_input'";
 
-
-
-
+                $sqli_defult_statusMachine = "SELECT machineStatus FROM machines WHERE support LIKE '$support_input'";
 
                 $result_acDrives = mysqli_query($db,$sqli_acDrives);
                 $result_PLC = mysqli_query($db,$sqli_PLC);
@@ -511,7 +507,52 @@
                 $result_speedControl = mysqli_query($db,$sqli_speedControl);
                 $result_support = mysqli_query($db,$sqli_support);
                 $result_image = mysqli_query($db,$sqli_image);
-                $result_statusMachine = mysqli_query($db,$sqli_default_statusMachine);
+                $result_statusMachine = mysqli_query($db,$sqli_defult_statusMachine);
+
+
+
+                $support_input2 = $_COOKIE["myJavascriptVar"];
+
+                $sqli_support2 = "SELECT distinct support FROM components WHERE support LIKE '$support_input2'";
+                $sqli_sourch = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'sourch'";
+                $sqli_Universal_Digital = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type like 'Universal Digital'";
+                $sqli_PLC2 = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'PLC'";
+                $sqli_Graphic_Recorder = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'Graphic Recorder'";
+                $sqli_Main = "SELECT main FROM components WHERE support LIKE '$support_input2' limit 1";
+                $sqli_PVAK = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'PVAK'";
+                $sqli_SCR = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'SCR Power'";
+                $sqli_PEX = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'PEX'";
+                $sqli_PWT = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'PWT'";
+                $sqli_Pol_Pot = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'Pol_Pot'";
+                $sqli_Volt_Ampermeter = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'Volt_Ampermeter'";
+                $sqli_powerSupply2 = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'Power Supply 24V'";
+                $sqli_DH1 = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type like 'DH1_SSR & DH2_SSR'";
+                $sqli_DH2 = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type like 'DH1_SSR & DH2_SSR'";
+                $sqli_PHT = "SELECT s_n FROM components WHERE support LIKE '$support_input2' and component_type LIKE 'PHT'";
+
+                $sqli_defult_statusMachine2 = "SELECT machineStatus FROM machines WHERE support LIKE '$support_input'";
+
+
+
+                $result_support2 = mysqli_query($db,$sqli_support2);
+                $result_sourch = mysqli_query($db,$sqli_sourch);
+                $result_Universal_Digital = mysqli_query($db,$sqli_Universal_Digital);
+                $result_PLC2 = mysqli_query($db,$sqli_PLC2);
+                $result_Graphic_Recorder = mysqli_query($db,$sqli_Graphic_Recorder);
+                $result_Main = mysqli_query($db,$sqli_Main);
+                $result_PVAK = mysqli_query($db,$sqli_PVAK);
+                $result_SCR = mysqli_query($db,$sqli_SCR);
+                $result_PEX = mysqli_query($db,$sqli_PEX);
+                $result_PWT = mysqli_query($db,$sqli_PWT);
+                $result_Pol_Pot = mysqli_query($db,$sqli_Pol_Pot);
+                $result_Volt_Ampermeter = mysqli_query($db,$sqli_Volt_Ampermeter);
+                $result_powerSupply2 = mysqli_query($db,$sqli_powerSupply2);
+                $result_DH1 = mysqli_query($db,$sqli_DH1);
+                $result_DH2 = mysqli_query($db,$sqli_DH2);
+                $result_PHT = mysqli_query($db,$sqli_PHT);
+
+                $result_statusMachine2 = mysqli_query($db,$sqli_defult_statusMachine2);
+
 
 
                 //**********************************************************
@@ -519,9 +560,6 @@
                 //sql for defult status machine in drop list (option 1)
 
                 
-              
-
-
 
 
                 //sql for update status machine
@@ -564,8 +602,59 @@
                 }
 
             }
+            
 
-               
+
+         //***************************************************************************************************************************************************************
+
+
+              //display data in machine ----------->> Electrotherm box Machine <<---------------------
+
+            //sql for display data per Machine
+
+                $query_list3="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
+                $result_list3 = mysqli_query($db , $query_list3);
+
+
+                if(isset($_POST['save_status_2'])) {
+
+                $update_status_machine2 = mysqli_real_escape_string($db,$_POST['update_status_machine2']);
+
+                if (empty($update_status_machine2)) {
+                    array_push($errors,"Password is required");
+                   
+                    $message = "no choose status";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                }
+
+                if(count($errors) == 0) {
+
+                    $sql_update_status2 = "UPDATE machines SET machineStatus = '$update_status_machine2' WHERE support LIKE '$support_input2'";
+    
+                    $query_update_status2 = mysqli_query($db,$sql_update_status2);
+
+                    if($query_update_status2) {
+    
+                         echo "<script type='text/javascript'>alert('Password is Update!');</script>";
+                        header('Location: Buliding-six.php');
+    
+                    } else {
+    
+                         echo "<script type='text/javascript'>alert('Wornge Email / password');</script>"; 
+                        //header('Location: LoginMD.php');
+                    }
+                
+                
+                }
+
+            }
+            
+            
+      
+
+
+
+            
 
                 
 
