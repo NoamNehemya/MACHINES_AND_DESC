@@ -497,6 +497,8 @@
                 $sqli_support = "SELECT distinct support FROM components WHERE support LIKE '$support_input'";
                 $sqli_image = "SELECT * FROM machines WHERE support LIKE '$support_input'";
 
+                $sqli_defult_statusMachine = "SELECT machineStatus FROM machines WHERE support LIKE '$support_input'";
+
 
 
 
@@ -509,16 +511,25 @@
                 $result_speedControl = mysqli_query($db,$sqli_speedControl);
                 $result_support = mysqli_query($db,$sqli_support);
                 $result_image = mysqli_query($db,$sqli_image);
+                $result_statusMachine = mysqli_query($db,$sqli_defult_statusMachine);
+
 
                 //**********************************************************
+
+                //sql for defult status machine in drop list (option 1)
+
+                
+              
+
+
 
 
                 //sql for update status machine
 
                 
 
-                $query_machineStatus="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
-                $result_machineStatus = mysqli_query($db , $query_machineStatus);
+                $query_list2="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
+                $result_list2 = mysqli_query($db , $query_list2);
 
 
                 if(isset($_POST['save_status'])) {
