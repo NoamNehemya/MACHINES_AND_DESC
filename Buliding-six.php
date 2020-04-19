@@ -913,7 +913,7 @@ else{ // move to next iteration
     }
 
  
-
+//
 // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
 window.onload = function() {
     if(!window.location.hash) {
