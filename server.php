@@ -496,8 +496,8 @@
                 $sqli_speedControl = "SELECT s_n FROM components WHERE support LIKE '$support_input' and component_type LIKE 'speed control'";
                 $sqli_support = "SELECT distinct support FROM components WHERE support LIKE '$support_input'";
                 $sqli_image = "SELECT * FROM machines WHERE support LIKE '$support_input'";
-
-                $sqli_defult_statusMachine = "SELECT machineStatus FROM machines WHERE support LIKE '$support_input'";
+      
+                $sqli_default_statusMachine = "SELECT machineStatus FROM machines WHERE support LIKE '$support_input'";
 
 
 
@@ -511,7 +511,7 @@
                 $result_speedControl = mysqli_query($db,$sqli_speedControl);
                 $result_support = mysqli_query($db,$sqli_support);
                 $result_image = mysqli_query($db,$sqli_image);
-                $result_statusMachine = mysqli_query($db,$sqli_defult_statusMachine);
+                $result_statusMachine = mysqli_query($db,$sqli_default_statusMachine);
 
 
                 //**********************************************************
