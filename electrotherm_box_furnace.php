@@ -793,8 +793,7 @@
               <?php while($row=mysqli_fetch_assoc($result_image)) {?>
           <div class="column2">
             <div class="form-group row">
-              <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="width:200px">
-            </div>
+            <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="max-width: 200px;border: 1px solid lightgray; box-shadow: 0 1px 5px 1px lightgrey; border-radius: 6px;">            </div>
             <?php
           }
       ?>
