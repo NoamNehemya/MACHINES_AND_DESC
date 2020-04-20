@@ -131,25 +131,25 @@
                     <?php include('errors.php'); ?>
                         <div class="form-row">
                           <div class="col">
-                            <input type="text" class="form-control" placeholder="First name" name="firstname" value="<?php echo $firstname; ?>">
+                            <input type="text" class="form-control" placeholder="First name" maxlength="10" name="firstname" value="<?php echo $firstname; ?>">
                           </div>
                         </div>
                         <br>
                         <div class="form-row">
                           <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name" name="lastname" value="<?php echo $lastname; ?>">
+                            <input type="text" class="form-control" placeholder="Last name" maxlength="20" name="lastname" value="<?php echo $lastname; ?>">
                           </div>
                         </div>
                         <br>
                         <div class="form-row">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="City" name="city" value="<?php echo $city; ?>">
+                              <input type="text" class="form-control" placeholder="City" maxlength="15" name="city" value="<?php echo $city; ?>">
                             </div>
                           </div>
                           <br>
                         <div class="form-row">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Street" name="street" value="<?php echo $street; ?>">
+                              <input type="text" class="form-control" placeholder="Street" maxlength="20" name="street" value="<?php echo $street; ?>">
                             </div>
                           </div>
                           <br>
@@ -169,25 +169,25 @@
                           <br>
                         <div class="form-row">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="Email" name="email1" value="<?php echo $email1; ?>">
+                            <input type="email" class="form-control" placeholder="Email" maxlength="30" name="email1" value="<?php echo $email1; ?>">
                             </div>
                         </div>
                           <br>
                         <div class="form-row">
                         <div class="col">
-                              <input type="email" class="form-control" placeholder="Confirm Email" name="email2" value="<?php echo $email2; ?>">
+                              <input type="email" class="form-control" placeholder="Confirm Email" maxlength="30" name="email2" value="<?php echo $email2; ?>">
                             </div>
                         </div>
                           <br>
                         <div class="form-group">
-                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password" name="password1">
+                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" maxlength="20" aria-describedby="passwordHelpInline" placeholder="Password" name="password1">
                             <small id="passwordHelpInline" class="text-muted">
                             <p id=explainPassword>Must be 8-20 characters long.</p>
                              </small>
                         </div>
         
                         <div class="form-group">
-                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password" name="password2">
+                            <input type="password" id="inputPassword6" class="form-control-mx-sm-3" maxlength="20" aria-describedby="passwordHelpInline" placeholder="Confirm Password" name="password2">
                             <small id="passwordHelpInline" class="text-muted">
                              </small>
                         </div>
@@ -204,7 +204,7 @@
                             <br>
                             <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Your Answer" name="answer" value="<?php echo $answer; ?>">
+                                  <input type="text" class="form-control" placeholder="Your Answer" maxlength="20" name="answer" value="<?php echo $answer; ?>">
                                 </div>
                               </div>
                           </div>
