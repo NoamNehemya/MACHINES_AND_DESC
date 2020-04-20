@@ -330,7 +330,7 @@
 
                         <div class="col2">
                         <select class="DropDowns" id="DropListTypeSupport" onChange="submitActiveOrDimmed()" name="support" value="<?php echo $support; ?>">
-                            <?php while($rows = $result_list2->fetch_assoc()):;?>
+                            <?php while($rows = $result_allsupport->fetch_assoc()):;?>
                                 <?php echo "<option value={$rows["support"]}>{$rows["support"]}</option>";?>
                             <?php endwhile;?>
                               </select>

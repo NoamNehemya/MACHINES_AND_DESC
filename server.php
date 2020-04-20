@@ -370,8 +370,6 @@
             $query_list="SELECT DISTINCT Component_type FROM components";
             $result_list = mysqli_query($db , $query_list);
 
-            $query_list2="SELECT DISTINCT support FROM machines ORDER BY cast(support as unsigned)"; // need cast because doing order by on String column
-            $result_list2 = mysqli_query($db , $query_list2);
 
           if(isset($_POST['insertComponentBtn'])) {
 
@@ -568,6 +566,9 @@
 
                 $query_list2="SELECT DISTINCT machineStatus FROM machines ORDER BY cast(machineStatus as unsigned)"; // need cast because doing order by on String column
                 $result_list2 = mysqli_query($db , $query_list2);
+
+                $query_allsupport="SELECT DISTINCT support FROM machines ORDER BY cast(support as unsigned)"; // need cast because doing order by on String column
+                $result_allsupport = mysqli_query($db , $query_allsupport);
 
 
                 if(isset($_POST['save_status'])) {
