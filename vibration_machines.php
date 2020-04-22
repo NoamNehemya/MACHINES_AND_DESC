@@ -414,7 +414,7 @@
                    
 
                     
-                    <form method="post" action="vibration_mashines.php" id="inputing">
+                    <form method="post" action="vibration_machines.php" id="inputing">
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm">Support:</label>
                             <div class="col1">
@@ -732,8 +732,8 @@ window.onload = function() {
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){
-    if (machineType_php[i] === 'VIBRATION MASHINES'){
-      return "vibration_mashines.php";
+    if (machineType_php[i] === 'VIBRATION MACHINES'){
+      return "vibration_machines.php";
     }
     else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
       return "electrotherm_box_furnace.php";

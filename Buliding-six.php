@@ -7,7 +7,7 @@ if (!$conn) {
 
 }
 // conncection to DB and store query of building 6 into php array
-$machine_support_query= "SELECT support FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_support_query= "SELECT support FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
 $machine_support_result = mysqli_query($conn , $machine_support_query);
 $phpArray_support = array(); // create new PHP array
 
@@ -15,7 +15,7 @@ while($row = mysqli_fetch_assoc($machine_support_result)){
     $phpArray_support[] = $row['support']; // insert support query into php array
 }  
 
-$machine_machineType_query= "SELECT Machine_type FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_machineType_query= "SELECT Machine_type FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
 $machine_machineType_result = mysqli_query($conn , $machine_machineType_query);
 $phpArray_machineType = array(); // create new PHP array
 
@@ -24,7 +24,7 @@ while($row = mysqli_fetch_assoc($machine_machineType_result)){
 }  
 // conncection to DB and store query of building 6 into php array
 
-$machine_status_query= "SELECT machineStatus FROM machines WHERE Machine_type LIKE 'VIBRATION MASHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_status_query= "SELECT machineStatus FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
 $machine_status_result = mysqli_query($conn , $machine_status_query);
 $phpArray_status = array(); // create new PHP array
 
@@ -853,8 +853,8 @@ for (var i = 0; i < machinesButtons.length; i++) {
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){ // check in iteration if the machine presented on DB
-    if (machineType_php[i] === 'VIBRATION MASHINES'){
-      return "vibration_mashines.php";
+    if (machineType_php[i] === 'VIBRATION MACHINES'){
+      return "vibration_machines.php";
     }
     else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
       return "electrotherm_box_furnace.php";

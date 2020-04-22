@@ -401,7 +401,7 @@ window.onload = function() {
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){
-    if (machineType_php[i] === 'VIBRATION MASHINES'){
+    if (machineType_php[i] === 'VIBRATION MACHINES'){
       return "vibration_mashines.php";
     }
     else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
