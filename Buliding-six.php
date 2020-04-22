@@ -896,8 +896,12 @@ else{ // move to next iteration
     support_php.splice($.inArray(itemtoRemove, support_php), 1);
 
     machineStatus_php.splice(0,1); // index of '1094'
-    machineStatus_php.splice(3,1); // index of '1279'
-    machineStatus_php.splice(14,1); // index of '1468'
+    machineStatus_php.splice(2,1); // index of '1279'
+    machineStatus_php.splice(12,1); // index of '1468'
+
+    machineType_php.splice(0,1); // index of '1094'
+    machineType_php.splice(2,1); // index of '1279'
+    machineType_php.splice(12,1); // index of '1468'
    
     // this loop configure the button border color according to machine status (in DB)
     for (var i = 0; i < support_php.length; i++) {
