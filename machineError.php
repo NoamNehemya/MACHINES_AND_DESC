@@ -300,7 +300,7 @@ $myPhpVar= $_COOKIE['myJavascriptVar'];
               <form id="Text_Area_Error">
 
               <h1 class="display-5" id="sorry_title"> Sorry! </h1>
-              <p id="senetece_one">Machine <?php echo $myPhpVar; ?> could not be found.</p>
+              <p id="senetece_one">Machine <?php echo $myPhpVar; ?> not found.</p>
               <p id="senetece_two">Please try again with another Machine Support.</p>
 
               </from>
