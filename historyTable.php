@@ -409,7 +409,7 @@ function closeNav() {
 document.getElementById('SearchSupport').onkeypress=function(e){
     if(e.keyCode==13){ // key is 'Enter' in keyboard
         localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='vibration_mashines.php'; // Move to page machine (vibration\electro...)
+        location.href='vibration_machines.php'; // Move to page machine (vibration\electro...)
     }
 }
 
