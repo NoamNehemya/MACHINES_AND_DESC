@@ -7,7 +7,7 @@ if (!$conn) {
 
 }
 // conncection to DB and store query of building 6 into php array
-$machine_support_query= "SELECT support FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+$machine_support_query= "SELECT * FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
 $machine_support_result = mysqli_query($conn , $machine_support_query);
 $phpArray_support = array(); // create new PHP array
 
@@ -20,7 +20,7 @@ $machine_machineType_result = mysqli_query($conn , $machine_machineType_query);
 $phpArray_machineType = array(); // create new PHP array
 
 while($row = mysqli_fetch_assoc($machine_machineType_result)){
-    $phpArray_machineType[] = $row['Machine_type']; // insert support query into php array
+    $phpArray_machineType[] = $row['Machine_type']; // insert machine type query into php array
 }  
 // conncection to DB and store query of building 6 into php array
 
