@@ -34,189 +34,27 @@ $result = mysqli_query($conn , $query);
     <title>Component Type - result</title>
 
    <style>
-		body {
-	  font-family: "Lato", sans-serif;
-	}
-
-	.sidenav {
-	  height: 100%;
-	  width: 0;
-	  position: fixed;
-	  z-index: 1;
-	  top: 0;
-	  left: 0;
-	  background-color: #111;
-    opacity: 0.9;
-	  overflow-x: hidden;
-	  transition: 0.5s;
-	  padding-top: 60px;
-	}
-
-	.sidenav a {
-	  padding: 8px 8px 8px 32px;
-	  text-decoration: none;
-	  font-size: 25px;
-	  color: #818181;
-	  display: block;
-	  transition: 0.3s;
-	}
-
-	.sidenav a:hover {
-	  color: #f1f1f1;
-	}
-
-	.sidenav .closebtn {
-	  position: absolute;
-	  top: 0;
-	  right: 25px;
-	  font-size: 36px;
-	  margin-left: 50px;
-	}
-
-	#main {
-	  transition: margin-left .5s;
-	  padding: 16px;
-	}
-
-	@media screen and (max-height: 450px) {
-	  .sidenav {padding-top: 15px;}
-	  .sidenav a {font-size: 18px;}
-	}
-
-		   
-        .container{
-           font-size: 20;
-           margin-top: 20px;
-           margin-bottom: 60px;
-        }
-
-       
-
-        .jumbotron-jumbotron-fluid{
-
-            height: 90px;
-            background-color: #E1F3EE;
-            margin-bottom: 0px;
-            padding-top: 5px;
-            padding-bottom: 20px;
-
-
-        }
-
-        .form-control-mx-sm-3{
-
-            width: 650px;
-            margin-left: 182px;
-        }
-
-       
-        #Confirm {
-
-            margin-left: 182px;
-            width: 650px;
-            margin-top: 35px;
-            padding-inline-end: 20px;
-            margin-block-end: 50px;
-
-        }
-
-        
-
-
-        #logout {
-
-          margin-left:1090px;
-          margin-top: 20px;
-          width: 200px;
-         
-        }
-
-      #titleMachine{
-
-        margin-top: 20px;
-        margin-left: 50px;
-      }
-
-      #backPage {
-
-        margin-top:20px;
-        margin-left: 15px; 
-      }
-
-      #homePage {
-
-        margin-top:20px;
-        margin-left: 15px; 
-        }
-
-        #PrintPage{
-
-        margin-top:20px;
-        margin-left:15px;  
-        }
-
-        #SearchSupport {
-
-        margin-left:730px;
-        margin-top: 20px;
-
-        }
-
-        #History {
-
-        margin-top:25px;
-        margin-left: 15px;  
-        }
-
-        #Incorrect {
-
-        margin-top:25px;
-        margin-left: 15px;  
-        }
-
-        #insert {
-
-        margin-top:0px;
-        margin-left: 0px;
-        }
-
-        #ComponentPool {
-
-        margin-top:25px;
-        margin-left: 15px;
-
-        }
-
-            #explanMachinePage {
-
-                margin-left:100px;
-                 margin-top: 40px;
-                 font-size: 25px;
-            }
 
             #ComponentTable {
-
                 margin-top: 60px;
                 margin: 60px 25px 25px 25px;
-                margin-left: 30px;
-                
-                
+                margin-left: 30px;      
             }
 
             #explanMachinePage {
-
               margin-left:100px;
               margin-top: 40px;
               font-size: 30px;
             }
 
-          
-  
-    
+            
    </style>
 
 
   <head>
+
+  <link rel="stylesheet" href="SideNav.css">
+
                 <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color:#669999; color: black; text-decoration-color: black;">
 				<div id="main">
 					<span id="navButton" style="font-size:30px;cursor:pointer">&#9776;</span>
@@ -373,18 +211,12 @@ function toggleNav(){
 function openNav() {
   document.getElementById("mySidenav").style.width = "90px";
   document.getElementById("main").style.marginLeft = "90px";
-  document.getElementById("titleMachine").style.marginLeft = "140px";
+  document.getElementById("titleMachine").style.marginLeft = "90px";
   document.getElementById("Search_Machine").style.marginLeft = "0px";
   document.getElementById("back_Page").style.marginLeft = "0px";
   document.getElementById("home_Page").style.marginLeft = "0px";
   document.getElementById("Brint").style.marginLeft = "0px";
   document.getElementById("explanMachinePage").style.marginLeft = "130px";
- 
-  document.getElementById("ComponentTable").style.marginLeft = "50px";
-
-
-
-    /*trasionts!*/
 
   document.getElementById("titleMachine").style.transition = "0.5s";
   document.getElementById("Search_Machine").style.transition = "0.5s";
@@ -392,24 +224,21 @@ function openNav() {
   document.getElementById("home_Page").style.transition = "0.5s";
   document.getElementById("Brint").style.transition = "0.5s";
   document.getElementById("explanMachinePage").style.transition = "0.5s";
-  document.getElementById("ComponentTable").style.transition = "0.5s";
-  
   
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+ document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("titleMachine").style.marginLeft = "50px";
+  document.getElementById("titleMachine").style.marginLeft = "0px";
   document.getElementById("explanMachinePage").style.marginright = "0px";
   document.getElementById("Search_Machine").style.marginLeft = "0px";
   document.getElementById("back_Page").style.marginRight = "0";
   document.getElementById("home_Page").style.marginRight = "0";
   document.getElementById("Brint").style.marginRight = "0";
 
-  
-  document.getElementById("ComponentTable").style.marginLeft = "0px";
-
+  document.getElementById("explanMachinePage").style.marginLeft = "100px";
+ 
 
 }
 // get variable (component_type value from pageStockEnter.php)

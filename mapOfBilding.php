@@ -1,6 +1,4 @@
 
-
-
 <html lang="en">
   <head>
    
@@ -15,114 +13,13 @@
     <title>Choose Bilding in Factory Area</title>
 
     <style>
-
-       
-        .container{
-           font-size: 20;
-           margin-top: 15px;
-           margin-bottom: 60px;
-        }
-
-       
-
-        .jumbotron-jumbotron-fluid{
-
-            height: 200px;
-            background-color: #E1F3EE;
-            margin-bottom: 0px;
-            padding-top: 1px;
-            padding-bottom: 20px;
-
-
-        }
-
-        .form-control-mx-sm-3{
-
-            width: 650px;
-            margin-left: 182px;
-        }
-
-       
-        #Confirm {
-
-            margin-left: 182px;
-            width: 650px;
-            margin-top: 35px;
-            padding-inline-end: 20px;
-            margin-block-end: 50px;
-
-        }
-
-        #login{
-
-            width: 100px;
-        }
-
-
-        #login {
-
-          margin-left:1300px;
-          margin-top: ;
-        }
-
-        #build1{
-
-            margin-left:210px;
-            margin-top: 60px;
-            padding: 65px 102px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 30px;
-
-        }
-
-        #build2{
-
-            margin-left: 420px;
-            margin-top: 60px;
-            padding: 65px 102px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 30px;
-
-        }
-
-        #build5{
-
-            margin-left:210px;
-            margin-top: 90px;
-            padding: 65px 102px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 30px;
-            margin-block-end: 30px;
-
-        }
-
-        #build6{
-
-            margin-left: 420px;
-            margin-top: 90px;
-            padding: 65px 102px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 30px;
-            margin-block-end: 30px;
-
-        }
-
-        .col2 {
-
-            margin-left:295px;
-            margin-top:15px;
-        }
-
-       
+  
     </style>
 
 
   </head>
 
+  <link rel="stylesheet" href="Login.css">
 
   <body>
 
@@ -145,9 +42,6 @@
                 <div class="form-group row">
                 <div class="col1">
                   <h1 class="display-4" id="titleOFpage">Factory Map</h1></br><p class="lead">Select the desired structure in the factory.</p>
-                </div>
-                <div class="col2">
-                    <img src="http://www.up2me.co.il/imgs/72228361.jpeg" id="LOGO-BTL" alt="" style="width:500px;">
                 </div>
                 </div>
               </div>
