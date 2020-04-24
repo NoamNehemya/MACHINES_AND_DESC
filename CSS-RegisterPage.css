@@ -1,0 +1,83 @@
+/*CSS Register page*/
+
+.container{
+    font-size: 20;
+    margin-top: 60px;
+    margin-bottom: 60px;
+ }
+
+ #inputDetails{
+
+     margin-top: 50px;
+
+ }
+
+ .form-control {
+
+     width: 650px;
+     margin-left: 182px;
+     margin-top: 20px;
+ }
+
+ #explainPassword{
+
+     margin-left: 182px;
+ }
+
+ .jumbotron-jumbotron-fluid{
+
+     height: 200px;
+     background-color: #E1F3EE;
+     margin-bottom: 0px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+
+ .form-control-mx-sm-3{
+
+     width: 650px;
+     margin-left: 182px;
+ }
+
+ #Verification-question{
+
+     margin-left: 182px;
+
+ }
+
+ #Confirm {
+
+     margin-left: 182px;
+     width: 650px;
+     margin-top: 35px;
+     padding-inline-end: 20px;
+     margin-block-end: 50px;
+ }
+
+ #login{
+
+     width: 100px;
+ }
+
+ #titleOFpage{
+
+     margin-top: 20px;
+ }
+
+ #db{
+
+   margin-left: 182px;
+ }
+
+ #swork{
+
+   margin-left: 182px;
+ }
+
+ #login {
+
+   margin-left:1300px;
+   margin-top: 20px;
+ }
+
+
