@@ -34,7 +34,7 @@ $result = mysqli_query($conn , $query);
 
           #historyTable {
             margin-top: 60px;
-            margin-left: 100px;       
+            margin-left: 20px;       
           }
 
           #VisualStatusButton{

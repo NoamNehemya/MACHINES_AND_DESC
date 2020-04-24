@@ -25,7 +25,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="Login.css">
+  <link rel="stylesheet" href="CSS-resetPassword.css">
 
   <body>
 
@@ -59,7 +59,7 @@
 
                         <div class="form-row">
                             <div class="col">
-                                <label id="Password">Your Email:</label>
+                                <label id="Email_forgot">Your Email:</label>
                                 <input type="email" class="form-control" placeholder="Your email Login" id="Email_reset_Password" name="Email_reset_Password" value="">
                                 </div>
                             </div>
