@@ -118,10 +118,16 @@ while($row = mysqli_fetch_assoc($machine_status_result)){
   <body>
   
 
-               
-  <p id="explanMachinePage">Select the machine you want to operate on.</p>
+  <div class="row">
+    <div class="col_one">
+      <p id="explanMachinePage">Select the machine you want to operate on.</p>
+    </div>
+    <div class="col_two">
+       <i class="fa fa-info-circle" id="informationIcon" onclick="alert('Machine Status\n\nGreen frame: Working machine\nYellow frame: Set up\nRed frame:     Error')" style="font-size:24px"></i>
+    </div>
+
+  </div>
            
-  <i class="fa fa-info-circle" id="informationIcon" onclick="alert('Machine Status\n\nGreen frame: Working machine\nYellow frame: Set up\nRed frame:     Error')" style="font-size:24px"></i>
 
     <div class="MainAREA" id= MainAREA >
 
@@ -337,7 +343,7 @@ function openNav() {
   document.getElementById("back_Page").style.marginLeft = "0px";
   document.getElementById("home_Page").style.marginLeft = "0px";
   document.getElementById("Brint").style.marginLeft = "0px";
-  document.getElementById("explanMachinePage").style.marginLeft = "130px";
+  document.getElementById("explanMachinePage").style.marginLeft = "280px";
  
   document.getElementById("").style.marginLeft = "50px";
 
@@ -360,7 +366,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   document.getElementById("titleMachine").style.marginLeft = "60px";
-  document.getElementById("explanMachinePage").style.marginright = "0px";
+  document.getElementById("explanMachinePage").style.marginLeft = "190px";
   document.getElementById("Search_Machine").style.marginLeft = "0px";
   document.getElementById("back_Page").style.marginRight = "0";
   document.getElementById("home_Page").style.marginRight = "0";
