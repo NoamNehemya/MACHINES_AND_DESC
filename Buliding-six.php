@@ -343,7 +343,7 @@ function openNav() {
 
 
 
-    /*trasionts!*/
+    /trasionts!/
 
   document.getElementById("titleMachine").style.transition = "0.5s";
   document.getElementById("Search_Machine").style.transition = "0.5s";
