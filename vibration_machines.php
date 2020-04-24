@@ -159,35 +159,7 @@
          
        }
 
-         /*css of list - status Machine */
-
-     /*    #List_Machine_Status {
-
-          background-color: #b3e6cc;
-          }
-
-          #redOP {
-
-          background-color:#ff4d4d;
-
-          }
-
-          #yellowOP {
-
-          background-color:#ffad33;
-
-          }
-
-          #greenOP {
-
-          background-color:#4dff88;
-
-
-          }
-          
-*/
-
-        
+ 
 
    </style>
 
@@ -516,7 +488,7 @@ function openNav() {
 
  
   document.getElementById("explanMachinePage").style.marginLeft = "130px";
-  document.getElementById("inputing").style.marginLeft = "65px";
+ // document.getElementById("inputing").style.marginLeft = "65px";
   
  /* document.getElementById("titleMachine").style.marginLeft = "80px"; */
   document.getElementById("MainArea").style.marginLeft = "800px";
