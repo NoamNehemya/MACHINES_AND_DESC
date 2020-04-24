@@ -17,10 +17,17 @@
 
             #explanMachinePage {
 
-              margin-left:100px;
-              margin-top: 40px;
-              font-size: 30px;
+              margin-left: 200px;
+              font-size: 25px;
             }
+
+            #informationIcon {
+
+              margin-left: 630px;
+              margin-top: 50px;
+            }
+
+ 
 
             .MainAREA {
 
