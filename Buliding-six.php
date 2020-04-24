@@ -423,7 +423,7 @@ else{ // move to next iteration
 // get variable (component_type value from pageStockEnter.php)
 var support = localStorage.getItem('PassVar');
 // set title to explanMachinePage title according to support sent variable
-document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
+
 // use cookie for using var javaScript in PHP code
 document.cookie = "myJavascriptVar = " +  support;
 // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
