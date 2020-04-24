@@ -19,7 +19,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="Login.css">
+  <link rel="stylesheet" href="CSS-MapOfBuilding.css">
 
   <body>
 
@@ -42,6 +42,9 @@
                 <div class="form-group row">
                 <div class="col1">
                   <h1 class="display-4" id="titleOFpage">Factory Map</h1></br><p class="lead">Select the desired structure in the factory.</p>
+                </div>
+                <div class="col2">
+                    <img src="http://www.up2me.co.il/imgs/72228361.jpeg" id="LOGO-BTL" alt="" style="width:500px;">
                 </div>
                 </div>
               </div>
