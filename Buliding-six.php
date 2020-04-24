@@ -418,6 +418,22 @@ else{ // move to next iteration
 }
   return "machineError.php"; // if all loop over, than machine not presented on the DB, so moving to machineError.php page
 }
+
+
+// get variable (component_type value from pageStockEnter.php)
+var support = localStorage.getItem('PassVar');
+// set title to explanMachinePage title according to support sent variable
+document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
+// use cookie for using var javaScript in PHP code
+document.cookie = "myJavascriptVar = " +  support;
+// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+
     
 
 
