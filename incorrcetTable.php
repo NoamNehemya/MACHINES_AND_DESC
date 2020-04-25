@@ -29,7 +29,6 @@ $result = mysqli_query($conn , $query);
 
    <style>
 
-
        #IncorrectTable {
            margin-top: 60px;
            margin: 60px 25px 25px 25px;

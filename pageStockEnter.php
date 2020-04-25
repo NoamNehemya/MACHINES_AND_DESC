@@ -51,8 +51,7 @@ $result = mysqli_query($conn , $query);
            width: 650px;
            margin-top: 250px;
            margin-left: 450px;
-
-
+           
         }
 
           

@@ -20,7 +20,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="CSS-RegisterPage.css">
+  <link rel="stylesheet" href="RegisterPage.css">
 
   <body>
 

@@ -22,7 +22,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="CSS-forgotPassword.css">
+  <link rel="stylesheet" href="forgotPassword.css">
 
   <body>
 

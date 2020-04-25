@@ -29,10 +29,7 @@ $result = mysqli_query($conn , $query);
 
    <style>
 
-
-    
-
-          #historyTable {
+         #historyTable {
             margin-top: 60px;
             margin-left: 20px;       
           }
@@ -44,7 +41,6 @@ $result = mysqli_query($conn , $query);
           #IncorrectTable {
             margin-top: 60px;
           }
-
 
     </style>
 

@@ -25,7 +25,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="CSS-resetPassword.css">
+  <link rel="stylesheet" href="resetPassword.css">
 
   <body>
 

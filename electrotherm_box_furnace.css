@@ -1,0 +1,174 @@
+
+        #firstColumnPage{
+
+            margin-left:100px;
+            margin-top: 20px;
+            width: 110px;
+        }
+
+
+
+        .dit1 {
+
+            border-style: solid;
+            width: 200px;
+            text-align: center;
+            border-color: grey;
+            margin-top: 20px;
+            background-color: #DEDEDE;
+        }
+
+        .dit2 {
+
+            border-style: solid;
+            width: 200px;
+            text-align: center;
+            border-color: grey;
+            margin-top: 2px;
+            margin-left: 50px;
+            background-color: #DEDEDE;
+         }
+
+         .dit3 {
+
+            border-style: solid;
+            width: 50px;
+            text-align: center;
+            border-color: grey;
+            margin-top: 2px;
+            margin-left: 10px;
+            background-color: #DEDEDE;
+
+
+         }
+
+          
+
+        
+        .col-sm-1-col-form-label-col-form-label-sm{
+
+            margin-left: 150px;
+            margin-top:20px;
+            font-size: 18px;
+            width:150px;
+        }
+
+        .col-sm-1-col-form-label-col-form-label-sm-1{
+
+            margin-top: 2px;
+            margin-left: 150px;
+            font-size: 18px;
+            width: 100px;
+        }
+
+
+        .DropDowns {
+
+          margin-left: 50px;
+          width: 200px;
+          margin-top: 5px;
+          border-style:ridge;
+          border-color: #313332;
+          background-color:white;
+          color:black;
+        }
+
+        .col2 {
+
+          margin-left: 20px;
+          width: 200px;
+        }
+
+        .col1{
+
+          width: 200px;
+        }
+
+        /**עבור השורה הראשונה בלבד!**/
+        .col3 {
+
+          width: 350px;
+
+          margin-left: 2px;
+          margin-top: 15px;
+
+
+        }
+        /**עמודות מתחת לשורה הראשונה**/
+
+        .col4 {
+
+          width: 350px;
+
+          margin-left: 50px;
+          
+          
+        }
+
+        /**לייבלים לשורה השניה והלאה**/
+
+        .Model-dit{
+
+          margin-left: 200px;
+        }
+
+        /**כפתור שמירה**/
+
+        #save {
+
+          margin-left: 130px;
+          width: 250px;
+          margin-top: 315px;
+
+        }
+
+        #machineImage{
+
+          margin-left: 65px;
+        }
+
+        /*css of list - status Machine */
+
+        #List_Machine_Statuc {
+
+        background-color: #b3e6cc;
+        }
+
+        #redOP {
+
+        background-color:#ff4d4d;
+
+        }
+
+        #yellowOP {
+
+        background-color:#ffad33;
+
+        }
+
+        #greenOP {
+
+        background-color:#4dff88;
+
+
+        }
+
+
+
+
+        .column1{
+
+          width: 1050px;
+        }
+
+       .column2{
+
+         width: 400px;
+         margin-left:0px;
+         margin-top: 80px;
+                 
+       }
+
+       .multiselect-container>li>a>label {
+        padding: 4px 20px 3px 20px;
+      }

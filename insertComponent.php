@@ -15,75 +15,9 @@
 
    <style>
 
-        /**labels**/
+   </style>
 
-        .col-sm-1-col-form-label-col-form-label-sm {
-
-            font-size: 18px;
-        } 
-
-        /**סידור עמודות בטופס**/
-
-        .col1 {
-
-            margin-left: 120px;
-            margin-top: 15px;
-            width: 150px;
-        }
-
-        .col2 {
-
-            margin-left: 0;
-            margin-top: 15px;
-            width: 200px;
-        }
-
-        .col3 {
-
-            margin-left:250px;
-            margin-top: 15px;
-            width: 150px;
-        }
-
-        .col4 {
-
-            margin-left:10px;
-            margin-top: 15px;
-
-        }
-
-        .col5 {
-
-            margin-left: 1250px;
-            margin-top: 25px;
-        }
-
-        /*drop down desins*/
-
-        .DropDowns {
-
-       
-            width: 220px;
-            margin-top: 5px;
-            border-style:ridge;
-            border-color: #313332;
-            background-color:white;
-            color: black;
-        }
-
-        #UpalteFile1 {
-
-            width: 220px;
-        }
-
-
-        #UpalteFile2 {
-
-            width: 170px;
-        }
-    
-    </style>
-
+<link rel="stylesheet" href="insertComponent.css">
 
   <head>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>

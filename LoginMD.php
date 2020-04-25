@@ -23,7 +23,7 @@
 
 </head>
 
-<link rel="stylesheet" href="CSS-loginPage.css">
+<link rel="stylesheet" href="loginPage.css">
 
 <body>
 
