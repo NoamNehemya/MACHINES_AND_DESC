@@ -1,15 +1,4 @@
-<?php 
-
-$conn = mysqli_connect('localhost','root','','test_project');
-
-if (!$conn) {
-	echo "failed";
-
-}
-
-$query="SELECT DISTINCT Component_type FROM components";
-$result = mysqli_query($conn , $query);
-?>
+<?php include('server.php');?>
 
 
 <html lang="en">
@@ -74,7 +63,7 @@ $( "#new-projects" ).load( "SideNav.html" );
                <div class="column" id="MainArea">
                         <select class="DropDown" id="DropListType" onChange="submitActiveOrDimmed()">
                         <option>Select component type...</option>
-                        <?php while($rows = $result->fetch_assoc()):;?>
+                        <?php while($rows = $result_to_dropList_enter_stock->fetch_assoc()):;?>
                         <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
                         <?php endwhile;?>
                         </select>

@@ -1,16 +1,4 @@
-
-<?php 
-
-$conn = mysqli_connect('localhost','root','','test_project');
-
-if (!$conn) {
-	echo "failed";
-
-}
-
-$query="select * from faulty";
-$result = mysqli_query($conn , $query);
-?>
+<?php include('server.php');?>
 
 
 
@@ -93,7 +81,7 @@ $( "#new-projects" ).load( "SideNav.html" );
 
 
                 <?php
-                     while($rows = mysqli_fetch_assoc($result)) {
+                     while($rows = mysqli_fetch_assoc($result_incorrect_table)) {
 
                 ?>
 

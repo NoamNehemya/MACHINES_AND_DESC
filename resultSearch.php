@@ -1,16 +1,4 @@
-<?php 
-
-$conn = mysqli_connect('localhost','root','','test_project');
-
-if (!$conn) {
-	echo "failed";
-
-}
-// Set PHP variable using created cookie (cookie 'myJavascriptVar' created on the buttom code)
-$myPhpVar= $_COOKIE['myJavascriptVar'];
-$query="SELECT * FROM components WHERE Component_type = '".$myPhpVar."'";
-$result = mysqli_query($conn , $query);
-?>
+<?php include('server.php');?>
 
 
 <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
@@ -99,7 +87,7 @@ $( "#new-projects" ).load( "SideNav.html" );
                 </thead>
 
                 <?php
-                     while($rows = mysqli_fetch_assoc($result)) {
+                     while($rows = mysqli_fetch_assoc($result_display_components)) {
 
                 ?>
 

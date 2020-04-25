@@ -1,40 +1,5 @@
-<?php 
-
-$conn = mysqli_connect('localhost','root','','test_project');
-
-if (!$conn) {
-	echo "failed";
-
-}
-// conncection to DB and store query of building 6 into php array
-$machine_support_query= "SELECT * FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
-$machine_support_result = mysqli_query($conn , $machine_support_query);
-$phpArray_support = array(); // create new PHP array
-
-while($row = mysqli_fetch_assoc($machine_support_result)){
-    $phpArray_support[] = $row['support']; // insert support query into php array
-}  
-
-$machine_machineType_query= "SELECT Machine_type FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
-$machine_machineType_result = mysqli_query($conn , $machine_machineType_query);
-$phpArray_machineType = array(); // create new PHP array
-
-while($row = mysqli_fetch_assoc($machine_machineType_result)){
-    $phpArray_machineType[] = $row['Machine_type']; // insert machine type query into php array
-}  
-// conncection to DB and store query of building 6 into php array
-
-$machine_status_query= "SELECT machineStatus FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
-$machine_status_result = mysqli_query($conn , $machine_status_query);
-$phpArray_status = array(); // create new PHP array
 
 
-while($row = mysqli_fetch_assoc($machine_status_result)){
-    $phpArray_status[] = $row['machineStatus']; // insert status query into php array
-} 
-
-
-?>
   <?php include('server.php');?>
   
   <html lang="en">

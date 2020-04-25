@@ -649,15 +649,79 @@
                 }
 
             }
+
+
+
+         //***************************************************************************************************************************************************************
+
+            //php side of BUILDING SIX
+
             
+            // conncection to DB and store query of building 6 into php array
+            $machine_support_query= "SELECT * FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+            $machine_support_result = mysqli_query($db , $machine_support_query);
+            $phpArray_support = array(); // create new PHP array
+
+            while($row = mysqli_fetch_assoc($machine_support_result)){
+                $phpArray_support[] = $row['support']; // insert support query into php array
+            }  
+
+            $machine_machineType_query= "SELECT Machine_type FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+            $machine_machineType_result = mysqli_query($db , $machine_machineType_query);
+            $phpArray_machineType = array(); // create new PHP array
+
+            while($row = mysqli_fetch_assoc($machine_machineType_result)){
+                $phpArray_machineType[] = $row['Machine_type']; // insert machine type query into php array
+            }  
+            // conncection to DB and store query of building 6 into php array
+
+            $machine_status_query= "SELECT machineStatus FROM machines WHERE Machine_type LIKE 'VIBRATION MACHINES' OR Machine_type LIKE 'ELECTROTHERM BO FURNACE'";
+            $machine_status_result = mysqli_query($db , $machine_status_query);
+            $phpArray_status = array(); // create new PHP array
+
+
+            while($row = mysqli_fetch_assoc($machine_status_result)){
+                $phpArray_status[] = $row['machineStatus']; // insert status query into php array
+            } 
+
+
+         //***************************************************************************************************************************************************************
+
+
+            //php of History Machine Page
+
+            $query_history_table="SELECT * from history";
+            $result_histroy_table = mysqli_query($db , $query_history_table);
+
+
+         //***************************************************************************************************************************************************************
+
+
+            //php of Incorrect Table Page
+
+            $query_incorrect_table="SELECT * FROM faulty";
+            $result_incorrect_table = mysqli_query($db , $query_incorrect_table);
             
-      
+
+         //***************************************************************************************************************************************************************
 
 
+            //save variable for ~~~~~ Machine error ~~~~~~ page and echo variable in this page
 
+            $myPhpVar_machine_Error= $_COOKIE['myJavascriptVar'];
             
+        //***************************************************************************************************************************************************************
+            
+            //php of page stock component enter 
 
-                
+            $query_to_dropList_enter_stock="SELECT DISTINCT Component_type FROM components";
+            $result_to_dropList_enter_stock = mysqli_query($db , $query_to_dropList_enter_stock);
+
+         //***************************************************************************************************************************************************************
+
+            $myPhpVar_component= $_COOKIE['myJavascriptVar'];
+            $query_display_components="SELECT * FROM components WHERE Component_type = '".$myPhpVar_component."'";
+            $result_display_components = mysqli_query($db , $query_display_components);
 
                 
 

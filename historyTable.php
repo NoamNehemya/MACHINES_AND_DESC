@@ -1,18 +1,4 @@
-<?php 
-
-$conn = mysqli_connect('localhost','root','','test_project');
-
-if (!$conn) {
-	echo "failed";
-
-}
-
-$query="select * from history";
-$result = mysqli_query($conn , $query);
-?>
-
-
-
+<?php include('server.php');?>
 
 <html lang="en">
   <head>
@@ -91,7 +77,7 @@ $( "#new-projects" ).load( "SideNav.html" );
                 </thead>
                 
                 <?php
-                     while($rows = mysqli_fetch_assoc($result)) {
+                     while($rows = mysqli_fetch_assoc($result_histroy_table)) {
 
                 ?>
 

@@ -1,15 +1,5 @@
-<?php 
 
-$conn = mysqli_connect('localhost','root','','test_project');
-
-if (!$conn) {
-	echo "failed";
-
-}
-// Set PHP variable using created cookie (cookie 'myJavascriptVar' created on the buttom code)
-$myPhpVar= $_COOKIE['myJavascriptVar'];
-
-?>
+<?php include('server.php');?>
 
 <html lang="en">
   <head>
@@ -87,7 +77,7 @@ $( "#new-projects" ).load( "SideNav.html" );
               <form id="Text_Area_Error">
 
               <h1 class="display-5" id="sorry_title"> Sorry! </h1>
-              <p id="senetece_one">Machine <?php echo $myPhpVar; ?> not found.</p>
+              <p id="senetece_one">Machine <?php echo $myPhpVar_machine_Error; ?> not found.</p>
               <p id="senetece_two">Please try again with another Machine Support.</p>
 
               </from>
@@ -115,6 +105,8 @@ var support = localStorage.getItem('PassVar');
 document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
 // use cookie for using var javaScript in PHP code
 document.cookie = "myJavascriptVar = " +  support;
+
+
 // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
 window.onload = function() {
     if(!window.location.hash) {
