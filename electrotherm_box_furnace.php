@@ -487,66 +487,12 @@
                    
 
 
-     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="myscripts.js"></script>
     <script>
 	
-	document.getElementById("navButton").addEventListener("click", toggleNav);
-
-function toggleNav(){
-    if (document.getElementById("mySidenav").style.width === "0px" || document.getElementById("mySidenav").style.width === "") {
-        return openNav();
-    } else if (document.getElementById("mySidenav").style.width === "90px") {
-		return closeNav();
-	  }
-    
-}
-
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "90px";
-  document.getElementById("main").style.marginLeft = "65px";
-  document.getElementById("titleMachine").style.marginLeft = "65px";
-
-  document.getElementById("Search_Machine").style.marginLeft = "0px";
-  document.getElementById("back_Page").style.marginLeft = "0px";
-  document.getElementById("home_Page").style.marginLeft = "0px";
-  document.getElementById("Brint").style.marginLeft = "0px";
-
- 
-  document.getElementById("explanMachinePage").style.marginLeft = "130px";
-  //document.getElementById("inputing").style.marginLeft = "65px";
-  
-  document.getElementById("titleMachine").style.marginLeft = "80px"; 
-  document.getElementById("MainArea").style.marginLeft = "800px";
-
-    /*trasionts!*/
-
-  document.getElementById("titleMachine").style.transition = "0.5s";
-  document.getElementById("Search_Machine").style.transition = "0.5s";
-  document.getElementById("back_Page").style.transition = "0.5s";
-  document.getElementById("home_Page").style.transition = "0.5s";
-  document.getElementById("Brint").style.transition = "0.5s";
-  
-  
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("titleMachine").style.marginLeft = "0px";
-
-  document.getElementById("Search_Machine").style.marginLeft = "0px";
-  document.getElementById("back_Page").style.marginRight = "0";
-  document.getElementById("home_Page").style.marginRight = "0";
-  document.getElementById("Brint").style.marginRight = "0";
-
-  document.getElementById("explanMachinePage").style.marginright = "20px";
- /* document.getElementById("titleMachine").style.marginLeft = "0"; */
-  document.getElementById("MainArea").style.marginLeft = "800px";
-
-}
 
 // this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
 // inside the text box for page machine (vibration\electro...) and move to this page. 

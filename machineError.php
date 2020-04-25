@@ -107,15 +107,6 @@ document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
 document.cookie = "myJavascriptVar = " +  support;
 
 
-// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
-
-
 function check(number){
 for(var i = 0; i < support_php.length; i++){
   if(number === support_php[i]){
