@@ -288,17 +288,50 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="myscripts.js"></script>
     <script>
-	
+
+      document.getElementById("navButton").addEventListener("click", toggleNav);
+
+function toggleNav(){
+    if (document.getElementById("mySidenav").style.width === "0px" || document.getElementById("mySidenav").style.width === "") {
+        return openNav();
+    } else if (document.getElementById("mySidenav").style.width === "90px") {
+		return closeNav();
+	  }
+    
+}
 
 
-// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
-// inside the text box for page machine (vibration\electro...) and move to this page. 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90px";
+  document.getElementById("main").style.marginLeft = "90px";
+  document.getElementById("titleMachine").style.marginLeft = "90px";
+  document.getElementById("Search_Machine").style.marginLeft = "0px";
+  document.getElementById("back_Page").style.marginLeft = "0px";
+  document.getElementById("home_Page").style.marginLeft = "0px";
+  document.getElementById("Brint").style.marginLeft = "0px";
+  document.getElementById("explanMachinePage").style.marginLeft = "130px";
 
-document.getElementById('SearchSupport').onkeypress=function(e){
-    if(e.keyCode==13){ // key is 'Enter' in keyboard
-        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href=check(document.getElementById('SearchSupport').value); // Move to page machine (vibration\electro...)
-    }
+  document.getElementById("titleMachine").style.transition = "0.5s";
+  document.getElementById("Search_Machine").style.transition = "0.5s";
+  document.getElementById("back_Page").style.transition = "0.5s";
+  document.getElementById("home_Page").style.transition = "0.5s";
+  document.getElementById("Brint").style.transition = "0.5s";
+  document.getElementById("explanMachinePage").style.transition = "0.5s";
+  
+}
+
+function closeNav() {
+ document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("titleMachine").style.marginLeft = "50px";
+  document.getElementById("explanMachinePage").style.marginright = "0px";
+  document.getElementById("Search_Machine").style.marginLeft = "0px";
+  document.getElementById("back_Page").style.marginRight = "0";
+  document.getElementById("home_Page").style.marginRight = "0";
+  document.getElementById("Brint").style.marginRight = "0";
+
+  document.getElementById("explanMachinePage").style.marginLeft = "100px";
+ 
 }
 
 // This command save the result of machine ID (support) from array of same class buttons [0..n] and display the pressed machine in machine page (vibration\electro...)  
@@ -309,28 +342,6 @@ for (var i = 0; i < machinesButtons.length; i++) {
     localStorage.setItem('PassVar',this.id); // save the machine id button (support number) to variable 
     location.href=check(this.id); // Move to page machine (vibration\electro...) 
     });
-}
-//this function check the machine type of selected machine 
-function check(number){
-for(var i = 0; i < support_php.length; i++){
-  if(number === support_php[i]){ // check in iteration if the machine presented on DB
-    if (machineType_php[i] === 'VIBRATION MACHINES'){
-      return "vibration_machines.php";
-    }
-    else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
-      return "electrotherm_box_furnace.php";
-    }
-    else{
-     return "nothing";
-    }
-  }
-else{ 
-    // move to next iteration
-}
-}
-  //creat variable for machine error page - push into support that not found machine mach and display in to machineError.php page
-  document.cookie = "myJavascriptVar_error = " +  number;
-  return "machineError.php"; // if all loop over, than machine not presented on the DB, so moving to machineError.php page
 }
 
 
@@ -346,7 +357,7 @@ document.cookie = "myJavascriptVar = " +  support;
     
     var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
     var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
-    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>;
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
 
   // we want array only for support that presented on this screen (building 6)
    // remove this items from support array because they dont presented on this screen (building 6)

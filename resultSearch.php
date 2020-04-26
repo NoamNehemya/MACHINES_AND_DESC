@@ -120,49 +120,51 @@ $( "#new-projects" ).load( "SideNav.html" );
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="myscripts.js"></script>
     <script>
 
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
+                    
 
-var table = document.getElementById("ComponentTable");
-for (var i = 1, rows; i < table.rows.length; i++) { //iterate through rows
-  if (table.rows[i].cells[7].querySelector('img').getAttribute('src').length > 0) { // cell 7 = image column
-    continue; // if there is image data (link) in the row, than continue
-  }
-    else{
-      table.rows[i].cells[7].querySelector('img').src = "http://www.up2me.co.il/imgs/31676683.jpg"; // change empty data to 'no image' icon
-      table.rows[i].cells[7].querySelector('img').style.width="35px"; // change icon size to be smaller than image thumbnail
-      table.rows[i].cells[7].querySelector('img').style.cursor = "no-drop"; 
-      table.rows[i].cells[7].querySelector('img').onclick = null; // no event after click on 'no image' icon
-  }                                   
-   }  
+    var table = document.getElementById("ComponentTable");
+    for (var i = 1, rows; i < table.rows.length; i++) { //iterate through rows
+      if (table.rows[i].cells[7].querySelector('img').getAttribute('src').length > 0) { // cell 7 = image column
+        continue; // if there is image data (link) in the row, than continue
+      }
+        else{
+          table.rows[i].cells[7].querySelector('img').src = "http://www.up2me.co.il/imgs/31676683.jpg"; // change empty data to 'no image' icon
+          table.rows[i].cells[7].querySelector('img').style.width="35px"; // change icon size to be smaller than image thumbnail
+          table.rows[i].cells[7].querySelector('img').style.cursor = "no-drop"; 
+          table.rows[i].cells[7].querySelector('img').onclick = null; // no event after click on 'no image' icon
+      }                                   
+      }  
+
+      
+    // get variable (component_type value from pageStockEnter.php)
+    var ComponentType = localStorage.getItem('PassVar');
+
+    // set title to explanMachinePage title according to ComponentType variable
+    document.getElementById("explanMachinePage").innerHTML = "Component type: " + ComponentType ;
+
+    // use cookie for using var javaScript in PHP code
+    document.cookie = "myJavascriptVar = " +  ComponentType ;
+
+   
+
+    if(window.location.href.substr(-2) !== "?r") { // refresh second time
+        window.location = window.location.href + "?r";
+      }
+
+        window.onload = function() { // refresh on page loading
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
+      }
 
 
-// get variable (component_type value from pageStockEnter.php)
-var ComponentType = localStorage.getItem('PassVar');
-
-// set title to explanMachinePage title according to ComponentType variable
-document.getElementById("explanMachinePage").innerHTML = "Component type: " + ComponentType ;
-
-// use cookie for using var javaScript in PHP code
-document.cookie = "myJavascriptVar = " +  ComponentType
-
-// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
-
-// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
-// inside the text box for page machine (vibration\electro...) and move to this page. 
-
-document.getElementById('SearchSupport').onkeypress=function(e){
-    if(e.keyCode==13){ // key is 'Enter' in keyboard
-        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='vibration_machines.php'; // Move to page machine (vibration\electro...)
-    }
-}
 </script>
   </body>
 </html>

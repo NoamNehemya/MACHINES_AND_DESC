@@ -320,49 +320,75 @@
     <script src="myscripts.js"></script>
     <script>
 
+document.getElementById("navButton").addEventListener("click", toggleNav);
 
-// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
-// inside the text box for page machine (vibration\electro...) and move to this page. 
-
-document.getElementById('SearchSupport').onkeypress=function(e){
-    if(e.keyCode==13){ // key is 'Enter' in keyboard
-        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href=check(document.getElementById('SearchSupport').value); // Move to page machine (vibration\electro...)
-    }
+function toggleNav(){
+    if (document.getElementById("mySidenav").style.width === "0px" || document.getElementById("mySidenav").style.width === "") {
+        return openNav();
+    } else if (document.getElementById("mySidenav").style.width === "90px") {
+		return closeNav();
+	  }
+    
 }
 
 
-// get variable (component_type value from pageStockEnter.php)
-var support = localStorage.getItem('PassVar');
-// set title to explanMachinePage title according to support sent variable
-document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
-// use cookie for using var javaScript in PHP code
-document.cookie = "myJavascriptVar = " +  support;
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90px";
+  document.getElementById("main").style.marginLeft = "90px";
+  document.getElementById("titleMachine").style.marginLeft = "90px";
+  document.getElementById("Search_Machine").style.marginLeft = "0px";
+  document.getElementById("back_Page").style.marginLeft = "0px";
+  document.getElementById("home_Page").style.marginLeft = "0px";
+  document.getElementById("Brint").style.marginLeft = "0px";
+  document.getElementById("explanMachinePage").style.marginLeft = "130px";
 
-
-
-function check(number){
-for(var i = 0; i < support_php.length; i++){
-  if(number === support_php[i]){
-    if (machineType_php[i] === 'VIBRATION MACHINES'){
-      return "vibration_machines.php";
-    }
-    else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
-      return "electrotherm_box_furnace.php";
-    }
-    else{
-     return "nothing";
-    }
-  }
-
-}
+  document.getElementById("titleMachine").style.transition = "0.5s";
+  document.getElementById("Search_Machine").style.transition = "0.5s";
+  document.getElementById("back_Page").style.transition = "0.5s";
+  document.getElementById("home_Page").style.transition = "0.5s";
+  document.getElementById("Brint").style.transition = "0.5s";
+  document.getElementById("explanMachinePage").style.transition = "0.5s";
+  
 }
 
-var machineTextBox = document.getElementById('machineStatusText').value; // store machine status value from text box
+function closeNav() {
+ document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("titleMachine").style.marginLeft = "50px";
+  document.getElementById("explanMachinePage").style.marginright = "0px";
+  document.getElementById("Search_Machine").style.marginLeft = "0px";
+  document.getElementById("back_Page").style.marginRight = "0";
+  document.getElementById("home_Page").style.marginRight = "0";
+  document.getElementById("Brint").style.marginRight = "0";
 
-document.getElementById('List_Machine_Status').value = machineTextBox; // set machineTextBox value as default in drop list
+  document.getElementById("explanMachinePage").style.marginLeft = "100px";
+ 
+}
 
-document.getElementById('machineStatusText').style.display = "none"; // hide machineTextBox from UI
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
+
+    // get variable (component_type value from pageStockEnter.php)
+    var support = localStorage.getItem('PassVar');
+    // set title to explanMachinePage title according to support sent variable
+    document.getElementById("titleOFpage").innerHTML = "Machine: " + support;
+    // use cookie for using var javaScript in PHP code
+    document.cookie = "myJavascriptVar = " +  support;
+
+
+    var machineTextBox = document.getElementById('machineStatusText').value; // store machine status value from text box
+
+    document.getElementById('List_Machine_Status').value = machineTextBox; // set machineTextBox value as default in drop list
+
+    document.getElementById('machineStatusText').style.display = "none"; // hide machineTextBox from UI
+
+    window.onload = function() {
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
+    }
 
 </script>
   </body>

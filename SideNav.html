@@ -95,14 +95,14 @@ function openNav() {
   document.getElementById("back_Page").style.marginLeft = "0px";
   document.getElementById("home_Page").style.marginLeft = "0px";
   document.getElementById("Brint").style.marginLeft = "0px";
-  document.getElementById("explanMachinePage").style.marginLeft = "130px";
+  //document.getElementById("explanMachinePage").style.marginLeft = "130px";
 
   document.getElementById("titleMachine").style.transition = "0.5s";
   document.getElementById("Search_Machine").style.transition = "0.5s";
   document.getElementById("back_Page").style.transition = "0.5s";
   document.getElementById("home_Page").style.transition = "0.5s";
   document.getElementById("Brint").style.transition = "0.5s";
-  document.getElementById("explanMachinePage").style.transition = "0.5s";
+  //document.getElementById("explanMachinePage").style.transition = "0.5s";
   
 }
 
@@ -110,15 +110,19 @@ function closeNav() {
  document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   document.getElementById("titleMachine").style.marginLeft = "50px";
-  document.getElementById("explanMachinePage").style.marginright = "0px";
+  //document.getElementById("explanMachinePage").style.marginright = "0px";
   document.getElementById("Search_Machine").style.marginLeft = "0px";
   document.getElementById("back_Page").style.marginRight = "0";
   document.getElementById("home_Page").style.marginRight = "0";
   document.getElementById("Brint").style.marginRight = "0";
 
-  document.getElementById("explanMachinePage").style.marginLeft = "100px";
+  //document.getElementById("explanMachinePage").style.marginLeft = "100px";
  
 
+}
+
+if(window.location.href.substr(-2) !== "?r") {
+  window.location = window.location.href + "?r";
 }
 </script>
 

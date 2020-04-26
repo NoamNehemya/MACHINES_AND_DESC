@@ -1,63 +1,36 @@
-document.getElementById("navButton").addEventListener("click", toggleNav);
 
-function toggleNav(){
-    if (document.getElementById("mySidenav").style.width === "0px" || document.getElementById("mySidenav").style.width === "") {
-        return openNav();
-    } else if (document.getElementById("mySidenav").style.width === "90px") {
-		return closeNav();
-	  }
+
+// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
+// inside the text box for page machine (vibration\electro...) and move to this page. 
+
+document.getElementById('SearchSupport').onkeypress=function(e){
+    if(e.keyCode==13){ // key is 'Enter' in keyboard
+        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
+        location.href=check(document.getElementById('SearchSupport').value); // Move to page machine (vibration\electro...)
+    }
+}
+
+//this function check the machine type of selected machine 
+function check(number){
+    for(var i = 0; i < support_php.length; i++){
+      if(number === support_php[i]){ // check in iteration if the machine presented on DB
+        if (machineType_php[i] === 'VIBRATION MACHINES'){
+          return "vibration_machines.php";
+        }
+        else if(machineType_php[i] === 'ELECTROTHERM BO FURNACE'){
+          return "electrotherm_box_furnace.php";
+        }
+        else{
+         return "nothing";
+        }
+      }
+    else{ 
+        // move to next iteration
+    }
+    }
     
-}
-
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "90px";
-  document.getElementById("main").style.marginLeft = "65px";
-  document.getElementById("titleMachine").style.marginLeft = "65px";
-
-  document.getElementById("Search_Machine").style.marginLeft = "0px";
-  document.getElementById("back_Page").style.marginLeft = "0px";
-  document.getElementById("home_Page").style.marginLeft = "0px";
-  document.getElementById("Brint").style.marginLeft = "0px";
-
- 
-  document.getElementById("explanMachinePage").style.marginLeft = "130px";
- // document.getElementById("inputing").style.marginLeft = "65px";
-  
- /* document.getElementById("titleMachine").style.marginLeft = "80px"; */
-  document.getElementById("MainArea").style.marginLeft = "800px";
-
-    /*trasionts!*/
-
-  document.getElementById("titleMachine").style.transition = "0.5s";
-  document.getElementById("Search_Machine").style.transition = "0.5s";
-  document.getElementById("back_Page").style.transition = "0.5s";
-  document.getElementById("home_Page").style.transition = "0.5s";
-  document.getElementById("Brint").style.transition = "0.5s";
-  
-  
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("titleMachine").style.marginLeft = "0px";
-
-  document.getElementById("Search_Machine").style.marginLeft = "0px";
-  document.getElementById("back_Page").style.marginRight = "0";
-  document.getElementById("home_Page").style.marginRight = "0";
-  document.getElementById("Brint").style.marginRight = "0";
-
-  document.getElementById("explanMachinePage").style.marginright = "20px";
- /* document.getElementById("titleMachine").style.marginLeft = "0"; */
-  document.getElementById("MainArea").style.marginLeft = "800px";
-
-}
-
-// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
-window.onload = function() {
-  if(!window.location.hash) {
-      window.location = window.location + '#loaded';
-      window.location.reload();
-  }
-}
+      //creat variable for machine error page - push into support that not found machine mach and display in to machineError.php page
+      document.cookie = "myJavascriptVar_error = " +  number;
+      return "machineError.php"; // if all loop over, than machine not presented on the DB, so moving to machineError.php page
+    }
+       

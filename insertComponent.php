@@ -17,7 +17,7 @@
 
    </style>
 
-<link rel="stylesheet" href="insertComponent.css">
+  <link rel="stylesheet" href="insertComponent.css">
 
   <head>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -182,56 +182,59 @@ $( "#new-projects" ).load( "SideNav.html" );
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="myscripts.js"></script>
     <script>
-	submitActiveOrDimmed();
+
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
+    
+    submitActiveOrDimmed();
 
 
-// This function set the behavior of Submit button, enabled or dimmed
-function submitActiveOrDimmed() {
+    // This function set the behavior of Submit button, enabled or dimmed
+    function submitActiveOrDimmed() {
 
-if  (  document.getElementById("textFildSerialNumber").value === ""
-    || document.getElementById("textFildMain").value === ""
-    || document.getElementById("textFildBrandName").value === ""
-    || document.getElementById("textFildPlace").value === ""
-    || document.getElementById("textFildMain").value === ""
-    || document.getElementById("textFildType").value === ""
-    || document.getElementById("textFildManual").value === ""
-    || document.getElementById("textFildModel").value === "") {
-    document.getElementById("UpalteFile2").disabled = true;
-    document.getElementById("UpalteFile2").style.cursor = "no-drop";
-    document.getElementById("UpalteFile2").style.backgroundColor='grey';
-}
-else{
-  document.getElementById("UpalteFile2").disabled = false;
-  document.getElementById("UpalteFile2").style.cursor = "pointer";
-  document.getElementById("UpalteFile2").style.backgroundColor='white';
+    if  (  document.getElementById("textFildSerialNumber").value === ""
+        || document.getElementById("textFildMain").value === ""
+        || document.getElementById("textFildBrandName").value === ""
+        || document.getElementById("textFildPlace").value === ""
+        || document.getElementById("textFildMain").value === ""
+        || document.getElementById("textFildType").value === ""
+        || document.getElementById("textFildManual").value === ""
+        || document.getElementById("textFildModel").value === "") {
+        document.getElementById("UpalteFile2").disabled = true;
+        document.getElementById("UpalteFile2").style.cursor = "no-drop";
+        document.getElementById("UpalteFile2").style.backgroundColor='grey';
     }
-}
-
-
-
-// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
-// inside the text box for page machine (vibration\electro...) and move to this page. 
-
-document.getElementById('SearchSupport').onkeypress=function(e){
-    if(e.keyCode==13){ // key is 'Enter' in keyboard
-        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='vibration_machines.php'; // Move to page machine (vibration\electro...)
-    }
-}
-
-
-function redFrames(){ // this function mark input fileds thats empty
-ButtonsElements = document.getElementsByClassName('form-control'); // all inputs fields
-for (var i = 1; i < ButtonsElements.length; i++) {
-        if(ButtonsElements[i].value === ""){
-            ButtonsElements[i].style.borderColor = 'red'; // if user dont insert input in the text field, the color of border will be red
-        }
-        else{
-            ButtonsElements[i].style.borderColor = ''; // the default border color
+    else{
+    document.getElementById("UpalteFile2").disabled = false;
+    document.getElementById("UpalteFile2").style.cursor = "pointer";
+    document.getElementById("UpalteFile2").style.backgroundColor='white';
         }
     }
-}
+
+
+
+
+    function redFrames(){ // this function mark input fileds thats empty
+    ButtonsElements = document.getElementsByClassName('form-control'); // all inputs fields
+    for (var i = 1; i < ButtonsElements.length; i++) {
+            if(ButtonsElements[i].value === ""){
+                ButtonsElements[i].style.borderColor = 'red'; // if user dont insert input in the text field, the color of border will be red
+            }
+            else{
+                ButtonsElements[i].style.borderColor = ''; // the default border color
+            }
+        }
+    }
+
+    window.onload = function() {
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
+    }
 
 
 </script>

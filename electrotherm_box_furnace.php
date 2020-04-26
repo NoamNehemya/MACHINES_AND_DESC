@@ -492,39 +492,79 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="myscripts.js"></script>
     <script>
+
+document.getElementById("navButton").addEventListener("click", toggleNav);
+
+function toggleNav(){
+    if (document.getElementById("mySidenav").style.width === "0px" || document.getElementById("mySidenav").style.width === "") {
+        return openNav();
+    } else if (document.getElementById("mySidenav").style.width === "90px") {
+		return closeNav();
+	  }
+    
+}
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90px";
+  document.getElementById("main").style.marginLeft = "90px";
+  document.getElementById("titleMachine").style.marginLeft = "90px";
+  document.getElementById("Search_Machine").style.marginLeft = "0px";
+  document.getElementById("back_Page").style.marginLeft = "0px";
+  document.getElementById("home_Page").style.marginLeft = "0px";
+  document.getElementById("Brint").style.marginLeft = "0px";
+  document.getElementById("explanMachinePage").style.marginLeft = "130px";
+
+  document.getElementById("titleMachine").style.transition = "0.5s";
+  document.getElementById("Search_Machine").style.transition = "0.5s";
+  document.getElementById("back_Page").style.transition = "0.5s";
+  document.getElementById("home_Page").style.transition = "0.5s";
+  document.getElementById("Brint").style.transition = "0.5s";
+  document.getElementById("explanMachinePage").style.transition = "0.5s";
+  
+}
+
+function closeNav() {
+ document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("titleMachine").style.marginLeft = "50px";
+  document.getElementById("explanMachinePage").style.marginright = "0px";
+  document.getElementById("Search_Machine").style.marginLeft = "0px";
+  document.getElementById("back_Page").style.marginRight = "0";
+  document.getElementById("home_Page").style.marginRight = "0";
+  document.getElementById("Brint").style.marginRight = "0";
+
+  document.getElementById("explanMachinePage").style.marginLeft = "100px";
+ 
+}
+
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
 	
 
-// this command is about insert input in SearchSupport text box, and after pressing on 'Enter' in keyboard, the system save the data
-// inside the text box for page machine (vibration\electro...) and move to this page. 
+    // get variable (component_type value from pageStockEnter.php)
+    var support = localStorage.getItem('PassVar');
+    // set title to explanMachinePage title according to support sent variable
+    document.getElementById("titleOFpage").innerHTML = "Machine: " + support ;
+    // use cookie for using var javaScript in PHP code
+    document.cookie = "myJavascriptVar = " +  support
+    // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
 
-document.getElementById('SearchSupport').onkeypress=function(e){
-    if(e.keyCode==13){ // key is 'Enter' in keyboard
-        localStorage.setItem('PassVar',document.getElementById('SearchSupport').value); // Set variable (support value) for machine page
-        location.href='electrotherm_box_furnace.php'; // Move to page machine (vibration\electro...)
+
+
+    var machineTextBox = document.getElementById('machineStatusText').value; // store machine status value from text box
+
+    document.getElementById('List_Machine_Status').value = machineTextBox; // set machineTextBox value as default in drop list
+
+    document.getElementById('machineStatusText').style.display = "none"; // hide machineTextBox from UI
+
+    window.onload = function() {
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
     }
-}
-
-// get variable (component_type value from pageStockEnter.php)
-var support = localStorage.getItem('PassVar');
-// set title to explanMachinePage title according to support sent variable
-document.getElementById("titleOFpage").innerHTML = "Machine: " + support ;
-// use cookie for using var javaScript in PHP code
-document.cookie = "myJavascriptVar = " +  support
-// Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
-
-
-var machineTextBox = document.getElementById('machineStatusText').value; // store machine status value from text box
-
-document.getElementById('List_Machine_Status').value = machineTextBox; // set machineTextBox value as default in drop list
-
-document.getElementById('machineStatusText').style.display = "none"; // hide machineTextBox from UI
-
 
 
 </script>
