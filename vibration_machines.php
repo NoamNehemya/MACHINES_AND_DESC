@@ -24,6 +24,8 @@
 
   <link rel="stylesheet" href="SideNav.css">
   <link rel="stylesheet" href="vibration_machines.css">
+  <link rel="stylesheet" href="componentsReplace.css">
+
 
                 <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color:#669999; color: black; text-decoration-color: black;">
 				<div id="main">
@@ -306,6 +308,38 @@
 
             </form>
             
+<button class="open-button" onclick="openForm()">Replace components</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Replacment</h1>
+
+    <label><b>Component Type</b></label>
+    <select class="DropDown" id="DropListType" onChange="submitActiveOrDimmed()">
+    <option>Select component type...</option>
+    <?php while($rows = $result_to_dropList_enter_stock->fetch_assoc()):;?>
+    <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
+    <?php endwhile;?>
+    </select>
+
+    <label><b>Add Component</b></label>
+    <select class="DropDown" id="DropListType">
+    <option value="1">Segev</option>
+    <option value="2">tamut</option>
+    <option value="3">kelev</option>
+    </select>
+    
+    <label><b>Remove Component</b></label>
+    <select class="DropDown" id="DropListType">
+    <option value="1">Segev</option>
+    <option value="2">tamut</option>
+    <option value="3">ya zevel</option>
+    </select>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
                               
 
           </div>
@@ -388,6 +422,14 @@ function closeNav() {
             window.location = window.location + '#loaded';
             window.location.reload();
         }
+    }
+
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
     }
 
 </script>
