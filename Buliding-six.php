@@ -324,9 +324,12 @@ for(var i = 0; i < support_php.length; i++){
      return "nothing";
     }
   }
-else{ // move to next iteration
+else{ 
+    // move to next iteration
 }
 }
+  //creat variable for machine error page - push into support that not found machine mach and display in to machineError.php page
+  document.cookie = "myJavascriptVar_error = " +  number;
   return "machineError.php"; // if all loop over, than machine not presented on the DB, so moving to machineError.php page
 }
 
