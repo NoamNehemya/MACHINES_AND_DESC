@@ -153,10 +153,6 @@ $( "#new-projects" ).load( "SideNav.html" );
 
    
 
-    if(window.location.href.substr(-2) !== "?r") { // refresh second time
-        window.location = window.location.href + "?r";
-      }
-
         window.onload = function() { // refresh on page loading
         if(!window.location.hash) {
             window.location = window.location + '#loaded';
