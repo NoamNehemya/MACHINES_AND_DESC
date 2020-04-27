@@ -312,8 +312,9 @@
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
+    <button type="button" onclick="closeForm()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h1>Replacment</h1>
-
+    
     <label><b>Component Type</b></label>
     <select class="DropDown" id="DropListType" onChange="submitActiveOrDimmed()">
     <option>Select component type...</option>
@@ -337,7 +338,7 @@
     </select>
 
     <button type="submit" class="btn">Submit</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    
   </form>
 </div>
                               

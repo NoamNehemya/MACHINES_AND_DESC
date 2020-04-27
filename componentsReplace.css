@@ -47,22 +47,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* Set a style for the submit button */
 .form-container .btn {
-  background-color: #4CAF50;
+  background-color: #459bb3;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
+  margin-top: 10px;
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
@@ -78,3 +74,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border-style:groove;
     
    }
+
+   .close {
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
+  }
+  
+  .close:hover {background: #bbb;}
+ 
