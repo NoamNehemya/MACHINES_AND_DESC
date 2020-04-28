@@ -555,6 +555,8 @@ function closeNav() {
     document.cookie = "myJavascriptVar = " +  support
     // Refresh page once while loaded (initialize), its necessary because page recognize cookie only after refresh
 
+    //
+
 
 
     var machineTextBox = document.getElementById('machineStatusText').value; // store machine status value from text box
