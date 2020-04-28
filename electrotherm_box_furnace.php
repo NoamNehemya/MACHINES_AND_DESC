@@ -420,7 +420,7 @@
                             </div>
 
                             <div class="col2">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine<br/>Status:</label>
+                            <label for="colFormLabelSm" id="fix" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine Status:</label>
                             </div>
 
                             <div class="col4">
@@ -431,6 +431,28 @@
                             </select>
                             </div>
                           </div>
+
+                          <div class="form-group row">
+                            
+                            <div class="col1">
+
+                            <?php while($row=mysqli_fetch_array($result_statusMachine)) {
+
+                            ?>
+                                
+                            <input type="text" id="machineStatusText" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
+
+                            <?php
+
+                            }
+
+                            ?>
+
+
+                            </div>
+
+
+                          </div>
                 
               </div>
           <?php while($row=mysqli_fetch_assoc($result_image)) {?>
@@ -440,6 +462,16 @@
             <?php
           }
       ?>
+                  <div class="form-group row">
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </div>
+          
             
             <div class="form-group row">
               <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
