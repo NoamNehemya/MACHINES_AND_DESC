@@ -197,15 +197,15 @@
                           </div>
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Main:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Pol/Pot:</label>
                             <div class="col1">
 
-                            <?php if (mysqli_num_rows($result_Main)==0){ ?> 
+                            <?php if (mysqli_num_rows($result_Pol_Pot)==0){ ?> 
                                   <input type="text" name="textField" class="dit2" value="-------------------">
                                   <?php }
                                   
                                   else { ?>
-                                    <?php while($row=mysqli_fetch_array($result_Main)) { ?>
+                                    <?php while($row=mysqli_fetch_array($result_Pol_Pot)) { ?>
                                     <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
                                     <?php } ?> 
                               
@@ -360,15 +360,15 @@
                           </div>
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Pol/Pot:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH1/SSR:</label>
                             <div class="col1">
 
-                            <?php if (mysqli_num_rows($result_Pol_Pot)==0){ ?> 
+                            <?php if (mysqli_num_rows($result_DH1)==0){ ?> 
                                   <input type="text" name="textField" class="dit2" value="-------------------">
                                   <?php }
                                   
                                   else { ?>
-                                    <?php while($row=mysqli_fetch_array($result_Pol_Pot)) { ?>
+                                    <?php while($row=mysqli_fetch_array($result_DH1)) { ?>
                                     <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
                                     <?php } ?> 
                               
@@ -401,44 +401,6 @@
                           </div>
 
                           <div class="form-group row">
-                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH1/SSR:</label>
-                            <div class="col1">
-
-                            <?php if (mysqli_num_rows($result_DH1)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
-                                  <?php }
-                                  
-                                  else { ?>
-                                    <?php while($row=mysqli_fetch_array($result_DH1)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-                                    <?php } ?> 
-                              
-                            <?php
-                            }
-                            ?>
-
-                            </div>
-
-                            <div class="col2">
-                            </div>
-
-                            <div class="col4">
-                            <?php while($row=mysqli_fetch_array($result_statusMachine2)) {
-
-                            ?>
-                                
-                            <input type="text" id="machineStatusText" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
-
-                            <?php
-
-                            }
-
-                            ?>
-
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH2/SSR:</label>
                             <div class="col1">
 
@@ -458,23 +420,20 @@
                             </div>
 
                             <div class="col2">
-                              <label for="colFormLabelSm" class="Model-dit">Machine<br/>Status:</label>
+                            <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine<br/>Status:</label>
                             </div>
 
                             <div class="col4">
-                              <select class="DropDowns" id="List_Machine_Status" name="update_status_machine2">
+                            <select class="DropDowns" id="List_Machine_Status" name="update_status_machine2">
                               <?php while($rows = $result_list3->fetch_assoc()):;?>
                                  <?php echo "<option value={$rows["machineStatus"]}>{$rows["machineStatus"]}</option>";?>
                               <?php endwhile;?>
                             </select>
                             </div>
                           </div>
-
-                      
-
                 
               </div>
-              <?php while($row=mysqli_fetch_assoc($result_image)) {?>
+          <?php while($row=mysqli_fetch_assoc($result_image)) {?>
           <div class="column2">
             <div class="form-group row">
             <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="max-width: 200px;border: 1px solid lightgray; box-shadow: 0 1px 5px 1px lightgrey; border-radius: 6px;">            </div>
