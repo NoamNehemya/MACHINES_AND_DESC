@@ -427,7 +427,7 @@ function closeNav() {
 
     window.onload = function() {
         if(!window.location.hash) {
-            window.location = window.location + '#loaded';
+            window.location = window.location + '#loaded?ID=' + support;
             window.location.reload();
         }
     }

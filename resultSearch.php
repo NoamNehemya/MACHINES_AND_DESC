@@ -155,7 +155,7 @@ $( "#new-projects" ).load( "SideNav.html" );
 
         window.onload = function() { // refresh on page loading
         if(!window.location.hash) {
-            window.location = window.location + '#loaded';
+          window.location = window.location + '#loaded?ID=' + ComponentType;
             window.location.reload();
         }
       }
