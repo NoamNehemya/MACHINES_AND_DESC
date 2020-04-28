@@ -114,16 +114,17 @@
 
                             <div class="col3">
 
-                            <?php while($row=mysqli_fetch_array($result_PLC)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_PLC)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_PLC)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
                            
                           </div>
@@ -133,16 +134,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">AC Drives:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_acDrives)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_acDrives)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_acDrives)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -153,16 +155,17 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_timer)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_timer)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_timer)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -182,16 +185,18 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_speedControl)) {
-
-                            ?>
-                              
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                  <?php if (mysqli_num_rows($result_speedControl)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_speedControl)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                                    
 
                             <?php
-
                             }
-
                             ?>
 
 
@@ -232,18 +237,18 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Power Supply:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_powerSupply)) {
-
-                            ?>
-
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                             <?php if (mysqli_num_rows($result_powerSupply)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_powerSupply)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                                    
                             <?php
-
-                             }
-
-                             ?>
+                            }
+                            ?>
 
                             </div>
 
@@ -267,16 +272,18 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Hourmeter:</label>
                             <div class="col1"> 
 
-                            <?php while($row=mysqli_fetch_array($result_hourmeter)) {
-
-                            ?>
+                            <?php if (mysqli_num_rows($result_hourmeter)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
                                   
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_hourmeter)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                                    
 
                             <?php
-
                             }
-
                             ?>
 
 

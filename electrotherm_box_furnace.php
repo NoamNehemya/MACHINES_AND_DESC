@@ -110,17 +110,17 @@
 
                             <div class="col3">
 
-                            <?php while($row=mysqli_fetch_array($result_sourch)) {
-
-                            ?>
-                           
-
-                           <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_sourch)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_sourch)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                           </div>
@@ -130,18 +130,19 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Universal<br/>Digital:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_Universal_Digital)) {
-
-                            ?>
-
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_Universal_Digital)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_Universal_Digital)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
+
 
                             </div>
 
@@ -151,16 +152,17 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_PLC2)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_PLC2)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_PLC2)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -178,16 +180,17 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_Graphic_Recorder)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_Graphic_Recorder)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_Graphic_Recorder)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -197,16 +200,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Main:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_Main)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['main']; ?>">
-
+                            <?php if (mysqli_num_rows($result_Main)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_Main)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
                               
                             </div>
@@ -218,17 +222,19 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_PVAK)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_PVAK)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_PVAK)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
+                              
 
                             </div>
 
@@ -247,16 +253,17 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_SCR)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                             <?php if (mysqli_num_rows($result_SCR)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_SCR)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
 
@@ -270,16 +277,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PEX:</label>
                             <div class="col1">
                        
-                            <?php while($row=mysqli_fetch_array($result_PEX)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_PEX)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_PEX)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -291,18 +299,18 @@
 
                             <div class="col4">
 
-                           
-                            <?php while($row=mysqli_fetch_array($result_PWT)) {
-
+                            <?php if (mysqli_num_rows($result_PWT)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_PWT)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
+                            <?php
+                            }
                             ?>
-
-                             <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
-                           <?php
-
-                           }
-
-                          ?>
 
 
                             </div>
@@ -313,16 +321,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">PHT:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_PHT)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_PHT)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_PHT)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -333,16 +342,17 @@
 
                             <div class="col4">
 
-                            <?php while($row=mysqli_fetch_array($result_Volt_Ampermeter)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_Volt_Ampermeter)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_Volt_Ampermeter)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -353,16 +363,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Pol/Pot:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_Pol_Pot)) {
-
-                           ?>
-
-                           <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
-                           <?php
-
+                            <?php if (mysqli_num_rows($result_Pol_Pot)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_Pol_Pot)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
+                            <?php
                             }
-
                             ?>
 
                             </div>
@@ -373,17 +384,17 @@
 
                             <div class="col4">
 
-                            
-                            <?php while($row=mysqli_fetch_array($result_powerSupply2)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_powerSupply2)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_powerSupply2)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -393,16 +404,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH1/SSR:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_DH1)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_DH1)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_DH1)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
@@ -430,16 +442,17 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">DH2/SSR:</label>
                             <div class="col1">
 
-                            <?php while($row=mysqli_fetch_array($result_DH2)) {
-
-                            ?>
-
-                            <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
-
+                            <?php if (mysqli_num_rows($result_DH2)==0){ ?> 
+                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <?php }
+                                  
+                                  else { ?>
+                                    <?php while($row=mysqli_fetch_array($result_DH2)) { ?>
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <?php } ?> 
+                              
                             <?php
-
                             }
-
                             ?>
 
                             </div>
