@@ -24,6 +24,8 @@
   
   <link rel="stylesheet" href="SideNav.css">
   <link rel="stylesheet" href="Buliding-six.css">
+  <link rel="stylesheet" href="AlertbuildingSix.css">
+
 
                 <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color:#669999; color: black; text-decoration-color: black;">
 				<div id="main">
@@ -88,8 +90,22 @@
       <p id="explanMachinePage">Select the machine you want to operate on.</p>
     </div>
     <div class="col_two">
-       <i class="fa fa-info-circle" id="informationIcon" onclick="alert('Machine Status\n\nGreen frame: Working machine\nYellow frame: Set up\nRed frame:     Error')" style="font-size:24px"></i>
-    </div>
+
+          <button class="btn btn-outline-dark" onclick="openForm()" id="informationIcon"><img src="http://www.up2me.co.il/imgs/46747251.png" alt="" style="width:20px"></button>
+
+          <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <button type="button" onclick="closeForm()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 id="title_info">Machine Status</h3>
+              
+              <p>Green frame:<span style="color:#006600"> <b>Working</b></span></p>
+              <p>Yellow frame:<span style="color:#e6b800"> <b>Set up</b></span></p>
+              <p>Red frame:<span style="color:#b30000"> <b>Error</b></span></p>
+              
+              
+            </form>
+          </div>
+       
 
   </div>
            
@@ -304,12 +320,12 @@ function toggleNav(){
 function openNav() {
   document.getElementById("mySidenav").style.width = "90px";
   document.getElementById("main").style.marginLeft = "90px";
-  document.getElementById("titleMachine").style.marginLeft = "90px";
+  document.getElementById("titleMachine").style.marginLeft = "150px";
   document.getElementById("Search_Machine").style.marginLeft = "0px";
   document.getElementById("back_Page").style.marginLeft = "0px";
   document.getElementById("home_Page").style.marginLeft = "0px";
   document.getElementById("Brint").style.marginLeft = "0px";
-  document.getElementById("explanMachinePage").style.marginLeft = "130px";
+  document.getElementById("explanMachinePage").style.marginLeft = "272px";
 
   document.getElementById("titleMachine").style.transition = "0.5s";
   document.getElementById("Search_Machine").style.transition = "0.5s";
@@ -323,14 +339,14 @@ function openNav() {
 function closeNav() {
  document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("titleMachine").style.marginLeft = "50px";
+  document.getElementById("titleMachine").style.marginLeft = "60px";
   document.getElementById("explanMachinePage").style.marginright = "0px";
   document.getElementById("Search_Machine").style.marginLeft = "0px";
   document.getElementById("back_Page").style.marginRight = "0";
   document.getElementById("home_Page").style.marginRight = "0";
   document.getElementById("Brint").style.marginRight = "0";
 
-  document.getElementById("explanMachinePage").style.marginLeft = "100px";
+  document.getElementById("explanMachinePage").style.marginLeft = "180px";
  
 }
 
@@ -388,6 +404,15 @@ document.cookie = "myJavascriptVar = " +  support;
          document.getElementById(support_php[i]).style.borderColor = 'red';
         }
     }
+
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+
 
 
     
