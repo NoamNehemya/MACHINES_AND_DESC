@@ -714,11 +714,23 @@
 
          //***************************************************************************************************************************************************************
 
+            //php result search 
+
             $myPhpVar_component= $_COOKIE['myJavascriptVar'];
             $query_display_components="SELECT * FROM components WHERE Component_type = '".$myPhpVar_component."'";
             $result_display_components = mysqli_query($db , $query_display_components);
 
+            //***************************************************************************************************************************************************************
                 
+            //php form change components
+
+            //drop list ONE
+            echo "<script>document.writeln(p1);</script>";
+
+            $output_drop_one = $_COOKIE["myJavascriptVar"];
+            $query_one = "SELECT s_n FROM components WHERE  support LIKE '".$support_input."' ";
+            $result_query_one = mysqli_query($db , $query_one);
+
 
 ?>
 
