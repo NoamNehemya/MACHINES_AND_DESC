@@ -323,8 +323,7 @@
     <h3 id="title_Components_Modification" ><b>Components Modification</b></h3><br>
     
     <label><b>Component Type</b></label><br>
-    <select class="form-control" id="DropListType" onChange="submitActiveOrDimmed()">
-    <option>Select component type...</option>
+    <select class="form-control" id="DropListType_ONE" onChange="submitActiveOrDimmed()">
     <?php while($rows = $result_to_dropList_enter_stock->fetch_assoc()):;?>
     <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
     <?php endwhile;?>
@@ -332,19 +331,18 @@
 
     <label><b>Add Component</b></label><br>
     <select class="form-control" id="DropListType">
-    <option value="1">Segev</option>
-    <option value="2">tamut</option>
-    <option value="3">kelev</option>
+    <option>Select component type...</option>
+    
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
     <select class="form-control" id="DropListType">
-    <option value="1">Segev</option>
-    <option value="2">tamut</option>
-    <option value="3">ya zevel</option>
+    <?php while($rows = $result_query_one->fetch_assoc()):;?>
+    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
+    <?php endwhile;?>
     </select><br><br>
 
-    <button type="submit" id="submit_Components_modification" class="btn">Submit</button>
+    <button type="submit" id="submit_Components" class="btn">Submit</button>
     
   </form>
 </div>
@@ -439,6 +437,29 @@ function closeNav() {
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
+
+    function submitActiveOrDimmed() {
+
+      if(document.getElementById("DropListType_ONE").value === "Select component type..."){
+        document.getElementById("submit_Components").disabled = true;
+        document.getElementById("submit_Components").style.cursor = "no-drop";
+        document.getElementById("submit_Components").style.backgroundColor='grey';
+      }
+      else{
+        document.getElementById("submit_Components").disabled = false;
+        document.getElementById("submit_Components").style.cursor = "pointer";
+        document.getElementById("submit_Components").style.backgroundColor='black';
+      }
+    }
+
+    
+      var p1 = document.getElementById('DropListType_ONE').options[document.getElementById('DropListType_ONE').selectedIndex].innerHTML;
+      
+
+    
+   // document.cookie = "VAR_DropListType_ONE = " +  document.getElementById('DropListType_ONE').options[document.getElementById('DropListType_ONE').selectedIndex].innerHTML;
+ 
+
 
 </script>
   </body>
