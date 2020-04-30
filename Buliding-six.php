@@ -90,8 +90,7 @@
       <p id="explanMachinePage">Select the machine you want to operate on.</p>
     </div>
     <div class="col_two">
-
-          <button class="btn btn-outline-dark" onclick="openForm()" id="informationIcon"><img src="http://www.up2me.co.il/imgs/46747251.png" alt="" style="width:20px"></button>
+          <i class="fa fa-info-circle" id="informationIcon" style="font-size:36px" onclick="openForm()"></i>
 
           <div class="form-popup" id="myForm">
             <form action="/action_page.php" class="form-container">
