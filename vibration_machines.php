@@ -320,31 +320,31 @@
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
     <button type="button" onclick="closeForm()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h1>Replacment</h1>
+    <h3 id="title_Components_Modification" ><b>Components Modification</b></h3><br>
     
-    <label><b>Component Type</b></label>
-    <select class="DropDown" id="DropListType" onChange="submitActiveOrDimmed()">
+    <label><b>Component Type</b></label><br>
+    <select class="form-control" id="DropListType" onChange="submitActiveOrDimmed()">
     <option>Select component type...</option>
     <?php while($rows = $result_to_dropList_enter_stock->fetch_assoc()):;?>
     <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
     <?php endwhile;?>
-    </select>
+    </select><br><br>
 
-    <label><b>Add Component</b></label>
-    <select class="DropDown" id="DropListType">
+    <label><b>Add Component</b></label><br>
+    <select class="form-control" id="DropListType">
     <option value="1">Segev</option>
     <option value="2">tamut</option>
     <option value="3">kelev</option>
-    </select>
+    </select><br><br>
     
-    <label><b>Remove Component</b></label>
-    <select class="DropDown" id="DropListType">
+    <label><b>Remove Component</b></label><br>
+    <select class="form-control" id="DropListType">
     <option value="1">Segev</option>
     <option value="2">tamut</option>
     <option value="3">ya zevel</option>
-    </select>
+    </select><br><br>
 
-    <button type="submit" class="btn">Submit</button>
+    <button type="submit" id="submit_Components_modification" class="btn">Submit</button>
     
   </form>
 </div>
