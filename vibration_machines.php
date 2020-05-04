@@ -318,7 +318,7 @@
 <button class="open-button" onclick="openForm()">Replace components</button>
 
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <form action="/action_page.php" class="form-container" onChange="window.location.reload()">
     <button type="button" onclick="closeForm()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h3 id="title_Components_Modification" ><b>Components Modification</b></h3><br>
     
