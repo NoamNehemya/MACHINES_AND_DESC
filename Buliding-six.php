@@ -1,7 +1,7 @@
 
 
   <?php include('server.php');?>
-  
+  <?php include('machinesClass.php');?>
   <html lang="en">
   <head>
    
