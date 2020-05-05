@@ -1,6 +1,7 @@
 
 <?php include('server.php');?>
 
+
 <html lang="en">
   <head>
    
@@ -314,8 +315,12 @@
             </div>
 
             </form>
-            
+
+
             <?php include('myForm.php');?>
+            <?php include('myForm2.php');?>
+            
+          
 
             <button class="open-button" onclick="openForm()">Replace components</button>
 
