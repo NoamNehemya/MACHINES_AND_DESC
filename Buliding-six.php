@@ -2,6 +2,8 @@
 
   <?php include('server.php');?>
   <?php include('machinesClass.php');?>
+  <?php error_reporting(E_ALL ^ E_NOTICE); ?>
+
   <html lang="en">
   <head>
    
