@@ -36,20 +36,7 @@
 
 
   <head>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-				  
-	</head>
-
-
-  <body>
-
-
-<ol id="new-projects"></ol>
- 
-<script>
-$( "#new-projects" ).load( "SideNav.html" );
-</script>
-
+  <?php include('sideNav.php');?>   
 
   <div id="includedContent"></div>
 

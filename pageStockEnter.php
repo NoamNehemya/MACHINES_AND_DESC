@@ -47,16 +47,8 @@
     </style>
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  </head>
 
-  <body>
-
-  <ol id="new-projects"></ol>
- 
-<script>
-$( "#new-projects" ).load( "SideNav.html" );
-</script>
+<?php include('sideNav.php');?>   
               
                   <p id="explanMachinePage">Select the type of component you want to view its inventory</p>
 
@@ -74,7 +66,7 @@ $( "#new-projects" ).load( "SideNav.html" );
                   
                 </div>
 
-
+   
             
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
