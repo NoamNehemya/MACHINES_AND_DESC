@@ -13,14 +13,14 @@
     <h3 id="title_Components_Modification" ><b>Components Modification</b></h3><br>
     
     <label><b>Component Type</b></label><br>
-    <select class="form-control" id="DropListType_one" onChange="updateCookie(DropListOneResult() )">
+    <select class="form-control" id="DropListType_one">
     <?php while($rows = $result_to_dropList_enter_stock->fetch_assoc()):;?>
     <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
     <?php endwhile;?>
     </select><br><br>
 
     
-    <button type="button" onclick="openForm2()" id="submit_Components" class="btn">Submit</button>
+    <button type="button" onclick="openForm2(); updateCookie(DropListOneResult() )" id="submit_Components" class="btn">Submit</button>
     
   </form>
 </div>

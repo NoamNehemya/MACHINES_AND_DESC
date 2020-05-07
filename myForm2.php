@@ -11,26 +11,27 @@
     <h3 id="title_Components_Modification" ><b>Components Modification</b></h3><br>
 
     <label><b>Add Component</b></label><br>
-    <select class="form-control" id="DropListType_two" onChange="updateCookie(DropListOneResult() )">
+    <select class="form-control" id="DropListType_two">
     <?php while($rows = $result_query_two->fetch_assoc()):;?>
     <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
     <?php endwhile;?>
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
-    <select class="form-control" id="DropListType_three" onChange="updateCookie(DropListOneResult() )">
+    <select class="form-control" id="DropListType_three">
     <?php while($rows = $result_query_three->fetch_assoc()):;?>
     <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
     <?php endwhile;?>
     </select><br><br>
 
-    <button type="button"  id="submit_Components" class="btn">Submit</button>
+    <button type="button"  id="submit_Components2" class="btn">Submit</button>
     
   </form>
 </div>
 
 
 <script>
+
 
 
 
