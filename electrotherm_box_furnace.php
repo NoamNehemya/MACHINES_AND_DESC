@@ -370,7 +370,7 @@
                             </div>
 
                             <div class="col2">
-                            <label for="colFormLabelSm" id="fix" class="col-sm-1-col-form-label-col-form-label-sm-1">Machine Status:</label>
+                            <label for="colFormLabelSm" class="Model-dit">Machine<br/>Status:</label>
                             </div>
 
                             <div class="col4">
