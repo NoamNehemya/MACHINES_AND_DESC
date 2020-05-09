@@ -80,8 +80,9 @@
     <script src="myscripts.js"></script>
     <script>
 
-    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array 
     var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
 
 
         window.onload = function() { // refresh on page loading
