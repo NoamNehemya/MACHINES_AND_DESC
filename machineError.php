@@ -59,18 +59,7 @@
     </style>
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  </head>
-
-  <body>
-
-  <ol id="new-projects"></ol>
- 
-<script>
-$( "#new-projects" ).load( "SideNav.html" );
-</script>
-
-				  
+<?php include('sideNav.php');?>   				  
 	</head>
 
 
@@ -93,12 +82,7 @@ $( "#new-projects" ).load( "SideNav.html" );
 
     var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array
     var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
-    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
 
-
-    if(window.location.href.substr(-2) !== "?r") { // refresh second time
-        window.location = window.location.href + "?r";
-      }
 
         window.onload = function() { // refresh on page loading
         if(!window.location.hash) {
