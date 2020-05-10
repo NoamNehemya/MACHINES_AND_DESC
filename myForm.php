@@ -18,7 +18,9 @@
     <?php echo "<option value={$rows["Component_type"]}>{$rows["Component_type"]}</option>";?>
     <?php endwhile;?>
     </select><br><br>
-
+    <br><br>
+    <br><br>
+    <br>
     
     <button type="button" onclick="openForm2(); updateCookie(DropListOneResult() )" id="submit_Components" class="btn">Submit</button>
     
