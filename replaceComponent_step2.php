@@ -144,7 +144,7 @@
 
    
       
-    // get variable (component_type value from pageStockEnter.php)
+    // get variable (component_type value from replaceComponentStep1.php)
     var ComponentType = localStorage.getItem('PassVar_one');
 
     var support = localStorage.getItem('PassVar');
