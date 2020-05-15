@@ -10,4 +10,8 @@ if (!$conn) {
 
 $myPhpVar= $_COOKIE['myJavascriptVar_error'];
 
+$myPhpVar_support= $_COOKIE['myJavascriptVar'];
+
+$myPhpVar_type_Component= $_COOKIE['myJavascriptVar_type'];
+
 ?>
