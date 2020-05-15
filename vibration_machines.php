@@ -266,12 +266,12 @@
             </form>
 
 
-            <?php include('myForm.php');?>
-            <?php include('myForm2.php');?>
-            
+          
           
 
-            <button class="open-button" onclick="openForm()">Replace components</button>
+            <button class="open-button" onclick="location.href='replaceComponent_step1.php';">Replace components</button>
+
+            
 
 
             
