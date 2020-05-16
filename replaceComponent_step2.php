@@ -86,7 +86,7 @@
 
       #submit_Components2 {
 
-        width: 450px;
+        width: 600px;
         margin-left: 15px;
         background-color: rgb(62, 133, 113);
         margin-top:15px;
@@ -109,19 +109,12 @@
 
     <label class="labels"><b>Add Component</b></label><br>
     <select class="form-control" id="DropListType_two">
-    <option>Select component type...</option>
-    <?php while($rows = $result_query_two->fetch_assoc()):;?>
-    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
-    <?php endwhile;?>
     
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
     <select class="form-control" id="DropListType_three">
-    <option>Select component type...</option>
-    <?php while($rows = $result_query_three->fetch_assoc()):;?>
-    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
-    <?php endwhile;?>
+   
     </select><br><br>
 
     <button type="button"  id="submit_Components2" class="btn" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Submit</button>
@@ -151,7 +144,7 @@
 
    
       
-    // get variable (component_type value from replaceComponentStep1.php)
+    // get variable (component_type value from pageStockEnter.php)
     var ComponentType = localStorage.getItem('PassVar_one');
 
     var support = localStorage.getItem('PassVar');
@@ -161,7 +154,6 @@
 
     // use cookie for using var javaScript in PHP code
     document.cookie = "myJavascriptVar = " +  ComponentType ;
-    document.cookie = "myJavascriptVar_support = " +  support ;
 
    
 
