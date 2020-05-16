@@ -2,9 +2,9 @@
 
 <?php//Creating this server page is meant to save us the code writing on one server page to create order
 
-$conn = mysqli_connect('localhost','root','','test_project');//New connection to the database
+$db = mysqli_connect('localhost','root','','test_project');//New connection to the database
 
-if (!$conn) {
+if (!$db) {
 	echo "failed";
 
 }

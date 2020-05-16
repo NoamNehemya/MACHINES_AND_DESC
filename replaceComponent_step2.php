@@ -109,14 +109,19 @@
 
     <label class="labels"><b>Add Component</b></label><br>
     <select class="form-control" id="DropListType_two">
-   
+    <option>Select component type...</option>
+    <?php while($rows = $result_query_two->fetch_assoc()):;?>
+    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
+    <?php endwhile;?>
     
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
     <select class="form-control" id="DropListType_three">
-
-   
+    <option>Select component type...</option>
+    <?php while($rows = $result_query_three->fetch_assoc()):;?>
+    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
+    <?php endwhile;?>
     </select><br><br>
 
     <button type="button"  id="submit_Components2" class="btn" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Submit</button>
