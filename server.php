@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL ^ E_NOTICE);
-
     ob_start();
 
     //variables for regiater page
@@ -738,4 +736,3 @@ error_reporting(E_ALL ^ E_NOTICE);
             $result_query_three = mysqli_query($db , $query_three);
 
 ?>
-

@@ -1,5 +1,4 @@
 <?php include('server.php');?>
-<?php include('server_machine_error.php');?>
 
 
 <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>
@@ -107,13 +106,20 @@
 
   <form id="Text_Area_droplist_to_replce">
 
-    <label class="labels"><b>Add Component</b></label><br>
+    <label><b>Add Component</b></label><br>
     <select class="form-control" id="DropListType_two">
-    
+    <?php while($rows = $result_query_two->fetch_assoc()):;?>
+    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
+    <?php endwhile;?>
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
     <select class="form-control" id="DropListType_three">
+    <?php while($rows = $result_query_three->fetch_assoc()):;?>
+    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
+    <?php endwhile;?>
+    </select><br><br>
+        
    
     </select><br><br>
 
@@ -153,8 +159,9 @@
     document.getElementById("explanMachinePage").innerHTML = "You have chosen to update a component type: " + ComponentType +" "+" "+ "in Machine: " + support + ".";
 
     // use cookie for using var javaScript in PHP code
-    document.cookie = "myJavascriptVar = " +  ComponentType ;
+    document.cookie = "myJavascriptVar = " +  support;
 
+    document.cookie = "headvalue="+ComponentType; // store value of DropListOneResult in JS cookie
    
 
         window.onload = function() { // refresh on page loading
