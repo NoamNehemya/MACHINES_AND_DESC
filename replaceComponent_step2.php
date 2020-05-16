@@ -109,11 +109,13 @@
 
     <label class="labels"><b>Add Component</b></label><br>
     <select class="form-control" id="DropListType_two">
+   
     
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
     <select class="form-control" id="DropListType_three">
+
    
     </select><br><br>
 
@@ -154,6 +156,7 @@
 
     // use cookie for using var javaScript in PHP code
     document.cookie = "myJavascriptVar = " +  ComponentType ;
+    document.cookie = "myJavascriptVar_support = " +  support ;
 
    
 

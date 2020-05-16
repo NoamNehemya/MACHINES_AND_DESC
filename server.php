@@ -723,19 +723,8 @@ error_reporting(E_ALL ^ E_NOTICE);
             $result_display_components = mysqli_query($db , $query_display_components);
 
             //***************************************************************************************************************************************************************
-                
-            //php form change components
-
-            //drop list one
-            $headvalue = $_COOKIE["headvalue"]; //cookie of drop list one (selected component type of drop list one)
-
-            //drop list two
-            $query_two = "SELECT s_n FROM components WHERE support NOT LIKE '".$support_input."' AND Component_type LIKE '".$headvalue."' ";
-            $result_query_two = mysqli_query($db , $query_two);
-
-            //drop list three
-            $query_three = "SELECT s_n FROM components WHERE support LIKE '".$support_input."' AND Component_type LIKE '".$headvalue."' ";
-            $result_query_three = mysqli_query($db , $query_three);
+  
+       
 
 ?>
 

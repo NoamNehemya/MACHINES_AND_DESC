@@ -71,10 +71,11 @@
 
 <?php include('sideNav.php');?>  
 
-                  <p id="Machine_support_title">Machine:  <?php echo $myPhpVar_support; ?> </p>
+                  <p id="Machine_support_title"></p>
 
               
                   <p id="explanMachinePage_replace_component">Select the type of component you want to replace component.</p>
+
 
                <div class="column" id="MainArea">
                         <select class="DropDown" id="DropListType" onChange="submitActiveOrDimmed()">
@@ -116,6 +117,10 @@
         document.getElementById("submit").style.backgroundColor='white';
       }
     }
+    ;
+    var support = localStorage.getItem('PassVar');
+    document.getElementById("Machine_support_title").innerHTML = "Machine: "  + support + ".";
+
 
     // use submitButtonActions() function where clicking on 'Submit' button
     document.getElementById("submit").addEventListener("click", submitButtonActions);
@@ -134,6 +139,8 @@
             window.location.reload();
         }
       }
+
+
 
 
 </script>
