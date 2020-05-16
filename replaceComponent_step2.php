@@ -86,7 +86,7 @@
 
       #submit_Components2 {
 
-        width: 600px;
+        width: 450px;
         margin-left: 15px;
         background-color: rgb(62, 133, 113);
         margin-top:15px;

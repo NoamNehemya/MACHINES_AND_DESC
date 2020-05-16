@@ -38,9 +38,9 @@
 
         #submit {
 
-           width: 650px;
+           width: 450px;
            margin-top: 100px;
-           margin-left: 450px;
+           margin-left: 550px;
            
         }
 
