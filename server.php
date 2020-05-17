@@ -744,12 +744,19 @@
 
                 $add_new_component_to_machine = mysqli_real_escape_string($db,$_POST['DropListType_two']);
 
+                $remove_prev_component_to_machine = mysqli_real_escape_string($db,$_POST['DropListType_three']);
+
+
+
 
                 $sql_update_component = "UPDATE components SET s_n = '$add_new_component_to_machine' WHERE Component_type LIKE '".$headvalue."' AND support LIKE '".$support_input."'";
-    
                 $query_update_component = mysqli_query($db,$sql_update_component);
 
-                if($query_update_component) {
+                $sql_prev_component = "UPDATE components SET support = 'Storage' WHERE s_n LIKE '$remove_prev_component_to_machine'";
+                $query_remove_component = mysqli_query($db,$sql_update_component);
+                
+
+                if($query_update_component && $query_remove_component) {
     
                      echo "<script type='text/javascript'>alert('Password is Update!');</script>";
                     header('Location: vibration_machines.php');

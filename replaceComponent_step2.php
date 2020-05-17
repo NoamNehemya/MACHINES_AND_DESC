@@ -118,7 +118,7 @@
     </select><br><br>
     
     <label><b>Remove Component</b></label><br>
-    <select class="form-control" id="DropListType_three">
+    <select class="form-control" id="DropListType_three" name="DropListType_three">
     <?php while($rows = $result_query_three->fetch_assoc()):;?>
     <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
     <?php endwhile;?>
