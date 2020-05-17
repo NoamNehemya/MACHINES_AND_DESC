@@ -428,7 +428,9 @@
               <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
             </div>
             
-            </form>                
+            </form>  
+
+              <button class="open-button" onclick="location.href='replaceComponent_step1.php';">Replace components</button>              
 
           </div>
         </div>
