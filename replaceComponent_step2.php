@@ -105,10 +105,10 @@
               
   <p id="explanMachinePage"></p>
 
-  <form id="Text_Area_droplist_to_replce">
+  <form id="Text_Area_droplist_to_replce" method="post" action="replaceComponent_step2.php">
 
     <label><b>Add Component</b></label><br>
-    <select class="form-control" id="DropListType_two">
+    <select class="form-control" id="DropListType_two" name="DropListType_two">
     <?php while($rows = $result_query_two->fetch_assoc()):;?>
     <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
     <?php endwhile;?>
@@ -124,7 +124,7 @@
    
     </select><br><br>
 
-    <button type="button"  id="submit_Components2" class="btn" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Submit</button>
+    <button type="submit"  id="submit_Components2" name="submit_Components2" class="btn" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Submit</button>
 
   </from>
 
