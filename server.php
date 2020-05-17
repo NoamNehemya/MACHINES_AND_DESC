@@ -738,5 +738,35 @@
             $result_query_three = mysqli_query($db , $query_three);
 
 
+            //Replacement operation
+
+            if(isset($_POST['submit_Components2'])) {
+
+                $add_new_component_to_machine = mysqli_real_escape_string($db,$_POST['DropListType_two']);
+
+
+                $sql_update_component = "UPDATE components SET s_n = '$add_new_component_to_machine' WHERE Component_type LIKE '".$headvalue."' AND support LIKE '".$support_input."'";
+    
+                $query_update_component = mysqli_query($db,$sql_update_component);
+
+                if($query_update_component) {
+    
+                     echo "<script type='text/javascript'>alert('Password is Update!');</script>";
+                    header('Location: vibration_machines.php');
+    
+                 } else {
+    
+                     echo "<script type='text/javascript'>alert('Wornge Email / password');</script>"; 
+                    //header('Location: LoginMD.php');
+                }
+                
+                
+                }
+
+          
+
+
+
+
 
 ?>
