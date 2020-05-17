@@ -1,4 +1,5 @@
 <?php include('server.php');?>
+<?php error_reporting(E_ALL ^ E_NOTICE); ?>
 
 
 <script src="https://kit.fontawesome.com/b06c582af3.js" crossorigin="anonymous"></script>

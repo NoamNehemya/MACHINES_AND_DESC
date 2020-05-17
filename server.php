@@ -1,3 +1,4 @@
+<?php error_reporting(E_ALL ^ E_NOTICE); ?>
 <?php
 
     ob_start();
@@ -724,6 +725,7 @@
                 
             //php form change components
 
+
             //drop list one
             $headvalue = $_COOKIE["headvalue"]; //cookie of drop list one (selected component type of drop list one)
 
@@ -734,5 +736,7 @@
             //drop list three
             $query_three = "SELECT s_n FROM components WHERE support LIKE '".$support_input."' AND Component_type LIKE '".$headvalue."' ";
             $result_query_three = mysqli_query($db , $query_three);
+
+
 
 ?>
