@@ -86,10 +86,11 @@
 
       #submit_Components2 {
 
-        width: 600px;
+        width: 350px;
         margin-left: 15px;
-        background-color: rgb(62, 133, 113);
+        background-color: #1a1a1a;
         margin-top:15px;
+        color:white;
       }
 
             
@@ -108,6 +109,7 @@
   <form id="Text_Area_droplist_to_replce" method="post" action="replaceComponent_step2.php">
 
     <label><b>Add Component</b></label><br>
+   
     <select class="form-control" id="DropListType_two" name="DropListType_two">
     <?php while($rows = $result_query_two->fetch_assoc()):;?>
     <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
@@ -124,7 +126,7 @@
    
     </select><br><br>
 
-    <button type="submit"  id="submit_Components2" name="submit_Components2" class="btn" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Submit</button>
+    <button type="submit"  id="submit_Components2" name="submit_Components2" class="btn" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='#1a1a1a';return true;" >Submit</button>
 
   </from>
 

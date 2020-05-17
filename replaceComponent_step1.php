@@ -39,9 +39,11 @@
 
         #submit {
 
-           width: 650px;
+           width: 350px;
            margin-top: 100px;
-           margin-left: 450px;
+           margin-left: 600px;
+           background-color: #1a1a1a;
+           color:white;
            
         }
 
@@ -85,7 +87,7 @@
                         <?php endwhile;?>
                         </select>
 
-                  <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" >Go! </button>
+                  <button type="button" id="submit" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='#1a1a1a';return true;" >Go! </button>
                   
                 </div>
 
