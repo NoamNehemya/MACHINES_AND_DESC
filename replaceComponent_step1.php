@@ -34,6 +34,7 @@
           font-size: 18px;
           background-color: white;
           border-style:groove;
+          text-align-last:center;
           
          }
 

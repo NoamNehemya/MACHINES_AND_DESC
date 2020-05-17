@@ -65,6 +65,7 @@
         font-size: 10px;
         background-color: white;
         border-style:groove;
+        text-align-last:center;
         
       }
 
@@ -76,7 +77,7 @@
         font-size: 10px;
         background-color: white;
         border-style:groove;
-        
+        text-align-last:center;
       }
 
       .labels {
