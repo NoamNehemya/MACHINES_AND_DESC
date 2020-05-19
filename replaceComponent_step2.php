@@ -87,11 +87,11 @@
 
       #submit_Components2 {
 
-        width: 350px;
-        margin-left: 15px;
+        width: 150px;
+        margin-top: -15px;
+        margin-left: 8px;
         background-color: #1a1a1a;
-        margin-top:15px;
-        color:white;
+        color: white;
       }
 
             
@@ -167,13 +167,6 @@
 
     document.cookie = "headvalue="+ComponentType; // store value of DropListOneResult in JS cookie
    
-
-        window.onload = function() { // refresh on page loading
-        if(!window.location.hash) {
-          window.location = window.location + '#loaded?ID=' + ComponentType;
-            window.location.reload();
-        }
-      }
 
 
 </script>

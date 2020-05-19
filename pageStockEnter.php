@@ -38,9 +38,10 @@
 
         #submit {
 
-           width: 650px;
-           margin-top: 250px;
-           margin-left: 450px;
+          width: 200px;
+          margin-top: 100px;
+          margin-left: 675px;
+          background-color: #1a1a1a;
            
         }
 
@@ -94,7 +95,7 @@
         document.getElementById("submit").style.cursor = "pointer";
         document.getElementById("submit").style.backgroundColor='white';
       }
-    }
+      }
 
     // use submitButtonActions() function where clicking on 'Submit' button
     document.getElementById("submit").addEventListener("click", submitButtonActions);
