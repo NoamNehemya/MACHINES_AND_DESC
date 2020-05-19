@@ -168,7 +168,12 @@
     document.cookie = "headvalue="+ComponentType; // store value of DropListOneResult in JS cookie
    
 
-
+    window.onload = function() { // refresh on page loading
+        if(!window.location.hash) {
+          window.location = window.location + '#loaded?ID=' + ComponentType + 'php?machineSupport' + support;
+            window.location.reload();
+        }
+      }
 </script>
   </body>
 </html>
