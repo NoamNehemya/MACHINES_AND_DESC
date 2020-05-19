@@ -754,7 +754,7 @@
                 $sql_update_component =  "UPDATE components SET support = '".$support_input."' WHERE s_n LIKE '$add_new_component_to_machine' AND Component_type LIKE '".$headvalue."'";
                 $query_update_component = mysqli_query($db,$sql_update_component);
 
-                $sql_prev_component = "UPDATE components SET support = '".$Storage."' WHERE s_n LIKE '$remove_prev_component_to_machine' AND Component_type LIKE '".$headvalue."' ";
+                $sql_prev_component = "UPDATE components SET support = 'Storage' WHERE s_n LIKE '$remove_prev_component_to_machine' AND Component_type LIKE '".$headvalue."' ";
                 $query_remove_component = mysqli_query($db,$sql_prev_component);
                 
 
