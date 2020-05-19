@@ -50,7 +50,7 @@
 
                             ?>
                             
-                              <input type="text" name="textField" class="dit1" value="<?php echo $row['support']; ?>">
+                              <input type="text" name="textField" class="dit1" value="<?php echo $row['support']; ?>" disabled>
 
                              <?php
 
@@ -66,12 +66,12 @@
                             <div class="col3">
 
                             <?php if (mysqli_num_rows($result_PLC)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <input type="text" name="textField" class="dit2" value="-------------------" disabled>
                                   <?php }
                                   
                                   else { ?>
                                     <?php while($row=mysqli_fetch_array($result_PLC)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>" disabled>
                                     <?php } ?> 
                               
                             <?php
@@ -86,12 +86,12 @@
                             <div class="col1">
 
                             <?php if (mysqli_num_rows($result_acDrives)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <input type="text" name="textField" class="dit2" value="-------------------" disabled>
                                   <?php }
                                   
                                   else { ?>
                                     <?php while($row=mysqli_fetch_array($result_acDrives)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>" disabled>
                                     <?php } ?> 
                               
                             <?php
@@ -107,12 +107,12 @@
                             <div class="col4">
 
                             <?php if (mysqli_num_rows($result_timer)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <input type="text" name="textField" class="dit2" value="-------------------" disabled>
                                   <?php }
                                   
                                   else { ?>
                                     <?php while($row=mysqli_fetch_array($result_timer)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>" disabled>
                                     <?php } ?> 
                               
                             <?php
@@ -126,7 +126,7 @@
                             <label for="colFormLabelSm" class="col-sm-1-col-form-label-col-form-label-sm-1">Building:</label>
                             <div class="col1">
 
-                              <p name="textField" class="dit2">6</p>
+                              <p name="textField" class="dit2" disabled>6</p>
 
                             </div>
 
@@ -137,12 +137,12 @@
                             <div class="col4">
 
                                   <?php if (mysqli_num_rows($result_speedControl)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <input type="text" name="textField" class="dit2" value="-------------------" disabled>
                                   <?php }
                                   
                                   else { ?>
                                     <?php while($row=mysqli_fetch_array($result_speedControl)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>" disabled>
                                     <?php } ?> 
                                     
 
@@ -171,7 +171,7 @@
 
                             ?>
                                 
-                            <input type="text" id="machineStatusText" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>">
+                            <input type="text" id="machineStatusText" name="textField" class="dit2" value="<?php echo $row['machineStatus']; ?>" disabled>
 
                             <?php
 
@@ -189,12 +189,12 @@
                             <div class="col1">
 
                              <?php if (mysqli_num_rows($result_powerSupply)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <input type="text" name="textField" class="dit2" value="-------------------" disabled>
                                   <?php }
                                   
                                   else { ?>
                                     <?php while($row=mysqli_fetch_array($result_powerSupply)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>" disabled>
                                     <?php } ?> 
                                     
                             <?php
@@ -224,12 +224,12 @@
                             <div class="col1"> 
 
                             <?php if (mysqli_num_rows($result_hourmeter)==0){ ?> 
-                                  <input type="text" name="textField" class="dit2" value="-------------------">
+                                  <input type="text" name="textField" class="dit2" value="-------------------" disabled>
                                   <?php }
                                   
                                   else { ?>
                                     <?php while($row=mysqli_fetch_array($result_hourmeter)) { ?>
-                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>">
+                                    <input type="text" name="textField" class="dit2" value="<?php echo $row['s_n']; ?>" disabled>
                                     <?php } ?> 
                                     
 
