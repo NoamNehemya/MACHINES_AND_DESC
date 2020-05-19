@@ -740,7 +740,7 @@
 
             //Replacement operation
 
-            $Storage = "Storage";
+            
 
             if(isset($_POST['submit_Components2'])) {
 
