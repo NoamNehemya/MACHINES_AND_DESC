@@ -30,11 +30,11 @@
           margin-left: 450px;
           width: 650px;
           height: 50px;
-          text-align: center;
+          text-align: left;
           font-size: 18px;
           background-color: white;
           border-style:groove;
-          text-align-last:center;
+          text-align-last:left;
           
          }
 
