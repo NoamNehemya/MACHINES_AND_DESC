@@ -61,11 +61,11 @@
         margin-left:130px;
         width: 700px;
         height: 40px;
-        text-align: center;
+        text-align: left;
         font-size: 10px;
         background-color: white;
         border-style:groove;
-        text-align-last:center;
+        text-align-last:left;
         
       }
 
@@ -73,11 +73,11 @@
         margin-left:130px;
         width: 700px;
         height: 40px;
-        text-align: center;
+        text-align: left;
         font-size: 10px;
         background-color: white;
         border-style:groove;
-        text-align-last:center;
+        text-align-last:left;
       }
 
       .labels {
