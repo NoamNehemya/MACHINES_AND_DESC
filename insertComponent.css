@@ -55,6 +55,17 @@
             color: black;
         }
 
+        .DropDowns2 {
+
+       
+            width: 220px;
+            margin-top: 5px;
+            border-style:ridge;
+            border-color: #313332;
+            background-color:white;
+            color: black;
+        }
+
         #UpalteFile1 {
 
             width: 220px;
