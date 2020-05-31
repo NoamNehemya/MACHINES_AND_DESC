@@ -268,10 +268,10 @@
 
 
           
-          
+            <div class="form-group row">
 
-            <button class="open-button" onclick="location.href='replaceComponent_step1.php';">Replace components</button>
-
+            <button class="btn btn-outline-dark" id="replacecomponent" onclick="location.href='replaceComponent_step1.php';" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='#999999';return true;">Replace components</button>
+            </div>
             
 
 
