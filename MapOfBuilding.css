@@ -10,7 +10,7 @@
 
         .jumbotron-jumbotron-fluid{
 
-            height: 200px;
+            height: 170px;
             background-color: #E1F3EE;
             margin-bottom: 0px;
             padding-top: 1px;
@@ -51,7 +51,7 @@
         #build1{
 
             margin-left:210px;
-            margin-top: 60px;
+            margin-top: 0px;
             padding: 65px 102px;
             text-align: center;
             text-decoration: none;
@@ -62,7 +62,7 @@
         #build2{
 
             margin-left: 420px;
-            margin-top: 60px;
+            margin-top: 0px;
             padding: 65px 102px;
             text-align: center;
             text-decoration: none;
@@ -73,7 +73,7 @@
         #build5{
 
             margin-left:210px;
-            margin-top: 90px;
+            margin-top: 50px;
             padding: 65px 102px;
             text-align: center;
             text-decoration: none;
@@ -85,7 +85,7 @@
         #build6{
 
             margin-left: 420px;
-            margin-top: 90px;
+            margin-top: 50px;
             padding: 65px 102px;
             text-align: center;
             text-decoration: none;
@@ -98,4 +98,14 @@
 
             margin-left:295px;
             margin-top:15px;
+        }
+        
+        #lead {
+
+            margin-bottom: 80px;
+        }
+
+        #titleOFpage {
+
+            margin-top: 0px;
         }
