@@ -691,7 +691,7 @@
 
             //php of History Machine Page
 
-            $query_history_table="SELECT * from history";
+            $query_history_table="SELECT * from history ORDER BY UpdateDate DESC";
             $result_histroy_table = mysqli_query($db , $query_history_table);
 
 
