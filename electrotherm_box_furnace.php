@@ -410,28 +410,22 @@
           <div class="column2">
             <div class="form-group row">
             <img src="<?php echo $row['image']?>" id="machineImage" alt="" style="max-width: 200px;border: 1px solid lightgray; box-shadow: 0 1px 5px 1px lightgrey; border-radius: 6px;">            </div>
+            </div>
+
             <?php
           }
       ?>
-                  <div class="form-group row">
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  </div>
-          
-            
-            <div class="form-group row">
-              <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
-            </div>
+        
+           </div>
+
+            <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
+      
             
             </form>  
-            <div class="form-group row">
+
               <button class="btn btn-outline-dark" id="replacecomponent" onclick="location.href='replaceComponent_step1.php';" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='#999999';return true;" id="save">Replace components</button>              
-            </div>
+
+              
           </div>
         </div>
       </div>
