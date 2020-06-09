@@ -116,10 +116,11 @@
 
         #save {
 
-          margin-left: 130px;
-          width: 250px;
-          margin-top: 315px;
-
+       
+          margin-left: 260px;
+          width: 220px;
+          height: 35px;
+          margin-top: 10px;
         }
 
         #machineImage{
@@ -160,9 +161,9 @@
         background-color:  #999999
         ;
         width: 250px;
-        margin-top: 315px;
+        margin-left: 235px;
+        margin-top: 10px;
         color:white;
-
 
 
       }
