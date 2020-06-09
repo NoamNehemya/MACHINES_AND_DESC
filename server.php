@@ -700,7 +700,7 @@
 
             //php of Incorrect Table Page
 
-            $query_incorrect_table="SELECT * FROM faulty";
+            $query_incorrect_table="SELECT * FROM faulty ORDER BY FaultNumber DESC";
             $result_incorrect_table = mysqli_query($db , $query_incorrect_table);
             
 
