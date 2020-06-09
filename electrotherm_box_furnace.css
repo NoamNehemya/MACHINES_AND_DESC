@@ -115,12 +115,11 @@
         /**כפתור שמירה**/
 
         #save {
-
-       
-          margin-left: 260px;
+          margin-left: 850px;
           width: 220px;
           height: 35px;
           margin-top: 10px;
+          margin-bottom: 15px;
         }
 
         #machineImage{
@@ -158,12 +157,11 @@
 
       #replacecomponent {
 
-        background-color:  #999999
-        ;
+        background-color: white;
         width: 250px;
-        margin-left: 235px;
+        margin-left: 30px;
         margin-top: 10px;
-        color:white;
+        margin-bottom: 15px;
 
 
       }
