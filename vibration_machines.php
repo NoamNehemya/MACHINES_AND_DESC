@@ -260,25 +260,25 @@
           }
       ?>
             
-            <div class="form-group row">
-              <button type="submit" name="save_status" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
+         
             </div>
-
+            
+              <button type="submit" name="save_status" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
+            
             </form>
 
 
           
-            <div class="form-group row">
+
 
             <button class="btn btn-outline-dark" id="replacecomponent" onclick="location.href='replaceComponent_step1.php';" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='#999999';return true;">Replace components</button>
-            </div>
-            
-
 
             
 
 
-          </div>
+            
+
+
         </div>
       </div>
             
