@@ -250,6 +250,8 @@
                 
               </div>
 
+
+
               <?php while($row=mysqli_fetch_assoc($result_image)) {?>
           <div class="column2">
             <div class="form-group row">
@@ -259,8 +261,7 @@
             <?php
           }
       ?>
-            
-         
+
             </div>
             
               <button type="submit" name="save_status" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
@@ -271,7 +272,7 @@
           
 
 
-            <button class="btn btn-outline-dark" id="replacecomponent" onclick="location.href='replaceComponent_step1.php';" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='#999999';return true;">Replace components</button>
+            <button class="btn btn-outline-dark" id="replacecomponent" onclick="location.href='replaceComponent_step1.php';" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;">Replace components</button>
 
             
 
