@@ -48,10 +48,6 @@
 	  .sidenav a {font-size: 18px;}
   }
   
-  @media screen and (min-width: 768px) {
-	  .jumbotron-jumbotron-fluid {padding-right: 100px;}
-	  
-	}
 
 		   
         .container{
@@ -90,12 +86,13 @@
 
         }
 
-        #logout {
+        .logout {
 
           margin-left:1090px;
           margin-top: 20px;
           width: 100px;
-         
+          color: yellow;
+          background-color: yellow;
         }
 
       #titleMachine{

@@ -17,19 +17,18 @@
 
   <link rel="stylesheet" href="SideNav.css">
 
-                <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color:#669999; color: black; text-decoration-color: black;">
-				<div id="main">
+                <nav class="navbar  navbar-light navbar-fixed-top" style="background-color:#669999; color: black; text-decoration-color: black;">
+				<div class="pl-2" id="main" >
 					<span id="navButton" style="font-size:30px;cursor:pointer">&#9776;</span>
+          <a class="text-left navbar-brand pl-4" href="#"><span class="">M&D</span></a>
 				</div>
-                <a class="navbar-brand" href="#">M&D</a>
+                
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+              
 
 
-                    <a class="logout1" style="right-side: 5px">
-                      <button class="btn btn-dark" onclick = "location.href='LoginMD.php';" id="logout" type="submit" >Log Out</button>
+                    
+                     <button class="float-right  btn bg-dark text-light pr-4 pl-4" style="" onclick = "location.href='LoginMD.php';"  type="submit" >Log Out</button>
 					</a>
                 
             </nav>
@@ -51,9 +50,9 @@
 						  
           </div>
           
-          <div class="jumbotron-jumbotron-fluid">
-            <div class="row">
-              <div class="column" id="titleMachine">
+          <div class="jumbotron-jumbotron-fluid " style="padding-right:0px;" >
+            <div class="row " style="padding-left:150px;padding-right:0px;float-right">
+              <div class="column " id="titleMachine">
                 <h1 class="display-5" id="titleOFpage"></h1>
                 </div>
                 <div class="column" id="Search_Machine">
