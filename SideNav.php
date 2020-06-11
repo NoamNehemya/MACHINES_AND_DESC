@@ -51,8 +51,8 @@
           </div>
           
           <div class="jumbotron-jumbotron-fluid " style="padding-right:0px;" >
-            <div class="row " style="padding-left:150px;padding-right:0px;float-right">
-              <div class="column " id="titleMachine">
+            <div class="row " style="padding-left:0px;padding-right:0px;float-right">
+              <div class="column  " style="padding-right:140px;" id="titleMachine">
                 <h1 class="display-5" id="titleOFpage"></h1>
                 </div>
                 <div class="column" id="Search_Machine">
