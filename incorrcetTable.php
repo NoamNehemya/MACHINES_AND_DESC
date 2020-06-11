@@ -74,6 +74,15 @@ background-color: rgb(20, 20, 20);
 border-color: rgb(20, 20, 20);
 }
 
+#VisualStatusButton {
+
+ 
+  margin-left:440px;
+  margin-top:40px;
+}
+
+
+
 
 
 
@@ -91,13 +100,13 @@ border-color: rgb(20, 20, 20);
     <div class="column p-5" id="MainArea">
 
                <div class="row">
-                 <div class="column" id="column1">
+                 <div class="column" id="column1" style="padding-left:0px;padding-right:0px;float-left">
 
                   <p id="explanMachinePage">This table shows all components found in factory machinery.</p>
                  </div>
 
-                 <div class="column" id="column2">
-               <button type="button" class="btn btn-outline-dark" id="VisualStatusButton">Visual status report</button>
+                 <div class="column "  id="column2" style="padding-left:0px;padding-right:0px;float-right">
+               <button type="button" class="btn btn-outline-dark " id="VisualStatusButton">Visual status report</button>
                     </div>
                </div>
 
