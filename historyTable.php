@@ -84,9 +84,9 @@ li.paginate_button.page-item.active a {
  
   <body>
 
-    <p id="explanMachinePage" style="padding-top:50px">This table shows the treatment history for all factory machines.</p>
+    <p id="explanMachinePage" style="padding-top:50px ">This table shows the treatment history for all factory machines.</p>
 
-    <div class="column p-5" id="MainArea">
+    <div class="column p-5" id="MainArea" style="margin-bottom:30px; margin-top:0px;">
 
                <div class="row">
                  <div class="column" id="column1">
