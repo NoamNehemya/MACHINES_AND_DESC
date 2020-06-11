@@ -88,7 +88,7 @@ border-color: rgb(20, 20, 20);
 
   <div id="includedContent"></div>
 
-    <div class="column" id="MainArea">
+    <div class="column p-5" id="MainArea">
 
                <div class="row">
                  <div class="column" id="column1">
