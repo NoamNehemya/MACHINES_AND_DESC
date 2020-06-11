@@ -120,7 +120,7 @@ li.paginate_button.page-item.active a {
              while($rows = mysqli_fetch_assoc($result_histroy_table)) {
 
           ?>
-  <tbody>
+  
           <tr>
             <th scope="row"><?php echo $rows['Update_Number']; ?></th>
             <td><?php echo $rows['UpdateDate']; ?></td>
@@ -130,7 +130,7 @@ li.paginate_button.page-item.active a {
             <td><?php echo $rows['OldMachine']; ?></td>                        
           </tr>
 
-  </tbody>
+ 
 
                 <?php
                     }
