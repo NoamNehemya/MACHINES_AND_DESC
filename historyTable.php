@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>History Table in Building 6</title>
+  <title>History Table</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+
+  
 
   <!-- MDBootstrap Datatables  -->
 <link href="datatables/datatables.min.css" rel="stylesheet">
