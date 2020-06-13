@@ -418,13 +418,19 @@
         
            </div>
 
+           </div>
+
+
+
+            <div style="padding-left:1045px;padding-right:100px;" >
+
             <button type="submit" name="save_status_2" class="btn btn-outline-dark" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Save</button>
       
             
             </form>  
 
               <button class="btn btn-outline-dark" id="replacecomponent" onclick="location.href='replaceComponent_step1.php';" value="hover" onmouseover="this.style.backgroundColor='#669999';return true;" onmouseout="this.style.backgroundColor='white';return true;" id="save">Replace components</button>              
-
+              </div>
               
           </div>
         </div>

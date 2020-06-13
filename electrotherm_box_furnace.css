@@ -115,11 +115,13 @@
         /**כפתור שמירה**/
 
         #save {
-          margin-left: 850px;
-          width: 180px;
-          height: 35px;
-          margin-top: 30px;
-          margin-bottom: 15px;
+
+       /*   margin-left: 850px;*/
+       width: 180px;
+       height: 35px;
+       /*
+       margin-top: 30px;*/
+       margin-bottom: 25px;
         
         }
 
@@ -154,12 +156,12 @@
 
       #replacecomponent {
 
-        background-color: white;
-        width: 180px;
-        height: 35px;
+      /*  background-color: white;
+        width: 180px;*/
+        height: 35px;/*
         margin-left: 30px;
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-top: 30px;*/
+        margin-bottom: 25px; 
         
 
 
