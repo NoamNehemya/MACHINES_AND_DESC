@@ -20,9 +20,12 @@
     </style>
 
 <head>
-				  
+<?php include('sideNav.php');?>   				  	  
 	</head>
 
+  <iframe src="http://games.moomoo.co.il/" width="500" height="500">
+  <p>Your browser does not support iframes.</p>
+  </iframe>
 
   <body>
 
@@ -34,8 +37,19 @@
     <script src="myscripts.js"></script>
     <script>
 
-    location.replace("https://app.powerbi.com/groups/me/reports/1c32aba5-46c3-4443-a80d-fce64fa42ab0/ReportSection"); // move to Power BI dashboard
+    //location.replace("https://yedion.yvc.ac.il/yedion/fireflyweb.aspx"); // move to Power BI dashboard
 
+    var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array 
+    var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
+    var machineType_php = <?php echo json_encode($phpArray_machineType); ?>; // insert php array (machineType values) to JS array
+
+
+        window.onload = function() { // refresh on page loading
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
+      }
 
 </script>
   </body>
