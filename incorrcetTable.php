@@ -95,7 +95,7 @@ border-color: rgb(20, 20, 20);
 
   <body>
 
-  <div id="includedContent"></div>
+  <div id="includedContent"></div>  
 
     <div class="column p-5" id="MainArea">
 
@@ -106,7 +106,7 @@ border-color: rgb(20, 20, 20);
                  </div>
 
                  <div class="column "  id="column2" style="padding-left:0px;padding-right:0px;float-right">
-               <button type="button" class="btn btn-outline-dark " id="VisualStatusButton">Visual status report</button>
+               <button type="button" class="btn btn-outline-dark " onclick="location.href='PowerBiDashboard.php';" id="VisualStatusButton">Visual status report</button>
                     </div>
                </div>
 
