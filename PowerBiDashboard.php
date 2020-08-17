@@ -33,7 +33,7 @@
     <script src="myscripts.js"></script>
     <script>
 
-    location.replace("https://app.powerbi.com/groups/me/reports/1c32aba5-46c3-4443-a80d-fce64fa42ab0/ReportSection"); // move to Power BI dashboard
+    location.replace("https://app.powerbi.com/groups/me/reports/421aa6ff-81b4-4116-81c5-379a0f84eb4d/ReportSectiona77e310d0309902010a3"); // move to Power BI dashboard
 
     var support_php = <?php echo json_encode($phpArray_support); ?>; // insert php array (support values) to JS array 
     var machineStatus_php = <?php echo json_encode($phpArray_status); ?>; // insert php array (status values) to JS array
