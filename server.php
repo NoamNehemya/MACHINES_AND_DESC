@@ -199,14 +199,14 @@
             if (empty($email_login)) {
                 array_push($errors,"email is required");
                
-                $message = "email is required";
+                $message = "Email is Required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
             if (empty($password_login)) {
-                array_push($errors,"password  is required");
+                array_push($errors,"Password  is Required");
                 
-                $message = "password  is required";
+                $message = "Password  is Required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
                 
             }
@@ -218,7 +218,7 @@
 
                 if (mysqli_num_rows($result) > 0){
 
-                    $message = "welcom! You are now login to the system.";
+                    $message = "Welcom! You are now login to the system.";
                     echo "<script type='text/javascript'>alert('$message');</script>";
 
                     ob_start();
@@ -233,7 +233,7 @@
 
                 else {
 
-                    $message = "worng password / email";
+                    $message = "Worng Password / Email";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                     
                 }
@@ -257,24 +257,24 @@
             $answer_forgot = mysqli_real_escape_string($db,$_POST['answer_forgot']);
 
             if (empty($email_forgot)) {
-                array_push($errors,"email is required");
+                array_push($errors,"Email is Required");
                
-                $message = "email is required";
+                $message = "Email is Required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
             if (empty($Verification_question_forgot)) {
                 array_push($errors,"Verification question is required");
                 
-                $message = "Verification question is required";
+                $message = "Verification Question is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
                 
             }
 
             if (empty($answer_forgot)) {
-                array_push($errors,"answer for Verification question is required");
+                array_push($errors,"Answer for Verification Question is required");
                 
-                $message = "answer for Verification question is required";
+                $message = "Answer for Verification Question is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
                 
             }
@@ -296,7 +296,7 @@
 
                 else {
 
-                    $message = "Worng email / Verification Question / Answer To Verification";
+                    $message = "Worng Email / Verification Question / Answer To Verification";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                     
                 }
@@ -334,9 +334,9 @@
             }
 
             if (empty($Email_reset_Password)) {
-                array_push($errors,"Email is required");
+                array_push($errors,"Email is Required");
                 
-                $message = "Email is required";
+                $message = "Email is Required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
                 
             }
@@ -390,13 +390,13 @@
     
             if (empty($support)) {
                 array_push($errors,"support is required");
-                $message = "support is required";
+                $message = "Support is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
     
             if (empty($manual)) {
                 array_push($errors,"manual is required");
-                $message = "manual is required";
+                $message = "Manual is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
@@ -404,19 +404,19 @@
     
             if (empty($serial_num)) {
                 array_push($errors,"serial number is required");
-                $message = "serial number is required";
+                $message = "Serial number is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
     
             if (empty($brand_name)) {
                 array_push($errors,"brand name is required");
-                $message = "brand name is required";
+                $message = "Brand name is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
     
             if (empty($main)) {
                 array_push($errors,"main is required");
-                $message = "main is required";
+                $message = "Main is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
     
@@ -440,19 +440,19 @@
     
             if (empty($model)) {
                 array_push($errors,"model  is required");
-                $message = "model  is required";
+                $message = "Model  is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
             if (empty($type)) {
                 array_push($errors,"type is required");
-                $message = "type is required";
+                $message = "Type is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
             if (empty($place)) {
                 array_push($errors,"place is required");
-                $message = "place is required";
+                $message = "Place is required";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
 
@@ -579,7 +579,7 @@
                 if (empty($update_status_machine)) {
                     array_push($errors,"Password is required");
                    
-                    $message = "no choose status";
+                    $message = "No choose status";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                 }
 
@@ -625,7 +625,7 @@
                 if (empty($update_status_machine2)) {
                     array_push($errors,"Password is required");
                    
-                    $message = "no choose status";
+                    $message = "No choose status";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                 }
 
