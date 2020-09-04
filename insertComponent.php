@@ -18,7 +18,7 @@
 
    </style>
 
-  <link rel="stylesheet" href="insertComponent.css">
+  <link rel="stylesheet" href="css/insertComponent.css">
 
   <head>
   <?php include('sideNav.php');?>   

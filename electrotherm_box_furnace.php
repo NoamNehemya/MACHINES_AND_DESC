@@ -21,8 +21,8 @@
 
   <head>
 
-  <link rel="stylesheet" href="SideNav.css">
-  <link rel="stylesheet" href="electrotherm_box_furnace.css">
+  <link rel="stylesheet" href="css/SideNav.css">
+  <link rel="stylesheet" href="css/electrotherm_box_furnace.css">
 
   <?php include('sideNav.php');?>   	
 				  

@@ -19,7 +19,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="MapOfBuilding.css">
+  <link rel="stylesheet" href="css/MapOfBuilding.css">
 
   <body>
 

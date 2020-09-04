@@ -21,7 +21,7 @@
 
   </head>
 
-  <link rel="stylesheet" href="RegisterPage.css">
+  <link rel="stylesheet" href="css/RegisterPage.css">
 
   <body>
 

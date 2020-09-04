@@ -24,9 +24,9 @@
 
   <head>
 
-  <link rel="stylesheet" href="SideNav.css">
-  <link rel="stylesheet" href="vibration_machines.css">
-  <link rel="stylesheet" href="componentsReplace.css">
+  <link rel="stylesheet" href="css/SideNav.css">
+  <link rel="stylesheet" href="css/vibration_machines.css">
+  <link rel="stylesheet" href="css/componentsReplace.css">
 
   <?php include('sideNav.php');?>   	
 

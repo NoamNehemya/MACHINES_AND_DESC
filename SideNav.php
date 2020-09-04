@@ -15,7 +15,7 @@
   <head>
     <body>
 
-  <link rel="stylesheet" href="SideNav.css">
+  <link rel="stylesheet" href="css/SideNav.css">
 
                 <nav class="navbar  navbar-light navbar-fixed-top" style="background-color:#669999; color: black; text-decoration-color: black;">
 				<div class="pl-2" id="main" >

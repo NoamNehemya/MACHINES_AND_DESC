@@ -25,7 +25,7 @@
 
 </head>
 
-<link rel="stylesheet" href="loginPage.css">
+<link rel="stylesheet" href="css/loginPage.css">
 
 <body>
 

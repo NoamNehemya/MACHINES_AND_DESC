@@ -24,8 +24,8 @@
 
   <head>
   
-  <link rel="stylesheet" href="Buliding-six.css">
-  <link rel="stylesheet" href="AlertbuildingSix.css">
+  <link rel="stylesheet" href="css/Buliding-six.css">
+  <link rel="stylesheet" href="css/AlertbuildingSix.css">
 
   <?php include('sideNav.php');?>   	
   
