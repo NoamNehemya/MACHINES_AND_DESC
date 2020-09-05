@@ -1,302 +1,253 @@
+/** css **/
 
-            #explanMachinePage {
+#explanMachinePage {
+    margin-left: 100px;
+    margin-top: 40px;
+    font-size: 25px;
+}
 
-                margin-left:100px;
-                 margin-top: 40px;
-                 font-size: 25px;
-            }
+#IncorrectTable {
+    margin-top: 60px;
+    margin: 60px 25px 25px 25px;
+    margin-left: 30px;
+}
 
-            #IncorrectTable {
+#explanMachinePage {
+    margin-left: 200px;
+    font-size: 25px;
+}
 
-                margin-top: 60px;
-                margin: 60px 25px 25px 25px;
-                margin-left: 30px;
-                
-                
-            }
+#informationIcon {
+    margin-left: 630px;
+    margin-top: 50px;
+}
 
-            #explanMachinePage {
+.MainAREA {
+    margin-left: 120px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 1315px;
+    height: 600PX;
+    background: url("http://www.up2me.co.il/imgs/38478576.jpg");
+}
 
-              margin-left: 200px;
-              font-size: 25px;
-            }
 
-            #informationIcon {
+/**************************************************************************************************************************************/
 
-              margin-left: 630px;
-              margin-top: 50px;
-            }
 
- 
+/*BUTTOMS MECHINES*/
 
-            .MainAREA {
+.btn-btn-outline-dark {
+    width: 80pxx;
+    height: 60px;
+    font-size: 12px;
+}
 
-            margin-left: 120px;
-            margin-top: 25px;
-            margin-bottom: 25px;
-            width: 1315px;
-            height: 600PX;
-            background: url("http://www.up2me.co.il/imgs/38478576.jpg" )  ;
 
-            }
+/******************/
 
-            /**************************************************************************************************************************************/
+.col1 {
+    margin-top: 20px;
+    margin-left: 480px;
+}
 
-            /*BUTTOMS MECHINES*/
+#ROSLER-FIRST-MACHINE-634 {
+    margin-top: 10px;
+}
 
-            .btn-btn-outline-dark {
 
-              width: 80pxx;
-              height: 60px;
-              font-size: 12px;
+/******************/
 
-            }
+.col2 {
+    margin-left: 10px;
+    margin-top: 20px;
+}
 
-            /******************/
+.col3 {
+    margin-left: 80px;
+    margin-top: 20px
+}
 
-           .col1 {
+.col4 {
+    margin-top: 90px;
+    margin-left: 200px;
+}
 
-             margin-top:20px;
-             margin-left:480px;
-           }
+.col5 {
+    margin-top: 90px;
+    margin-left: 70px;
+}
 
-           #ROSLER-FIRST-MACHINE-634 {
+.col6 {
+    margin-top: 90px;
+    margin-left: 70px;
+}
 
-             margin-top: 10px;
-           }
 
-           /******************/
+/***************************/
 
-           .col2 {
 
-             margin-left: 10px;
-             margin-top: 20px;
-           }
+/*machine 629*/
 
-           .col3 {
+.col7 {
+    margin-left: 50px;
+    margin-top: 15px;
+}
 
-             margin-left: 80px;
-             margin-top: 20px
-           }
+.col8 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-           .col4 {
+.col9 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-             margin-top: 90px;
-             margin-left: 200px;
-           }
+.col10 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-           .col5 {
+.col11 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-             margin-top: 90px;
-             margin-left: 70px;
-           }
+.col12 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-           .col6 {
 
-            margin-top: 90px;
-            margin-left: 70px;
+/***************************/
 
-           }
 
-           /***************************/
+/*machine 637*/
 
-           /*machine 629*/
+.col13 {
+    margin-left: 50px;
+    margin-top: 25px;
+}
 
-           .col7 {
+.col14 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-             margin-left: 50px;
-             margin-top: 15px;
-           }
+.col15 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-           .col8 {
+.col16 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-            margin-left: 10px;
-            margin-top: 15px;
-           }
+.col17 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-           .col9 {
+.col18 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-            margin-left: 10px;
-            margin-top: 15px;
+.col19 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-           }
+.col20 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-           .col10 {
+.col21 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-            margin-left: 10px;
-            margin-top: 15px;
-           
-          }
+.col22 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-          .col11 {
+.col23 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-          margin-left: 10px;
-          margin-top: 15px;
+.col24 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
-          }
+.col25 {
+    margin-left: 10px;
+    margin-top: 25px;
+}
 
 
-          .col12 {
+/***************************/
 
-          margin-left: 10px;
-          margin-top: 15px;
- 
-          }
 
+/*MACHINE 0148*/
 
+.col26 {
+    margin-left: 450px;
+    margin-top: 15px;
+}
 
-           /***************************/
+.col27 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-          /*machine 637*/
+.col28 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
+.col29 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-          .col13 {
 
-            margin-left: 50px;
-            margin-top: 25px;
-          }
+/*************************/
 
-          .col14 {
 
-            margin-left: 10px;
-            margin-top: 25px;
-          }
+/*MACHINE BOX-2 0148*/
 
-          .col15 {
+.col30 {
+    margin-left: 50px;
+    margin-top: 30px;
+}
 
-          margin-left: 10px;
-          margin-top: 25px;
-          }
+.col31 {
+    margin-left: 10px;
+    margin-top: 30px;
+}
 
-          .col16 {
+.col32 {
+    margin-left: 10px;
+    margin-top: 30px;
+}
 
-          margin-left: 10px;
-          margin-top: 25px;
-          }
+.col33 {
+    margin-left: 630px;
+    margin-top: 30px;
+}
 
-          .col17 {
+.col34 {
+    margin-left: 10px;
+    margin-top: 30px;
+}
 
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col18 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col19 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col20 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col21 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col22 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col23 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col24 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-          .col25 {
-
-          margin-left: 10px;
-          margin-top: 25px;
-          }
-
-           /***************************/
-
-           /*MACHINE 0148*/
-
-           .col26 {
-
-            margin-left: 450px;
-            margin-top: 15px;
-            }
-
-            .col27 {
-
-            margin-left: 10px;
-            margin-top: 15px;
-            }
-
-            .col28 {
-
-            margin-left: 10px;
-            margin-top: 15px;
-            }
-
-
-            .col29 {
-
-            margin-left: 10px;
-            margin-top: 15px;
-            }
-
-
-            /*************************/
-
-            /*MACHINE BOX-2 0148*/
-
-            .col30 {
-
-            margin-left: 50px;
-            margin-top: 30px;
-            }
-
-            .col31 {
-
-            margin-left: 10px;
-            margin-top: 30px;
-            }
-
-
-            .col32 {
-
-            margin-left: 10px;
-            margin-top: 30px;
-            }
-
-
-            .col33 {
-
-            margin-left: 630px;
-            margin-top: 30px;
-            }
-
-
-            .col34 {
-
-            margin-left: 10px;
-            margin-top: 30px;
-            }
-
-            .col35 {
-
-            margin-left: 10px;
-            margin-top: 30px;
-            }
+.col35 {
+    margin-left: 10px;
+    margin-top: 30px;
+}
