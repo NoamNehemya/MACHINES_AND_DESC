@@ -113,7 +113,7 @@
    
     <select class="form-control" id="DropListType_two" name="DropListType_two">
     <?php while($rows = $result_query_two->fetch_assoc()):;?>
-    <?php echo "<option value={$rows["s_n"]}>{$rows["s_n"]}</option>";?>
+    <?php echo "<option value={$rows["s_nAndSupport"]}>{$rows["s_nAndSupport"]}</option>";?>
     <?php endwhile;?>
     </select><br><br>
     
