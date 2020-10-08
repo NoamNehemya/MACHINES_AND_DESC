@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" onclick="redFrames()" placeholder="insert Manual" id="textFildManual"  maxlength="272" name="manual" value="<?php echo $manual; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" placeholder="Insert Manual" id="textFildManual"  maxlength="272" name="manual" value="<?php echo $manual; ?>">
                         </div>
 
                     </div>
@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="Insert Serial Number" id="textFildSerialNumber" maxlength="25" name="serial_num" value="<?php echo $serial_num; ?>">
                         </div>
 
                         <div class="col3">
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Model type" id="textFildBrandName" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="Insert Model Type" id="textFildBrandName" maxlength="18" name="brand_name" value="<?php echo $brand_name; ?>">
                         </div>
 
                     </div>
@@ -83,7 +83,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
+                            <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="Insert Main" id="textFildMain" maxlength="11" name="main" value="<?php echo $main; ?>">
                         </div>
 
                         <div class="col3">
@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="col4">
-                            <input type="file" class="btn btn-outline-dark" onChange="submitActiveOrDimmed()"  id="UpalteFile1" name="upalte_image" value="<?php echo $upalte_image; ?>">
+                            <input type="file" class="btn btn-outline-dark" onChange="submitActiveOrDimmed()"  id="UpalteFile1" name="Upload_image" value="<?php echo $upalte_image; ?>">
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@
                         </div>
 
                         <div class="col2">
-                            <input type="text" class="form-control" placeholder="insert Department" id="textFildDepartment" maxlength="17" name="Department" value="<?php echo $Department; ?>">
+                            <input type="text" class="form-control" placeholder="Insert Department" id="textFildDepartment" maxlength="17" name="Department" value="<?php echo $Department; ?>">
                         </div>
 
                         <div class="col3">
@@ -110,7 +110,7 @@
                             </div>
 
                             <div class="col4">
-                                <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
+                                <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="Insert type"  id="textFildType" maxlength="20" name="type" value="<?php echo $type; ?>">
                             </div>
                     
                     </div>
@@ -122,7 +122,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
+                                <input type="text" class="form-control" onclick="redFrames()" onChange="submitActiveOrDimmed()" placeholder="Insert Model" id="textFildModel" maxlength="23" name="model" value="<?php echo $model; ?>">
                             </div>
 
                             <div class="col3">
@@ -146,7 +146,7 @@
                             </div>
     
                             <div class="col2">
-                                <input type="text" class="form-control" onclick="redFrames()" placeholder="insert Place" id="textFildPlace" maxlength="11" name="place" value="<?php echo $place; ?>">
+                                <input type="text" class="form-control" onclick="redFrames()" placeholder="Insert Place" id="textFildPlace" maxlength="11" name="place" value="<?php echo $place; ?>">
                             </div>
 
                            
