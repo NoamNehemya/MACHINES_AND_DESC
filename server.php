@@ -692,7 +692,7 @@
             //php of History Machine Page
 
             $query_history_table="SELECT * from history ORDER BY UpdateDate DESC";
-            $result_histroy_table = mysqli_query($db , $query_history_table);
+            $result_history_table = mysqli_query($db , $query_history_table);
 
 
          //***************************************************************************************************************************************************************
@@ -730,7 +730,7 @@
             $headvalue = $_COOKIE["headvalue"]; //cookie of drop list one (selected component type of drop list one)
 
             //drop list two
-            $query_two = "SELECT s_n FROM components WHERE support NOT LIKE '".$support_input."' AND Component_type LIKE '".$headvalue."' ";
+            $query_two = "SELECT concat(s_n, ' - From Machine: ',support) as s_nAndSupport FROM components WHERE support NOT LIKE '".$support_input."' AND Component_type LIKE '".$headvalue."' ";
             $result_query_two = mysqli_query($db , $query_two);
 
             //drop list three
@@ -761,7 +761,7 @@
                 if($query_update_component && $query_remove_component) {
     
                      echo "<script type='text/javascript'>alert('Password is Update!');</script>";
-                    header('Location: vibration_machines.php');
+                    header('Location: Buliding-six.php');
     
                  } else {
     
