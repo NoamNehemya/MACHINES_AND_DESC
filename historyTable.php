@@ -117,7 +117,7 @@ li.paginate_button.page-item.active a {
   </thead>
 
           <?php
-             while($rows = mysqli_fetch_assoc($result_histroy_table)) {
+             while($rows = mysqli_fetch_assoc($result_history_table)) {
 
           ?>
   
