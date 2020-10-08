@@ -1,0 +1,70 @@
+
+
+        .col-sm-1-col-form-label-col-form-label-sm {
+
+            font-size: 18px;
+        } 
+
+        /**סידור עמודות בטופס**/
+
+        .col1 {
+
+            padding: 15px 120px 0px 120px;
+            /*margin: 0 auto;*/
+            width: 150px;
+        }
+
+        .col2 {
+
+            padding: 15px 0px 0px 0px;
+            width: 200px;
+        }
+
+        .col3 {
+            padding: 15px 100px 0px 150px;
+            width: 150px;
+        }
+
+        .col4 {
+            padding: 15px 100px 0px 10px;
+            width: 330px;
+
+        }
+
+        .col5 {
+            padding: 25px 100px 0px 1250px;
+        }
+
+        /*drop down desins*/
+
+        .DropDowns {
+
+            padding: 5px 0px 0px 0px;
+            width: 200px;
+            border-style:ridge;
+            border-color: #313332;
+            background-color:white;
+            color: black;
+        }
+
+        .DropDowns2 {
+
+       
+            width: 220px;
+            padding: 5px 0px 0px 0px;
+            border-style:ridge;
+            border-color: #313332;
+            background-color:white;
+            color: black;
+        }
+
+        #UpalteFile1 {
+
+            width: 220px;
+        }
+
+
+        #UpalteFile2 {
+
+            width: 170px;
+        }
